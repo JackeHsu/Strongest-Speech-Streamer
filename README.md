@@ -136,8 +136,41 @@ Strongest Speech Streamer is an AI-driven gamified speech training platform desi
     In the project files, researchers can replace the AI model by modifying the API configuration in `project/scripts/main.gd`. This allows testing with different models while keeping the feedback workflow intact.
    
      在工程项目文件中，研究人员可以通过修改 `project/scripts/main.gd` 中的 API 配置来更换 AI 模型，从而测试不同模型的反馈效果，同时保持原有反馈流程不变。
+   
+
+### AI Functions in main.gd / main.gd 中的 AI 函数
+
+```gdscript
+# Initialize a new AI conversation session
+func create():
+	var url := "https://qianfan.baidubce.com/v2/app/conversation" # API URL
+	var body := {"app_id": "YOUR_APP_ID_HERE"}  # Replace with real app_id
+	var headers := [
+		"Content-Type: application/json",
+		"X-Appbuilder-Authorization: Bearer YOUR_API_KEY_HERE"  # Masked for privacy
+	]
+	create_dialog.request(url, headers, HTTPClient.METHOD_POST, JSON.new().stringify(body))
+	# Returns conversation_id for subsequent requests
+
+# Send player input to AI and get feedback
+func ask(question: String):
+	var url := "https://qianfan.baidubce.com/v2/app/conversation/runs" # API URL
+	var body := {
+		"app_id": "YOUR_APP_ID_HERE",   # Replace with real app_id
+		"query": question,               # Player input or speech text
+		"conversation_id": con_id,       # From create()
+		"stream": false
+	}
+	var headers := [
+		"Content-Type: application/json",
+		"X-Appbuilder-Authorization: Bearer YOUR_API_KEY_HERE"  # Masked for privacy
+	]
+	ask_question.request(url, headers, HTTPClient.METHOD_POST, JSON.new().stringify(body))
+	# Returns AI feedback for the game to display
+```
 
 ---
+
 ## License / 许可证
 
 - This project is only for research or education purposes, and not available for commercial use or redistribution. Licensed under CC BY-NC 4.0.
