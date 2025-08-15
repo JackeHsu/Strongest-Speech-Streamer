@@ -65,8 +65,8 @@ Strongest Speech Streamer is an AI-driven gamified speech training platform desi
 
 ### 1.Download Project Files / 下载项目文件
 
-- Download the Godot source project (only the AI gamified version “Strongest Speech Streamer”) and the four versions of executable files (PC & Android, gamified AI and simple learning software).  
-- 下载 Godot 源代码工程（仅包含 AI 游戏化版本“最强演讲主播”的源码）以及四个版本的可执行文件（PC/Android 端，“最强演讲主播”和“演讲学习软件”）。
+- Download the Godot source project (only the AI gamified version “Strongest Speech Streamer”) and the four versions of executable files (PC & Android, gamified AI and Speech Learning Tool).  
+- 下载 Godot 源代码工程（仅包含 AI 游戏化版本“最强演讲主播”的源码）以及四个版本的可执行文件（PC/Android 端，“最强演讲主播”和“演讲学习工具”）。
 - Due to GitHub file size limitations, executable files and the PC ffmpeg file are hosted on a cloud drive for download: [Download Link](https://pan.baidu.com/s/1o2qi9rAzwodceS_mP8JbYg?pwd=qm3m)
 - 由于 GitHub 仓库文件大小限制，可执行文件及 PC 端 ffmpeg 文件已放在网盘供下载：[下载链接](https://pan.baidu.com/s/1o2qi9rAzwodceS_mP8JbYg?pwd=qm3m)
 
