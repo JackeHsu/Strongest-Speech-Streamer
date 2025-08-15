@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxb68l1s6sob8"]
+
+[ext_resource type="Script" path="res://scripts/player/equipment.gd" id="1_moa5n"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/Inventory_data.gd" id="2_u672q"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/slot_data.gd" id="3_t364b"]
+
+[sub_resource type="Resource" id="Resource_yyi8a"]
+script = ExtResource("2_u672q")
+slot_datas = Array[ExtResource("3_t364b")]([null, null, null, null, null])
+
+[node name="equipment" type="Node2D" groups=["player"]]
+script = ExtResource("1_moa5n")
+inventory_data = SubResource("Resource_yyi8a")

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://fyis5grlsyhm"]
+
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_gsl0y"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_jajrn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g18rf"]
+atlas = ExtResource("1_gsl0y")
+region = Rect2(128, 64, 32, 32)
+
+[resource]
+script = ExtResource("1_jajrn")
+item_name = "草莓瑞士卷"
+stackable = true
+item_texture = SubResource("AtlasTexture_g18rf")
+description = "抹茶草莓瑞士卷，下午茶最佳选择（体力+10）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 10
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 80
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

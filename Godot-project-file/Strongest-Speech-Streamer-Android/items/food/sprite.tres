@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cdbnjck7u16h2"]
+
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_disph"]
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_jt4q6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m457f"]
+atlas = ExtResource("1_jt4q6")
+region = Rect2(128, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_disph")
+item_name = "雪碧"
+stackable = true
+item_texture = SubResource("AtlasTexture_m457f")
+description = "另外一种快乐水（体力+3，获得少量经验加成，小幅减少金币获得）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 3
+exp_buff_value = 0.1
+gold_buff_value = -0.1
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 10
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

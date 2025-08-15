@@ -1,0 +1,484 @@
+[gd_scene load_steps=10 format=3 uid="uid://hoe7c2pla8n5"]
+
+[ext_resource type="Texture2D" uid="uid://bjtn8k7o58n7g" path="res://assets/ui/achievement/achievement.png" id="1_gijhe"]
+[ext_resource type="Texture2D" uid="uid://blkmlh3bhgm2l" path="res://assets/ui/achievement/achi.png" id="2_5sabh"]
+[ext_resource type="Script" path="res://scripts/achievement_panel.gd" id="2_fo76p"]
+[ext_resource type="Texture2D" uid="uid://ckcwp371w85hv" path="res://assets/ui/achievement/achi_icon.png" id="3_gsc3s"]
+[ext_resource type="FontFile" uid="uid://cf7ocurslf3ii" path="res://assets/font/VonwaonBitmap-12px.ttf" id="4_adwm7"]
+[ext_resource type="Texture2D" uid="uid://cd6dk8nskvv27" path="res://assets/ui/achievement/achi_icon_2.png" id="6_5lf24"]
+[ext_resource type="Texture2D" uid="uid://cs4xalc38d5t6" path="res://assets/bag_ui/close_button.png" id="7_yil2l"]
+[ext_resource type="AudioStream" uid="uid://dfo0meutr5ctb" path="res://assets/audio/achievement.wav" id="8_m0n6y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghh42"]
+texture = ExtResource("1_gijhe")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="AchievementPanel" type="Panel"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -224.0
+offset_top = -620.0
+offset_right = 227.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ghh42")
+script = ExtResource("2_fo76p")
+
+[node name="achi_hide_timer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="prompt" type="Label" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 102.0
+offset_right = 764.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+autowrap_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+offset_left = 12.0
+offset_top = 32.0
+offset_right = 433.0
+offset_bottom = 582.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 10
+
+[node name="Control1" type="Control" parent="GridContainer"]
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 2
+
+[node name="achi_b" type="TextureRect" parent="GridContainer/Control1"]
+modulate = Color(0.35, 0.35, 0.35, 1)
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -30.0
+offset_right = 210.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sabh")
+stretch_mode = 5
+
+[node name="achi_explain" type="Label" parent="GridContainer/Control1/achi_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+text = "^初次报道^"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="achi_icon" type="TextureRect" parent="GridContainer/Control1"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 52.0
+texture = ExtResource("3_gsc3s")
+
+[node name="Control2" type="Control" parent="GridContainer"]
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 2
+
+[node name="achi_b" type="TextureRect" parent="GridContainer/Control2"]
+modulate = Color(0.35, 0.35, 0.35, 1)
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -30.0
+offset_right = 210.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sabh")
+stretch_mode = 5
+
+[node name="achi_explain" type="Label" parent="GridContainer/Control2/achi_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+text = "^甜蜜的梦^"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="achi_icon" type="TextureRect" parent="GridContainer/Control2"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 52.0
+texture = ExtResource("3_gsc3s")
+
+[node name="Control3" type="Control" parent="GridContainer"]
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 2
+
+[node name="achi_b" type="TextureRect" parent="GridContainer/Control3"]
+modulate = Color(0.35, 0.35, 0.35, 1)
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -30.0
+offset_right = 210.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sabh")
+stretch_mode = 5
+
+[node name="achi_explain" type="Label" parent="GridContainer/Control3/achi_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+text = "*董事长*"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="achi_icon" type="TextureRect" parent="GridContainer/Control3"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 52.0
+texture = ExtResource("3_gsc3s")
+
+[node name="Control4" type="Control" parent="GridContainer"]
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 2
+
+[node name="achi_b" type="TextureRect" parent="GridContainer/Control4"]
+modulate = Color(0.34902, 0.34902, 0.34902, 1)
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -30.0
+offset_right = 210.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sabh")
+stretch_mode = 5
+
+[node name="achi_explain" type="Label" parent="GridContainer/Control4/achi_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+text = "￥富豪￥"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="achi_icon" type="TextureRect" parent="GridContainer/Control4"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 52.0
+texture = ExtResource("3_gsc3s")
+
+[node name="Control5" type="Control" parent="GridContainer"]
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 2
+
+[node name="achi_b" type="TextureRect" parent="GridContainer/Control5"]
+modulate = Color(0.34902, 0.34902, 0.34902, 1)
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -30.0
+offset_right = 210.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sabh")
+stretch_mode = 5
+
+[node name="achi_explain" type="Label" parent="GridContainer/Control5/achi_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+text = "*职业玩家*"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="achi_icon" type="TextureRect" parent="GridContainer/Control5"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 52.0
+texture = ExtResource("3_gsc3s")
+
+[node name="Control6" type="Control" parent="GridContainer"]
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 2
+
+[node name="achi_b" type="TextureRect" parent="GridContainer/Control6"]
+modulate = Color(0.34902, 0.34902, 0.34902, 1)
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -30.0
+offset_right = 210.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sabh")
+stretch_mode = 5
+
+[node name="achi_explain" type="Label" parent="GridContainer/Control6/achi_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+text = "*玩偶收藏家*"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="achi_icon" type="TextureRect" parent="GridContainer/Control6"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 52.0
+texture = ExtResource("3_gsc3s")
+
+[node name="Control7" type="Control" parent="GridContainer"]
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 2
+
+[node name="achi_b" type="TextureRect" parent="GridContainer/Control7"]
+modulate = Color(0.34902, 0.34902, 0.34902, 1)
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -30.0
+offset_right = 210.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sabh")
+stretch_mode = 5
+
+[node name="achi_explain" type="Label" parent="GridContainer/Control7/achi_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+text = "*疯狂车迷*"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="achi_icon" type="TextureRect" parent="GridContainer/Control7"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 52.0
+texture = ExtResource("3_gsc3s")
+
+[node name="Control8" type="Control" parent="GridContainer"]
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 2
+
+[node name="achi_b" type="TextureRect" parent="GridContainer/Control8"]
+modulate = Color(0.34902, 0.34902, 0.34902, 1)
+custom_minimum_size = Vector2(421, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -30.0
+offset_right = 210.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5sabh")
+stretch_mode = 5
+
+[node name="achi_explain" type="Label" parent="GridContainer/Control8/achi_b"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_adwm7")
+theme_override_font_sizes/font_size = 36
+text = "？？？"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="achi_icon" type="TextureRect" parent="GridContainer/Control8"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 52.0
+texture = ExtResource("6_5lf24")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture_normal = ExtResource("7_yil2l")
+stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_m0n6y")
+
+[connection signal="timeout" from="achi_hide_timer" to="." method="_on_achi_hide_timer_timeout"]
+[connection signal="mouse_entered" from="GridContainer/Control1/achi_b" to="." method="_on_achi_1_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Control1/achi_b" to="." method="_on_achi_1_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Control2/achi_b" to="." method="_on_achi_2_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Control2/achi_b" to="." method="_on_achi_2_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Control3/achi_b" to="." method="_on_achi_3_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Control3/achi_b" to="." method="_on_achi_3_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Control4/achi_b" to="." method="_on_achi_4_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Control4/achi_b" to="." method="_on_achi_4_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Control5/achi_b" to="." method="_on_achi_5_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Control5/achi_b" to="." method="_on_achi_5_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Control6/achi_b" to="." method="_on_achi_6_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Control6/achi_b" to="." method="_on_achi_6_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Control7/achi_b" to="." method="_on_achi_7_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Control7/achi_b" to="." method="_on_achi_7_mouse_exited"]
+[connection signal="mouse_entered" from="GridContainer/Control8/achi_b" to="." method="_on_achi_8_mouse_entered"]
+[connection signal="mouse_exited" from="GridContainer/Control8/achi_b" to="." method="_on_achi_8_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

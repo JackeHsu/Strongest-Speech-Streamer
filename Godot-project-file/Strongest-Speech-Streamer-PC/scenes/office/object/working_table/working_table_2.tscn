@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb8aet7l5kc1x"]
+
+[ext_resource type="Script" path="res://scripts/office/object/working_table_2.gd" id="1_mkpyx"]
+[ext_resource type="Shader" path="res://shaders/sprite_outline.gdshader" id="2_hsxaw"]
+[ext_resource type="Texture2D" uid="uid://d3bmr7588bs21" path="res://assets/tilesets/office/table_2.png" id="2_ty2mh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d4of3"]
+shader = ExtResource("2_hsxaw")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[node name="working_table_2" type="StaticBody2D"]
+position = Vector2(-1.5, 6.5)
+script = ExtResource("1_mkpyx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_d4of3")
+position = Vector2(1.5, -5)
+texture = ExtResource("2_ty2mh")
+region_rect = Rect2(903, 269, 63, 35)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -31.0
+offset_top = -17.0
+offset_right = 31.0
+offset_bottom = 17.0
+
+[connection signal="gui_input" from="Control" to="." method="_on_control_gui_input"]
+[connection signal="mouse_entered" from="Control" to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]

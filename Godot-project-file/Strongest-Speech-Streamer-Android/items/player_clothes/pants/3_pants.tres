@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c7c71canb7tt2"]
+
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_pbltx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gg2bu"]
+load_path = "res://.godot/imported/clothes_icon.png-e54788f07b68c343ac4c8cf5dc87cc5d.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a701"]
+atlas = SubResource("CompressedTexture2D_gg2bu")
+region = Rect2(32, 96, 32, 32)
+
+[resource]
+script = ExtResource("1_pbltx")
+item_name = "黑色西裤"
+stackable = false
+item_texture = SubResource("AtlasTexture_4a701")
+description = "黑色西服套装：经典之选，魅力永恒（装备完整套装大幅提升装备得分）"
+item_max_amount = 0
+group_name = "equipment"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 3
+equipment_value = 3
+price = 750
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

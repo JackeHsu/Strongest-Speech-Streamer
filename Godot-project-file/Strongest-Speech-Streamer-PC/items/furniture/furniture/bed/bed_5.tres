@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://u50opbligxnl"]
+
+[ext_resource type="Texture2D" uid="uid://kmfj10o6ax4u" path="res://assets/home/item/normal_item/normal_item.png" id="1_7hdy1"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_7imgo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opw2c"]
+atlas = ExtResource("1_7hdy1")
+region = Rect2(383, 318, 82, 84)
+
+[resource]
+script = ExtResource("2_7imgo")
+item_name = "上下床"
+stackable = false
+item_texture = SubResource("AtlasTexture_opw2c")
+description = "这是一张上下床"
+item_max_amount = 0
+group_name = "interactive"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 850
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = "sleep"

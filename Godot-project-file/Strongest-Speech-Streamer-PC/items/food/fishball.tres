@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c3hii7witwtj1"]
+
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_h317a"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_hgnmd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5w2n"]
+atlas = ExtResource("1_h317a")
+region = Rect2(32, 96, 32, 32)
+
+[resource]
+script = ExtResource("1_hgnmd")
+item_name = "烤鱼丸"
+stackable = true
+item_texture = SubResource("AtlasTexture_a5w2n")
+description = "淋上酱汁的烤鱼丸串！（体力+5，获得少量经验加成，获得少量金币加成）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 5
+exp_buff_value = 0.1
+gold_buff_value = 0.1
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 65
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

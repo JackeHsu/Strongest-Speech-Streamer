@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cquojllfr3pad"]
+
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_h6ums"]
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_xhox1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogd28"]
+atlas = ExtResource("1_xhox1")
+region = Rect2(224, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_h6ums")
+item_name = "功能饮料"
+stackable = true
+item_texture = SubResource("AtlasTexture_ogd28")
+description = "比咖啡更提神的功能饮料，但是喝多了对身体不好（体力+40，获得一定经验加成，大幅降低金币获得）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 40
+exp_buff_value = 0.2
+gold_buff_value = -0.5
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 100
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

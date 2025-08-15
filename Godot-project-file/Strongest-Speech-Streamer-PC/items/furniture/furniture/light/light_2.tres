@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://f81xv8qbrh10"]
+
+[ext_resource type="Texture2D" uid="uid://kmfj10o6ax4u" path="res://assets/home/item/normal_item/normal_item.png" id="1_y3kma"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_o8263"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x7cu"]
+atlas = ExtResource("1_y3kma")
+region = Rect2(132, 274, 24, 32)
+
+[resource]
+script = ExtResource("2_o8263")
+item_name = "台灯2"
+stackable = true
+item_texture = SubResource("AtlasTexture_7x7cu")
+description = "一盏小台灯"
+item_max_amount = 99
+group_name = "furniture"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 300
+is_commodity = true
+layer = 2
+source_id = 0
+interactive_type = ""

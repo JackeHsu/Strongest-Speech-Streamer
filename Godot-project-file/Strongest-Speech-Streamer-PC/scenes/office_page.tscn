@@ -1,0 +1,379 @@
+[gd_scene load_steps=26 format=3 uid="uid://cx16b08rqvvtb"]
+
+[ext_resource type="Texture2D" uid="uid://4j8nq2feov0" path="res://assets/background/working.png" id="1_ekmfp"]
+[ext_resource type="Script" path="res://scripts/office_page/office_page.gd" id="1_l0n0g"]
+[ext_resource type="PackedScene" uid="uid://boaq4yauehfwj" path="res://scenes/meeting_page.tscn" id="3_tt10f"]
+[ext_resource type="Texture2D" uid="uid://47ru5i5x08qa" path="res://assets/button_background_new.png" id="4_kyakc"]
+[ext_resource type="Texture2D" uid="uid://qjiywcfu6gin" path="res://assets/button_background_new2.png" id="5_wwd7q"]
+[ext_resource type="Texture2D" uid="uid://bxi4a3rapxk5g" path="res://assets/background/working/working1.png" id="6_atktf"]
+[ext_resource type="Texture2D" uid="uid://cs4xalc38d5t6" path="res://assets/bag_ui/close_button.png" id="6_v610a"]
+[ext_resource type="Texture2D" uid="uid://b0gjiyke210js" path="res://assets/background/working/working2.png" id="7_o8j0d"]
+[ext_resource type="Texture2D" uid="uid://dmc8aydvor28s" path="res://assets/background/working/working3.png" id="8_6cdkc"]
+[ext_resource type="Texture2D" uid="uid://crf2pcyteofnm" path="res://assets/background/working/working4.png" id="9_160ni"]
+[ext_resource type="Texture2D" uid="uid://dx1524g1dne27" path="res://assets/background/working/working5.png" id="10_y53lo"]
+[ext_resource type="AudioStream" uid="uid://0btt6nrgrjcq" path="res://assets/audio/working.wav" id="11_dkvxs"]
+[ext_resource type="FontFile" uid="uid://cf7ocurslf3ii" path="res://assets/font/VonwaonBitmap-12px.ttf" id="12_iq2l8"]
+[ext_resource type="Texture2D" uid="uid://bld81125kafun" path="res://assets/ui/dialogue/dialogue.png" id="13_5hdo1"]
+[ext_resource type="Script" path="res://scripts/office_page/float_tips.gd" id="14_sdejl"]
+[ext_resource type="PackedScene" uid="uid://dhqyl5sjn5rva" path="res://scenes/ui/floating_tips_2.tscn" id="15_a218p"]
+[ext_resource type="Texture2D" uid="uid://ckba7nvilnmi1" path="res://assets/npc/npc_1.png" id="16_ng82h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hmsyy"]
+texture = ExtResource("4_kyakc")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r46fs"]
+texture = ExtResource("5_wwd7q")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_852l7"]
+texture = ExtResource("4_kyakc")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u66rp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_atktf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o8j0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6cdkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_160ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_y53lo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_642ob"]
+texture = ExtResource("13_5hdo1")
+texture_margin_left = 12.0
+texture_margin_top = 18.0
+texture_margin_right = 12.0
+texture_margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5bhxc"]
+texture = ExtResource("5_wwd7q")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2i8c8"]
+texture = ExtResource("4_kyakc")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a55w7"]
+texture = ExtResource("13_5hdo1")
+texture_margin_left = 12.0
+texture_margin_top = 18.0
+texture_margin_right = 12.0
+texture_margin_bottom = 22.0
+
+[node name="office_page" type="Node2D"]
+script = ExtResource("1_l0n0g")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ekmfp")
+
+[node name="Main" parent="." instance=ExtResource("3_tt10f")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1280.0
+offset_bottom = 720.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="main_score" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "演讲得分："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="clothes_score" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "服装得分："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="energy_score" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "状态得分："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="total_score" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "总共得分："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exp_and_gold" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "经验值：金币："
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="advice" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_r46fs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hmsyy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hmsyy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "建议"
+
+[node name="continue" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_r46fs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hmsyy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hmsyy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "继续"
+
+[node name="Advice" type="RichTextLabel" parent="."]
+visible = false
+custom_minimum_size = Vector2(640, 360)
+offset_left = 320.0
+offset_top = 77.0
+offset_right = 960.0
+offset_bottom = 511.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_852l7")
+scroll_following = true
+autowrap_mode = 1
+
+[node name="close_advice_buttton" type="TextureButton" parent="Advice"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_top = 1.0
+offset_right = -5.0
+offset_bottom = 41.0
+grow_horizontal = 0
+texture_normal = ExtResource("6_v610a")
+stretch_mode = 0
+
+[node name="working" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(640, 320)
+sprite_frames = SubResource("SpriteFrames_u66rp")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="working"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -372.0
+offset_top = -257.0
+offset_right = -202.0
+offset_bottom = -189.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "收集直播数据中！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="working_wav" type="AudioStreamPlayer" parent="working"]
+stream = ExtResource("11_dkvxs")
+
+[node name="start_speech" type="Button" parent="."]
+visible = false
+offset_left = 306.0
+offset_top = 500.0
+offset_right = 498.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_r46fs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hmsyy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hmsyy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "准备完成"
+
+[node name="judge_talk" type="Node2D" parent="."]
+visible = false
+
+[node name="speech" type="Label" parent="judge_talk"]
+offset_left = 282.0
+offset_top = 384.0
+offset_right = 558.0
+offset_bottom = 499.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_iq2l8")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_642ob")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Timer" type="Timer" parent="judge_talk"]
+wait_time = 2.0
+
+[node name="Submit" type="Button" parent="."]
+visible = false
+offset_left = 544.0
+offset_top = 451.0
+offset_right = 736.0
+offset_bottom = 544.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_5bhxc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2i8c8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2i8c8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2i8c8")
+text = "回去休息"
+
+[node name="Task_panel" type="RichTextLabel" parent="."]
+visible = false
+custom_minimum_size = Vector2(640, 360)
+offset_left = 70.0
+offset_top = 77.0
+offset_right = 710.0
+offset_bottom = 437.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+bbcode_enabled = true
+text = "一缸水，用去1／2和5桶，还剩30%，这缸水有多少桶？"
+autowrap_mode = 1
+
+[node name="fail_back" type="Button" parent="."]
+visible = false
+offset_left = 556.0
+offset_top = 451.0
+offset_right = 748.0
+offset_bottom = 544.0
+theme_override_colors/font_hover_pressed_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_5bhxc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2i8c8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2i8c8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2i8c8")
+text = "回去工作"
+
+[node name="float_tips" type="Node2D" parent="."]
+visible = false
+position = Vector2(622, 369)
+script = ExtResource("14_sdejl")
+damage_node = ExtResource("15_a218p")
+
+[node name="Timer" type="Timer" parent="float_tips"]
+wait_time = 5.0
+
+[node name="npc_panel" type="TextureRect" parent="."]
+visible = false
+offset_left = 739.0
+offset_top = 227.0
+offset_right = 991.0
+offset_bottom = 675.0
+texture = ExtResource("16_ng82h")
+
+[node name="speech" type="RichTextLabel" parent="npc_panel"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = -234.0
+offset_right = 527.0
+offset_bottom = 175.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("12_iq2l8")
+theme_override_font_sizes/normal_font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_a55w7")
+bbcode_enabled = true
+autowrap_mode = 1
+
+[node name="uploading_file" type="Label" parent="."]
+visible = false
+offset_left = 560.0
+offset_top = 20.0
+offset_right = 720.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "请稍等！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/advice" to="Main" method="_on_advice_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Advice/close_advice_buttton" to="Main" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="start_speech" to="." method="_on_start_speech_pressed"]
+[connection signal="timeout" from="judge_talk/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Submit" to="Main" method="_on_submit_pressed"]
+[connection signal="pressed" from="fail_back" to="Main" method="_on_fail_back_pressed"]
+[connection signal="visibility_changed" from="float_tips" to="float_tips" method="_on_visibility_changed"]
+[connection signal="timeout" from="float_tips/Timer" to="float_tips" method="_on_timer_timeout"]
+
+[editable path="Main"]

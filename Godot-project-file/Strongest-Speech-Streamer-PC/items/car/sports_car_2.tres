@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bcsm2a2tydn3b"]
+
+[ext_resource type="Texture2D" uid="uid://c2r6py6lhplcc" path="res://assets/items/car/key.png" id="1_3fos3"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_fwf4e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_legqm"]
+atlas = ExtResource("1_3fos3")
+region = Rect2(192, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_fwf4e")
+item_name = "R8"
+stackable = false
+item_texture = SubResource("AtlasTexture_legqm")
+description = "超级超级酷的跑车！（装备后，获得大量金币加成）"
+item_max_amount = 0
+group_name = "equipment"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 5
+equipment_value = 7
+price = 10000
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

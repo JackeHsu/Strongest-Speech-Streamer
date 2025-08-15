@@ -1,0 +1,4 @@
+join npc_1 center
+npc_1: 看你今天怎么有点[wave amp=50 freq=5]没精神[/wave]啊，是不是昨天没休息好。
+npc_1: 待会儿[color=#FF0000]开完直播[/color]快去休息下吧！
+leave npc_1

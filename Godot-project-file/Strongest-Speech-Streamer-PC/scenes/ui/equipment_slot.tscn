@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8o0jmh0cx1oh"]
+
+[ext_resource type="FontFile" uid="uid://cf7ocurslf3ii" path="res://assets/font/VonwaonBitmap-12px.ttf" id="1_1h08y"]
+[ext_resource type="Script" path="res://scripts/ui/equipment_slot.gd" id="1_43h2f"]
+[ext_resource type="Texture2D" uid="uid://buunqmuwxcpqs" path="res://assets/ui/Inventory_select.png" id="4_vau7j"]
+
+[node name="equipment_slot" type="Control"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(3, 3)
+script = ExtResource("1_43h2f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="tr_slot" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 9.0
+offset_right = 26.0
+offset_bottom = 29.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_1h08y")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="select" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_vau7j")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

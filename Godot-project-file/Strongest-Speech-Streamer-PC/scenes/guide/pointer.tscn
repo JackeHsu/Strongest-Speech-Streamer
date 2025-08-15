@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://drg8scqpg4jky"]
+
+[ext_resource type="Script" path="res://scripts/guide/pointer.gd" id="1_tp6tt"]
+[ext_resource type="Texture2D" uid="uid://b24ahmo0w64i6" path="res://assets/ui/pointer.png" id="2_0nxjc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbpcd"]
+atlas = ExtResource("2_0nxjc")
+region = Rect2(0, 0, 32, 32)
+
+[node name="Pointer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1240.0
+offset_bottom = -680.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_tp6tt")
+
+[node name="hand" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_fbpcd")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

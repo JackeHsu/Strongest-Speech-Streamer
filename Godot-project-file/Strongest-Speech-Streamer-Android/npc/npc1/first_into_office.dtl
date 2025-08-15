@@ -1,0 +1,8 @@
+join npc_1 center
+npc_1: <你好！/嗨！/早上好！>新主播，今天你是第一次上班吧！
+npc_1: 是不是感觉有点[wave amp=50 freq=5]紧张。[/wave]
+npc_1: [color=#00FF00]放轻松一些[/color]，你很快就会适应的！
+npc_1: 来吧！这里有个[color=#FF0000]直播任务[/color]交给你。
+npc_1: 你准备好了点击[color=#FF0000]准备完成[/color]就可以[color=#FF0000]直播演讲了[/color]。
+leave npc_1
+[signal arg="finish_dialogue"]

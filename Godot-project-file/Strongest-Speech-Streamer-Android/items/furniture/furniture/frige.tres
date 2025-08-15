@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://0l3rudmpj87b"]
+
+[ext_resource type="Texture2D" uid="uid://kmfj10o6ax4u" path="res://assets/home/item/normal_item/normal_item.png" id="1_l0ivu"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_nxlrt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbnm8"]
+atlas = ExtResource("1_l0ivu")
+region = Rect2(590, 328, 36, 74)
+
+[resource]
+script = ExtResource("2_nxlrt")
+item_name = "冰箱"
+stackable = true
+item_texture = SubResource("AtlasTexture_vbnm8")
+description = "非常实用的冰箱！"
+item_max_amount = 99
+group_name = "furniture"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 1000
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

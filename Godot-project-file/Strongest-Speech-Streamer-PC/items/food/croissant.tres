@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dq5dbdyjp0cn3"]
+
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_jw4g5"]
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_r02h1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbgk4"]
+atlas = ExtResource("1_r02h1")
+region = Rect2(64, 64, 32, 32)
+
+[resource]
+script = ExtResource("1_jw4g5")
+item_name = "煎蛋牛角包"
+stackable = true
+item_texture = SubResource("AtlasTexture_fbgk4")
+description = "作为早餐非常合适的现烤煎蛋牛角包！（体力+20，获得少量经验加成）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 20
+exp_buff_value = 0.15
+gold_buff_value = 0.0
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 75
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

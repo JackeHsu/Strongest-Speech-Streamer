@@ -1,0 +1,115 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctki77lbi7j6d"]
+
+[ext_resource type="Script" path="res://scripts/ui/shop_slot.gd" id="1_p8c4s"]
+[ext_resource type="FontFile" uid="uid://cf7ocurslf3ii" path="res://assets/font/VonwaonBitmap-12px.ttf" id="2_5xv14"]
+[ext_resource type="Texture2D" uid="uid://buunqmuwxcpqs" path="res://assets/ui/Inventory_select.png" id="3_yy0hr"]
+[ext_resource type="Texture2D" uid="uid://cnmt67s0q0mo1" path="res://assets/Inventory_background.png" id="4_4r26k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tu445"]
+texture = ExtResource("4_4r26k")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[node name="shop_slot" type="Control"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(3, 3)
+script = ExtResource("1_p8c4s")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+visible = false
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 9.0
+offset_right = 26.0
+offset_bottom = 29.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_5xv14")
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="select" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_yy0hr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 134.0
+offset_bottom = 302.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = 0
+
+[node name="item_name" type="Label" parent="VBoxContainer"]
+z_index = 10
+custom_minimum_size = Vector2(124, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_5xv14")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_tu445")
+text = "物品名称：初始西裤"
+autowrap_mode = 1
+text_direction = 1
+
+[node name="item_price" type="Label" parent="VBoxContainer"]
+z_index = 10
+custom_minimum_size = Vector2(124, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_5xv14")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_tu445")
+text = "物品价格：初始西裤"
+autowrap_mode = 1
+text_direction = 1
+
+[node name="describe" type="Label" parent="VBoxContainer"]
+z_index = 10
+custom_minimum_size = Vector2(124, 144)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_5xv14")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_tu445")
+text = "物品名称：初始西裤"
+autowrap_mode = 1
+text_direction = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

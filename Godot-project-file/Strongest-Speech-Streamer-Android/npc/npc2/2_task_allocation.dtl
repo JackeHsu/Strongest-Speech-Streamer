@@ -1,0 +1,5 @@
+join npc_2 center
+npc_2: <你好啊！/嗨！/早上好呀！>昨天过的怎么样？
+npc_2: 今天又布置新的[color=#FF0000]直播任务[/color]了。
+npc_2: [shake amp=50 freq=5]加油！加油！[/shake]
+leave 

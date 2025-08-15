@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv6424mh27ux7"]
+
+[ext_resource type="Texture2D" uid="uid://bt7e70s08m0fo" path="res://scenes/home_builder/item/interact_item/bed.png" id="1_0an6e"]
+[ext_resource type="Script" path="res://scenes/home_builder/item/home_item_3.gd" id="2_twvbs"]
+
+[node name="Item" type="Sprite2D"]
+texture = ExtResource("1_0an6e")
+script = ExtResource("2_twvbs")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="OK" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0, 1, 0.0862745, 1)
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Deny" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 0, 0, 1)
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

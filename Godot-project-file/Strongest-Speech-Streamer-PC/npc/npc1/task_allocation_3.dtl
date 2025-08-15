@@ -1,0 +1,9 @@
+join npc_1 center
+npc_1: [wave amp=50 freq=5]太好了！[/wave]，过几天就是假期了！
+npc_1: 感觉一听到假期就会很有[shake amp=50 freq=5][color=#FF0000]动力[/color][/shake]呢！
+npc_1: 来吧！让我们完成今天的[color=#00FF00]直播任务[/color]！
+join npc_2 left
+npc_2: [wave amp=50 freq=5]Hello~[/wave]放假要出去哪玩吗？
+npc_1: 那必须去啊！不过，要先把工作完成！
+npc_2: 哈哈哈，那当然啦！
+leave --All--

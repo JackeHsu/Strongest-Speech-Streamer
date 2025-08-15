@@ -1,0 +1,932 @@
+[gd_scene load_steps=210 format=3 uid="uid://smuj0cw4xlfb"]
+
+[ext_resource type="Script" path="res://scripts/ui/shop_ui.gd" id="1_sp1g0"]
+[ext_resource type="Texture2D" uid="uid://bgy2tegbtnst5" path="res://assets/ui/Inventory_background.png" id="2_eucg8"]
+[ext_resource type="Texture2D" uid="uid://bdgsj4u0mps4k" path="res://assets/tilesets/keyboard/close_button.png" id="3_oq18m"]
+[ext_resource type="Texture2D" uid="uid://etuyovlv65md" path="res://assets/ui/Inventory_Slot.png" id="4_g3ab7"]
+[ext_resource type="PackedScene" uid="uid://dcj3uqddsqr6p" path="res://scenes/casesimulator/Case.tscn" id="5_n74p0"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/slot_data.gd" id="6_chnih"]
+[ext_resource type="Resource" uid="uid://b3kfs8erwv006" path="res://items/furniture/furniture/bed/bed_3.tres" id="8_2o1jm"]
+[ext_resource type="Resource" uid="uid://da48qn8prrfd4" path="res://items/furniture/furniture/bed/bed_2.tres" id="8_g0oxm"]
+[ext_resource type="Resource" uid="uid://dfu484lv1b4a" path="res://items/furniture/furniture/bed/bed_1.tres" id="9_acylq"]
+[ext_resource type="Resource" uid="uid://u50opbligxnl" path="res://items/furniture/furniture/bed/bed_5.tres" id="9_x8r8s"]
+[ext_resource type="Resource" uid="uid://cr41x666bkwqs" path="res://items/furniture/furniture/mirror_1.tres" id="10_r4ds2"]
+[ext_resource type="Resource" uid="uid://62atdx4pfvmp" path="res://items/furniture/furniture/bed/bed_4.tres" id="10_y7wln"]
+[ext_resource type="Resource" uid="uid://ynb8pwrh4wow" path="res://items/furniture/wall/wall_0.tres" id="11_da1dm"]
+[ext_resource type="Resource" uid="uid://doh2kegyatx4e" path="res://items/furniture/furniture/cupboard.tres" id="11_o6le5"]
+[ext_resource type="Resource" uid="uid://b4u6wq8q3s3ys" path="res://items/furniture/furniture/cabinet/cabinet_2.tres" id="13_cmjif"]
+[ext_resource type="Resource" uid="uid://c776n3aarnoy0" path="res://items/furniture/furniture/closet.tres" id="13_hemh7"]
+[ext_resource type="Resource" uid="uid://becxn6ya25id6" path="res://items/furniture/ground/floor_5.tres" id="14_5pmtx"]
+[ext_resource type="Resource" uid="uid://c2e2f5rk86q1b" path="res://items/furniture/furniture/cabinet/cabinet_3.tres" id="14_65e5a"]
+[ext_resource type="Resource" uid="uid://c012ynic3l4sq" path="res://items/furniture/furniture/cabinet/cabinet_4.tres" id="15_cwbg8"]
+[ext_resource type="Resource" uid="uid://boqhujpmxtthe" path="res://items/furniture/ground/floor_0.tres" id="15_emkob"]
+[ext_resource type="Resource" uid="uid://f81xv8qbrh10" path="res://items/furniture/furniture/light/light_2.tres" id="17_45uld"]
+[ext_resource type="Resource" uid="uid://daodfitata276" path="res://items/furniture/furniture/light/light_3.tres" id="18_7bql2"]
+[ext_resource type="Resource" uid="uid://dbuo5fmo2uabx" path="res://items/furniture/furniture/light/light_4.tres" id="19_x777x"]
+[ext_resource type="Resource" uid="uid://kwq3ce6orvfj" path="res://items/furniture/furniture/light/light_5.tres" id="20_bmpkm"]
+[ext_resource type="Resource" uid="uid://ct52nsmb87i56" path="res://items/furniture/furniture/plant/plant_1.tres" id="21_okcdb"]
+[ext_resource type="Resource" uid="uid://dn8ohk7hhmsht" path="res://items/furniture/furniture/plant/plant_2.tres" id="22_udbbk"]
+[ext_resource type="Resource" uid="uid://62ugf8bwla8w" path="res://items/furniture/furniture/plant/plant_3.tres" id="23_d5sqs"]
+[ext_resource type="Resource" uid="uid://cppfdlycrsh7h" path="res://items/furniture/furniture/plant/plant_4.tres" id="24_auxrl"]
+[ext_resource type="Resource" uid="uid://bwyigcn8u84bk" path="res://items/furniture/furniture/plant/plant_5.tres" id="25_wpupp"]
+[ext_resource type="Resource" uid="uid://bjyq6v7fccvn4" path="res://items/furniture/furniture/plant/plant_6.tres" id="26_clovq"]
+[ext_resource type="Resource" uid="uid://dwbvlmv3nssme" path="res://items/furniture/furniture/cabinet/cabinet_1.tres" id="34_4738w"]
+[ext_resource type="Resource" uid="uid://drn60qq458ecl" path="res://items/furniture/ground/floor_1.tres" id="34_if4ga"]
+[ext_resource type="Resource" uid="uid://cu0odgv1vphvh" path="res://items/furniture/ground/floor_2.tres" id="35_1nlim"]
+[ext_resource type="Resource" uid="uid://bcxw8v65gngld" path="res://items/furniture/furniture/light/light_1.tres" id="35_ndu3g"]
+[ext_resource type="Resource" uid="uid://dau0nxblatd7j" path="res://items/furniture/ground/floor_3.tres" id="36_dkc7e"]
+[ext_resource type="Resource" uid="uid://bc0itnjh1krk1" path="res://items/furniture/ground/floor_4.tres" id="37_t3uu2"]
+[ext_resource type="Resource" uid="uid://cxj7pusnsk88q" path="res://items/furniture/ground/floor_6.tres" id="39_c04dp"]
+[ext_resource type="Resource" uid="uid://ba8jfguyu0cs6" path="res://items/furniture/ground/floor_7.tres" id="40_s8boe"]
+[ext_resource type="Resource" uid="uid://buxpiyevbtsbf" path="res://items/furniture/ground/floor_8.tres" id="41_2ue5m"]
+[ext_resource type="Resource" uid="uid://lhx5joh64yj2" path="res://items/furniture/furniture/plant/plant_7.tres" id="41_oookt"]
+[ext_resource type="Resource" uid="uid://bqf1lwbp42e8t" path="res://items/furniture/furniture/sofa/sofa_1.tres" id="42_kdfml"]
+[ext_resource type="Resource" uid="uid://cdyuly16hrl2p" path="res://items/furniture/ground/floor_9.tres" id="42_yc1y5"]
+[ext_resource type="Resource" uid="uid://cc7owopjhpir" path="res://items/furniture/ground/floor_10.tres" id="43_h0jis"]
+[ext_resource type="Resource" uid="uid://bbuvt2kpemqck" path="res://items/furniture/furniture/sofa/sofa_2.tres" id="43_xf374"]
+[ext_resource type="Resource" uid="uid://wui3dhjrwkl7" path="res://items/car/normal_car_0.tres" id="44_aeom5"]
+[ext_resource type="Resource" uid="uid://bxs5gc16qfd1o" path="res://items/furniture/furniture/sofa/sofa_3.tres" id="44_puo1p"]
+[ext_resource type="Resource" uid="uid://cplxb5kpf3y6a" path="res://items/furniture/furniture/sofa/sofa_4.tres" id="45_cynki"]
+[ext_resource type="Resource" uid="uid://duqya4uaeeyc1" path="res://items/car/normal_car_1.tres" id="45_qv3xy"]
+[ext_resource type="Resource" uid="uid://dnhf83hjlyddk" path="res://items/furniture/furniture/sofa/sofa_5.tres" id="46_a0chu"]
+[ext_resource type="Resource" uid="uid://bplidwg4821gh" path="res://items/furniture/toy/toy_5.tres" id="46_sm883"]
+[ext_resource type="Resource" uid="uid://cs8w6ojhayddw" path="res://items/furniture/furniture/sofa/sofa_6.tres" id="47_mauve"]
+[ext_resource type="Resource" uid="uid://bw0shjmfwian7" path="res://items/furniture/furniture/sofa/sofa_7.tres" id="48_28t2v"]
+[ext_resource type="Resource" uid="uid://sy21cie8ehcr" path="res://items/furniture/furniture/sofa/sofa_8.tres" id="49_x26cr"]
+[ext_resource type="Resource" uid="uid://enwkgux1s37d" path="res://items/furniture/furniture/stool/stool_1.tres" id="50_nqmmv"]
+[ext_resource type="Resource" uid="uid://b5wm087wr0pv7" path="res://items/furniture/furniture/stool/stool_2.tres" id="51_mdneg"]
+[ext_resource type="Resource" uid="uid://b6pitk5itw30k" path="res://items/furniture/furniture/stool/stool_3.tres" id="52_vayc7"]
+[ext_resource type="Resource" uid="uid://cetvvlw6wy8eq" path="res://items/furniture/furniture/stool/stool_4.tres" id="53_byw3j"]
+[ext_resource type="Resource" uid="uid://ctxplow0fm55p" path="res://items/furniture/furniture/stool/stool_5.tres" id="54_wtqu0"]
+[ext_resource type="Resource" uid="uid://dgjv1t8o86o6h" path="res://items/furniture/furniture/stool/stool_6.tres" id="55_y8ow2"]
+[ext_resource type="Resource" uid="uid://b0iggn6dsoi7m" path="res://items/furniture/furniture/table/table_1.tres" id="56_xse1g"]
+[ext_resource type="Resource" uid="uid://cdlidg5wtmjmi" path="res://items/furniture/furniture/table/table_2.tres" id="57_cpdej"]
+[ext_resource type="Resource" uid="uid://doha1ytb8j6q7" path="res://items/furniture/furniture/table/table_3.tres" id="58_ayl38"]
+[ext_resource type="Resource" uid="uid://c57ph2khuphwh" path="res://items/furniture/furniture/table/table_4.tres" id="59_6u7p5"]
+[ext_resource type="Resource" uid="uid://cv2bel6bucrh7" path="res://items/furniture/furniture/table/table_5.tres" id="60_5pksp"]
+[ext_resource type="Resource" uid="uid://bbkpge8ew05nl" path="res://items/furniture/wall/wall_1.tres" id="62_o5xad"]
+[ext_resource type="Resource" uid="uid://bkdhbqe27vt7e" path="res://items/furniture/wall/wall_2.tres" id="63_kdrai"]
+[ext_resource type="Resource" uid="uid://dgrr4ja1s68qh" path="res://items/furniture/wall/wall_3.tres" id="64_edd4p"]
+[ext_resource type="Resource" uid="uid://nod8e248yu7c" path="res://items/furniture/wall/wall_4.tres" id="65_tfqiv"]
+[ext_resource type="Resource" uid="uid://sws1fugrdkeo" path="res://items/furniture/wall/wall_5.tres" id="66_s05yd"]
+[ext_resource type="Resource" uid="uid://nk2auqurh405" path="res://items/furniture/wall/wall_6.tres" id="67_ur5gn"]
+[ext_resource type="Resource" uid="uid://d301nxu220lry" path="res://items/furniture/wall/wall_7.tres" id="68_4jyfv"]
+[ext_resource type="Resource" uid="uid://3nn8ci0dunhl" path="res://items/furniture/wall/wall_8.tres" id="69_sg32a"]
+[ext_resource type="Resource" uid="uid://cbdt30bdpw2xr" path="res://items/furniture/wall/wall_9.tres" id="70_kwpe0"]
+[ext_resource type="Resource" uid="uid://da41rp7gvrc2d" path="res://items/furniture/wall/wall_10.tres" id="71_2i3mr"]
+[ext_resource type="Resource" uid="uid://bj4tfgj572s4k" path="res://items/car/sports_car_0.tres" id="72_i7fhp"]
+[ext_resource type="Resource" uid="uid://coha1782rbv8j" path="res://items/furniture/furniture/table/table_6.tres" id="73_qxlxv"]
+[ext_resource type="Resource" uid="uid://c67aa02oyh6mq" path="res://items/furniture/furniture/coffice_machine.tres" id="75_wq5tb"]
+[ext_resource type="Resource" uid="uid://hxgwxo1iguns" path="res://items/furniture/furniture/desk.tres" id="77_raf1p"]
+[ext_resource type="Resource" uid="uid://chk7ks1iyealr" path="res://items/furniture/furniture/fish_tank.tres" id="78_xiqko"]
+[ext_resource type="Resource" uid="uid://0l3rudmpj87b" path="res://items/furniture/furniture/frige.tres" id="79_raxht"]
+[ext_resource type="Resource" uid="uid://740p1xpfl2l0" path="res://items/furniture/furniture/game_machine.tres" id="80_px00j"]
+[ext_resource type="Resource" uid="uid://ccy7qkyu6m4ww" path="res://items/furniture/furniture/globe.tres" id="81_6x31f"]
+[ext_resource type="Resource" uid="uid://c4ws7whs0njhx" path="res://items/furniture/furniture/microwave.tres" id="82_sg3sn"]
+[ext_resource type="Resource" uid="uid://c8i4nhoorjwh3" path="res://items/furniture/furniture/mirror_2.tres" id="84_cewed"]
+[ext_resource type="Resource" uid="uid://c7q4aa3x14ifh" path="res://items/furniture/furniture/mixer.tres" id="85_do8ex"]
+[ext_resource type="Resource" uid="uid://cgdi32ovu0owl" path="res://items/furniture/furniture/rice_cooker.tres" id="86_ydvqj"]
+[ext_resource type="Resource" uid="uid://03vkqie28ko6" path="res://items/furniture/furniture/shelf.tres" id="87_fnsqp"]
+[ext_resource type="Resource" uid="uid://dsgl2eplv8yjd" path="res://items/furniture/furniture/sink_1.tres" id="88_d2aic"]
+[ext_resource type="Resource" uid="uid://8idqjh3cifry" path="res://items/furniture/furniture/toaster.tres" id="89_xeggj"]
+[ext_resource type="Resource" uid="uid://dp3hjnug2408d" path="res://items/furniture/furniture/TV.tres" id="90_1kdnf"]
+[ext_resource type="Resource" uid="uid://dfm4jphibkcbk" path="res://items/furniture/toilet/bathtub.tres" id="91_bxnub"]
+[ext_resource type="Resource" uid="uid://dog5spsej6ls5" path="res://items/furniture/toilet/closestool.tres" id="92_065do"]
+[ext_resource type="Resource" uid="uid://bxwbglixuvhy0" path="res://items/furniture/toilet/mirror_3.tres" id="93_34etd"]
+[ext_resource type="Resource" uid="uid://dprj1d0m67ju3" path="res://items/furniture/toilet/sink_2.tres" id="94_odkqj"]
+[ext_resource type="Resource" uid="uid://cwlra1ffc6iq5" path="res://items/furniture/toilet/wash_machine.tres" id="95_tn5hy"]
+[ext_resource type="Resource" uid="uid://da8nwds2n3igq" path="res://items/player_clothes/clothes/1_clothes.tres" id="96_ssg71"]
+[ext_resource type="Resource" uid="uid://bofj5qob1ej80" path="res://items/player_clothes/clothes/2_clothes.tres" id="97_8wccm"]
+[ext_resource type="Resource" uid="uid://dpl7chgn7gh2x" path="res://items/player_clothes/clothes/3_clothes.tres" id="98_errdy"]
+[ext_resource type="Resource" uid="uid://b442qlo73tydj" path="res://items/player_clothes/pants/1_pants.tres" id="99_h8h3w"]
+[ext_resource type="Resource" uid="uid://bo21u8dq67a2y" path="res://items/player_clothes/pants/2_pants.tres" id="100_d4eha"]
+[ext_resource type="Resource" uid="uid://c7c71canb7tt2" path="res://items/player_clothes/pants/3_pants.tres" id="101_aq0as"]
+[ext_resource type="Resource" uid="uid://b8pcnl06v7yqe" path="res://items/player_clothes/shoes/1_shoes.tres" id="102_kriwc"]
+[ext_resource type="Resource" uid="uid://sp8jlafxpnv2" path="res://items/player_clothes/shoes/2_shoes.tres" id="103_82axh"]
+[ext_resource type="Resource" uid="uid://iyqdgx68f8j4" path="res://items/player_clothes/shoes/3_shoes.tres" id="104_14ejx"]
+[ext_resource type="Resource" uid="uid://d1yv46ueumb7t" path="res://items/player_clothes/clothes/9_clothes.tres" id="105_vcdjj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qno3w"]
+texture = ExtResource("2_eucg8")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="Resource" id="Resource_15704"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("9_acylq")
+
+[sub_resource type="Resource" id="Resource_fy2h5"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("8_g0oxm")
+
+[sub_resource type="Resource" id="Resource_oip4y"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("8_2o1jm")
+
+[sub_resource type="Resource" id="Resource_jlvge"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("10_y7wln")
+
+[sub_resource type="Resource" id="Resource_sk76i"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("9_x8r8s")
+
+[sub_resource type="Resource" id="Resource_id06s"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("34_4738w")
+
+[sub_resource type="Resource" id="Resource_i1u6o"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("13_cmjif")
+
+[sub_resource type="Resource" id="Resource_ywfo8"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("14_65e5a")
+
+[sub_resource type="Resource" id="Resource_22l25"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("15_cwbg8")
+
+[sub_resource type="Resource" id="Resource_qnbe8"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("35_ndu3g")
+
+[sub_resource type="Resource" id="Resource_y7xu4"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("17_45uld")
+
+[sub_resource type="Resource" id="Resource_2lkfy"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("18_7bql2")
+
+[sub_resource type="Resource" id="Resource_xt3nt"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("19_x777x")
+
+[sub_resource type="Resource" id="Resource_aq3wm"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("20_bmpkm")
+
+[sub_resource type="Resource" id="Resource_7anw4"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("21_okcdb")
+
+[sub_resource type="Resource" id="Resource_6a8tm"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("22_udbbk")
+
+[sub_resource type="Resource" id="Resource_tffes"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("23_d5sqs")
+
+[sub_resource type="Resource" id="Resource_v0osf"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("24_auxrl")
+
+[sub_resource type="Resource" id="Resource_kml2e"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("25_wpupp")
+
+[sub_resource type="Resource" id="Resource_mow0n"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("26_clovq")
+
+[sub_resource type="Resource" id="Resource_4rsw8"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("15_emkob")
+
+[sub_resource type="Resource" id="Resource_5qgfi"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("34_if4ga")
+
+[sub_resource type="Resource" id="Resource_6kay4"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("35_1nlim")
+
+[sub_resource type="Resource" id="Resource_0rb51"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("36_dkc7e")
+
+[sub_resource type="Resource" id="Resource_7aaj8"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("37_t3uu2")
+
+[sub_resource type="Resource" id="Resource_evxth"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("14_5pmtx")
+
+[sub_resource type="Resource" id="Resource_xmjd3"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("39_c04dp")
+
+[sub_resource type="Resource" id="Resource_bn24t"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("40_s8boe")
+
+[sub_resource type="Resource" id="Resource_8k8bi"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("41_2ue5m")
+
+[sub_resource type="Resource" id="Resource_nr61w"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("42_yc1y5")
+
+[sub_resource type="Resource" id="Resource_ls3al"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("43_h0jis")
+
+[sub_resource type="Resource" id="Resource_1vg6l"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("44_aeom5")
+
+[sub_resource type="Resource" id="Resource_ax4tn"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("45_qv3xy")
+
+[sub_resource type="Resource" id="Resource_noi1q"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("46_sm883")
+
+[sub_resource type="Resource" id="Resource_wio48"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("41_oookt")
+
+[sub_resource type="Resource" id="Resource_4c7u4"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("42_kdfml")
+
+[sub_resource type="Resource" id="Resource_javs2"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("43_xf374")
+
+[sub_resource type="Resource" id="Resource_gj2ct"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("44_puo1p")
+
+[sub_resource type="Resource" id="Resource_mxfic"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("45_cynki")
+
+[sub_resource type="Resource" id="Resource_37n1a"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("46_a0chu")
+
+[sub_resource type="Resource" id="Resource_7h1cm"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("47_mauve")
+
+[sub_resource type="Resource" id="Resource_7tgbh"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("48_28t2v")
+
+[sub_resource type="Resource" id="Resource_qngoh"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("49_x26cr")
+
+[sub_resource type="Resource" id="Resource_wswb4"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("50_nqmmv")
+
+[sub_resource type="Resource" id="Resource_wkc0w"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("51_mdneg")
+
+[sub_resource type="Resource" id="Resource_vx5ou"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("52_vayc7")
+
+[sub_resource type="Resource" id="Resource_8uvk5"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("53_byw3j")
+
+[sub_resource type="Resource" id="Resource_hhpon"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("54_wtqu0")
+
+[sub_resource type="Resource" id="Resource_6ebrg"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("55_y8ow2")
+
+[sub_resource type="Resource" id="Resource_md7h2"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("56_xse1g")
+
+[sub_resource type="Resource" id="Resource_bests"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("57_cpdej")
+
+[sub_resource type="Resource" id="Resource_rcoan"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("58_ayl38")
+
+[sub_resource type="Resource" id="Resource_c8awb"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("59_6u7p5")
+
+[sub_resource type="Resource" id="Resource_2rakr"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("60_5pksp")
+
+[sub_resource type="Resource" id="Resource_4jwt7"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("11_da1dm")
+
+[sub_resource type="Resource" id="Resource_h5jyy"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("62_o5xad")
+
+[sub_resource type="Resource" id="Resource_hl8f7"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("63_kdrai")
+
+[sub_resource type="Resource" id="Resource_x1w4g"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("64_edd4p")
+
+[sub_resource type="Resource" id="Resource_1ptij"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("65_tfqiv")
+
+[sub_resource type="Resource" id="Resource_b668h"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("66_s05yd")
+
+[sub_resource type="Resource" id="Resource_eop8a"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("67_ur5gn")
+
+[sub_resource type="Resource" id="Resource_urq4d"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("68_4jyfv")
+
+[sub_resource type="Resource" id="Resource_ce5kv"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("69_sg32a")
+
+[sub_resource type="Resource" id="Resource_go650"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("70_kwpe0")
+
+[sub_resource type="Resource" id="Resource_yqffd"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("71_2i3mr")
+
+[sub_resource type="Resource" id="Resource_2xbti"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("44_aeom5")
+
+[sub_resource type="Resource" id="Resource_jl43h"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("45_qv3xy")
+
+[sub_resource type="Resource" id="Resource_5ib4p"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("72_i7fhp")
+
+[sub_resource type="Resource" id="Resource_dswp4"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("73_qxlxv")
+
+[sub_resource type="Resource" id="Resource_a00he"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("13_hemh7")
+
+[sub_resource type="Resource" id="Resource_vdfph"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("75_wq5tb")
+
+[sub_resource type="Resource" id="Resource_34fo6"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("11_o6le5")
+
+[sub_resource type="Resource" id="Resource_jve4t"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("77_raf1p")
+
+[sub_resource type="Resource" id="Resource_pneyp"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("78_xiqko")
+
+[sub_resource type="Resource" id="Resource_lyj2r"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("79_raxht")
+
+[sub_resource type="Resource" id="Resource_cqdva"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("80_px00j")
+
+[sub_resource type="Resource" id="Resource_xbk55"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("81_6x31f")
+
+[sub_resource type="Resource" id="Resource_23m2n"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("82_sg3sn")
+
+[sub_resource type="Resource" id="Resource_iu8jg"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("10_r4ds2")
+
+[sub_resource type="Resource" id="Resource_8bdwm"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("84_cewed")
+
+[sub_resource type="Resource" id="Resource_7fif5"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("85_do8ex")
+
+[sub_resource type="Resource" id="Resource_g807f"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("86_ydvqj")
+
+[sub_resource type="Resource" id="Resource_385rg"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("87_fnsqp")
+
+[sub_resource type="Resource" id="Resource_rnrog"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("88_d2aic")
+
+[sub_resource type="Resource" id="Resource_e6lbg"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("89_xeggj")
+
+[sub_resource type="Resource" id="Resource_ilpyk"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("90_1kdnf")
+
+[sub_resource type="Resource" id="Resource_m3lgc"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("91_bxnub")
+
+[sub_resource type="Resource" id="Resource_2gb1w"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("92_065do")
+
+[sub_resource type="Resource" id="Resource_21136"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("93_34etd")
+
+[sub_resource type="Resource" id="Resource_q0c0u"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("94_odkqj")
+
+[sub_resource type="Resource" id="Resource_y1c4c"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("95_tn5hy")
+
+[sub_resource type="Resource" id="Resource_17rtw"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("96_ssg71")
+
+[sub_resource type="Resource" id="Resource_626xp"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("97_8wccm")
+
+[sub_resource type="Resource" id="Resource_nuiio"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("98_errdy")
+
+[sub_resource type="Resource" id="Resource_8rbs1"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("99_h8h3w")
+
+[sub_resource type="Resource" id="Resource_81eie"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("100_d4eha")
+
+[sub_resource type="Resource" id="Resource_r0gy4"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("101_aq0as")
+
+[sub_resource type="Resource" id="Resource_81xkd"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("102_kriwc")
+
+[sub_resource type="Resource" id="Resource_sy1ex"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("103_82axh")
+
+[sub_resource type="Resource" id="Resource_6cpe7"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("104_14ejx")
+
+[sub_resource type="Resource" id="Resource_1lefe"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("44_aeom5")
+
+[sub_resource type="Resource" id="Resource_o8jkk"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("45_qv3xy")
+
+[sub_resource type="Resource" id="Resource_q1ae7"]
+script = ExtResource("6_chnih")
+quantity = 1
+item_data = ExtResource("105_vcdjj")
+
+[node name="shop" type="Control" node_paths=PackedStringArray("chests")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sp1g0")
+chests = [NodePath("Case"), NodePath("Case2"), NodePath("Case3")]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = -233.0
+offset_right = -39.0
+offset_bottom = -90.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(3, 3)
+theme_override_styles/panel = SubResource("StyleBoxTexture_qno3w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = -3
+theme_override_constants/margin_bottom = -5
+
+[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/VBoxContainer/MarginContainer2/HFlowContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_oq18m")
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.376471, 0.247059, 1)
+theme_override_font_sizes/font_size = 15
+text = "商店"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = -1
+theme_override_constants/v_separation = -1
+columns = 8
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect4" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect5" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect6" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect7" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect8" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect9" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect10" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect11" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect12" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect13" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect14" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect15" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect16" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect17" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect18" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect19" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect20" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect21" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect22" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect23" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect24" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect25" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect26" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect27" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect28" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect29" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect30" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect31" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect32" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect33" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect34" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect35" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect36" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect37" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect38" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect39" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect40" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect41" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect42" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect43" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect44" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect45" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect46" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect47" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="TextureRect48" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_g3ab7")
+
+[node name="item_grid" type="GridContainer" parent="PanelContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = -1
+theme_override_constants/v_separation = -1
+columns = 8
+
+[node name="Case" parent="." instance=ExtResource("5_n74p0")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -280.0
+offset_top = -232.0
+offset_right = -220.0
+offset_bottom = -172.0
+blue_items = Array[ExtResource("6_chnih")]([SubResource("Resource_15704"), SubResource("Resource_fy2h5"), SubResource("Resource_oip4y"), SubResource("Resource_jlvge"), SubResource("Resource_sk76i"), SubResource("Resource_id06s"), SubResource("Resource_i1u6o"), SubResource("Resource_ywfo8"), SubResource("Resource_22l25"), SubResource("Resource_qnbe8"), SubResource("Resource_y7xu4"), SubResource("Resource_2lkfy"), SubResource("Resource_xt3nt"), SubResource("Resource_aq3wm"), SubResource("Resource_7anw4"), SubResource("Resource_6a8tm"), SubResource("Resource_tffes"), SubResource("Resource_v0osf"), SubResource("Resource_kml2e"), SubResource("Resource_mow0n")])
+purple_items = Array[ExtResource("6_chnih")]([SubResource("Resource_4rsw8"), SubResource("Resource_5qgfi"), SubResource("Resource_6kay4"), SubResource("Resource_0rb51"), SubResource("Resource_7aaj8"), SubResource("Resource_evxth"), SubResource("Resource_xmjd3"), SubResource("Resource_bn24t"), SubResource("Resource_8k8bi"), SubResource("Resource_nr61w"), SubResource("Resource_ls3al")])
+red_items = Array[ExtResource("6_chnih")]([SubResource("Resource_1vg6l"), SubResource("Resource_ax4tn")])
+special_items = Array[ExtResource("6_chnih")]([SubResource("Resource_noi1q")])
+
+[node name="Case2" parent="." instance=ExtResource("5_n74p0")]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -280.0
+offset_top = -232.0
+offset_right = -220.0
+offset_bottom = -172.0
+blue_items = Array[ExtResource("6_chnih")]([SubResource("Resource_wio48"), SubResource("Resource_4c7u4"), SubResource("Resource_javs2"), SubResource("Resource_gj2ct"), SubResource("Resource_mxfic"), SubResource("Resource_37n1a"), SubResource("Resource_7h1cm"), SubResource("Resource_7tgbh"), SubResource("Resource_qngoh"), SubResource("Resource_wswb4"), SubResource("Resource_wkc0w"), SubResource("Resource_vx5ou"), SubResource("Resource_8uvk5"), SubResource("Resource_hhpon"), SubResource("Resource_6ebrg"), SubResource("Resource_md7h2"), SubResource("Resource_bests"), SubResource("Resource_rcoan"), SubResource("Resource_c8awb"), SubResource("Resource_2rakr")])
+purple_items = Array[ExtResource("6_chnih")]([SubResource("Resource_4jwt7"), SubResource("Resource_h5jyy"), SubResource("Resource_hl8f7"), SubResource("Resource_x1w4g"), SubResource("Resource_1ptij"), SubResource("Resource_b668h"), SubResource("Resource_eop8a"), SubResource("Resource_urq4d"), SubResource("Resource_ce5kv"), SubResource("Resource_go650"), SubResource("Resource_yqffd")])
+red_items = Array[ExtResource("6_chnih")]([SubResource("Resource_2xbti"), SubResource("Resource_jl43h")])
+special_items = Array[ExtResource("6_chnih")]([SubResource("Resource_5ib4p")])
+
+[node name="Case3" parent="." instance=ExtResource("5_n74p0")]
+visible = false
+layout_mode = 1
+offset_left = -280.0
+offset_top = -232.0
+offset_right = -220.0
+offset_bottom = -172.0
+blue_items = Array[ExtResource("6_chnih")]([SubResource("Resource_dswp4"), SubResource("Resource_a00he"), SubResource("Resource_vdfph"), SubResource("Resource_34fo6"), SubResource("Resource_jve4t"), SubResource("Resource_pneyp"), SubResource("Resource_lyj2r"), SubResource("Resource_cqdva"), SubResource("Resource_xbk55"), SubResource("Resource_23m2n"), SubResource("Resource_iu8jg"), SubResource("Resource_8bdwm"), SubResource("Resource_7fif5"), SubResource("Resource_g807f"), SubResource("Resource_385rg"), SubResource("Resource_rnrog"), SubResource("Resource_e6lbg"), SubResource("Resource_ilpyk"), SubResource("Resource_m3lgc"), SubResource("Resource_2gb1w"), SubResource("Resource_21136"), SubResource("Resource_q0c0u"), SubResource("Resource_y1c4c")])
+purple_items = Array[ExtResource("6_chnih")]([SubResource("Resource_17rtw"), SubResource("Resource_626xp"), SubResource("Resource_nuiio"), SubResource("Resource_8rbs1"), SubResource("Resource_81eie"), SubResource("Resource_r0gy4"), SubResource("Resource_81xkd"), SubResource("Resource_sy1ex"), SubResource("Resource_6cpe7")])
+red_items = Array[ExtResource("6_chnih")]([SubResource("Resource_1lefe"), SubResource("Resource_o8jkk")])
+special_items = Array[ExtResource("6_chnih")]([SubResource("Resource_q1ae7")])
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MarginContainer2/HFlowContainer/TextureButton" to="." method="_on_texture_button_pressed"]

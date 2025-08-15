@@ -1,0 +1,5 @@
+join npc_2 center
+npc_2: 下午要[color=#FF0000]直播演讲[/color]哦！
+npc_2: 待会儿和你详细说一下主题！
+npc_2: 记得提前准备准备！
+leave npc_2

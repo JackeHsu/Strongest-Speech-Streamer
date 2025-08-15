@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://sp8jlafxpnv2"]
+
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_erlcf"]
+[ext_resource type="Texture2D" uid="uid://r4n0tydbt6fw" path="res://assets/items/clothes_icon.png" id="1_jxlqg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_riqpi"]
+atlas = ExtResource("1_jxlqg")
+region = Rect2(64, 64, 32, 32)
+
+[resource]
+script = ExtResource("1_erlcf")
+item_name = "白色皮鞋"
+stackable = false
+item_texture = SubResource("AtlasTexture_riqpi")
+description = "白色西服套装：优雅之巅，非凡之选（装备完整套装大幅提升装备得分）"
+item_max_amount = 0
+group_name = "equipment"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 4
+equipment_value = 2
+price = 750
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

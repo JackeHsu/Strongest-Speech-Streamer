@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://chk7ks1iyealr"]
+
+[ext_resource type="Texture2D" uid="uid://kmfj10o6ax4u" path="res://assets/home/item/normal_item/normal_item.png" id="1_yv7if"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_7krrk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgval"]
+atlas = ExtResource("1_yv7if")
+region = Rect2(592, 226, 48, 46)
+
+[resource]
+script = ExtResource("2_7krrk")
+item_name = "鱼缸"
+stackable = true
+item_texture = SubResource("AtlasTexture_qgval")
+description = "非常好看的鱼缸！"
+item_max_amount = 99
+group_name = "furniture"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 1000
+is_commodity = true
+layer = 2
+source_id = 0
+interactive_type = ""

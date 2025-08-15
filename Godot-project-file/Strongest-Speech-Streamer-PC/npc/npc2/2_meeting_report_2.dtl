@@ -1,0 +1,5 @@
+join npc_2 center
+npc_2: 呀，这么开心啊，看来一定是发生什么好事了吧！[shake amp=50 freq=5]哈哈哈！[/shake]
+npc_2: 待会儿[color=#FF0000]直播完[/color]一定要和我讲讲哦！
+npc_2: 我先去准备了，[wave amp=50 freq=5]拜拜~[/wave]
+leave npc_2

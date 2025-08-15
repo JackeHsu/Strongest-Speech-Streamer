@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtdufhpknuxji"]
+
+[ext_resource type="Script" path="res://scenes/home_builder/ui/Slot.gd" id="1"]
+
+[node name="Slot" type="Panel"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand_mode = 1
+stretch_mode = 6
+
+[connection signal="gui_input" from="." to="." method="_on_Slot_gui_input"]

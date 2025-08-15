@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://cclvmufo3lt0l"]
+
+[ext_resource type="Texture2D" uid="uid://bxbo64bod4k8v" path="res://assets/start_gif/1/启动画面1_1.png" id="1_575b8"]
+[ext_resource type="Script" path="res://scripts/start_gif.gd" id="1_u55qd"]
+[ext_resource type="Texture2D" uid="uid://cvjaot3kxvaaf" path="res://assets/start_gif/1/启动画面1_2.png" id="2_uym76"]
+[ext_resource type="Texture2D" uid="uid://b5vs7rkv7so57" path="res://assets/start_gif/1/启动画面1_3.png" id="3_8agva"]
+[ext_resource type="Texture2D" uid="uid://k1w7yn3rj340" path="res://assets/start_gif/1/启动画面1_4.png" id="4_31w8q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymat4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_575b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uym76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8agva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_31w8q")
+}],
+"loop": false,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u55qd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 320)
+sprite_frames = SubResource("SpriteFrames_ymat4")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b3kfs8erwv006"]
+
+[ext_resource type="Texture2D" uid="uid://kmfj10o6ax4u" path="res://assets/home/item/normal_item/normal_item.png" id="1_qeqmv"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_x2kq7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c4rt"]
+atlas = ExtResource("1_qeqmv")
+region = Rect2(126, 320, 68, 80)
+
+[resource]
+script = ExtResource("2_x2kq7")
+item_name = "双人床1"
+stackable = false
+item_texture = SubResource("AtlasTexture_4c4rt")
+description = "这是一张双人床"
+item_max_amount = 0
+group_name = "interactive"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 800
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = "sleep"

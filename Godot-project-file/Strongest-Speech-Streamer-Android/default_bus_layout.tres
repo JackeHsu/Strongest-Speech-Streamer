@@ -1,0 +1,32 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://c5kb58c76uvsi"]
+
+[sub_resource type="AudioEffectRecord" id="AudioEffectRecord_jeo26"]
+resource_name = "Record"
+
+[sub_resource type="AudioEffectCapture" id="AudioEffectCapture_teijq"]
+resource_name = "Capture"
+buffer_length = 1.0
+
+[resource]
+bus/1/name = &"Record"
+bus/1/solo = false
+bus/1/mute = true
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectRecord_jeo26")
+bus/1/effect/0/enabled = true
+bus/2/name = &"Buffer"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Record"
+bus/3/name = &"Capture"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 0.0
+bus/3/send = &"Buffer"
+bus/3/effect/0/effect = SubResource("AudioEffectCapture_teijq")
+bus/3/effect/0/enabled = true

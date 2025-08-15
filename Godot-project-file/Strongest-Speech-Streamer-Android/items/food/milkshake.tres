@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://benoot7lx1iqp"]
+
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_jjipj"]
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_q34ap"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fgjp"]
+atlas = ExtResource("1_q34ap")
+region = Rect2(192, 64, 32, 32)
+
+[resource]
+script = ExtResource("1_jjipj")
+item_name = "奶昔"
+stackable = true
+item_texture = SubResource("AtlasTexture_6fgjp")
+description = "单独来一杯或者搭配其他零食，都是不错的选择（体力+10，获得少量经验加成，小幅减少金币获得）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 10
+exp_buff_value = 0.15
+gold_buff_value = -0.15
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 90
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

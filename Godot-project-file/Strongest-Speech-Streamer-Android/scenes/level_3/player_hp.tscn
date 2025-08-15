@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://crg6bfugq734a"]
+
+[ext_resource type="Script" path="res://scenes/level_3/player_hp.gd" id="1_7j80i"]
+[ext_resource type="Texture2D" uid="uid://coewkot664uyi" path="res://assets/level_3/world_tileset.png" id="2_pjrcp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkacy"]
+resource_local_to_scene = true
+size = Vector2(14, 11)
+
+[node name="ItemCollsion" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_7j80i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_mkacy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pjrcp")
+region_enabled = true
+region_rect = Rect2(64, 128, 16, 16)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

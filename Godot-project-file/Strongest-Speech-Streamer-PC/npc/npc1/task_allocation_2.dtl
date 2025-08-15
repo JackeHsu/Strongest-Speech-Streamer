@@ -1,0 +1,5 @@
+join npc_1 center
+npc_1: 今天有一个客户来找我们！
+npc_1: 这里是他的[color=#FF0000]需求[/color]！
+npc_1: 你看一下告诉我们要怎么解决！
+leave npc_1

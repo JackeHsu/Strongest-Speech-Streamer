@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddk7ebux3w2c4"]
+
+[ext_resource type="Shader" path="res://shaders/guide_mask.gdshader" id="1_4hdqb"]
+[ext_resource type="Script" path="res://scripts/guide/guide_mask.gd" id="2_j722h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ju0e5"]
+shader = ExtResource("1_4hdqb")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_owk2i"]
+blend_mode = 2
+
+[node name="GuideMask" type="ColorRect"]
+clip_children = 1
+material = SubResource("ShaderMaterial_ju0e5")
+custom_minimum_size = Vector2(1280, 720)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.521569)
+script = ExtResource("2_j722h")
+
+[node name="Mask" type="ColorRect" parent="."]
+material = SubResource("CanvasItemMaterial_owk2i")
+layout_mode = 0
+offset_left = 489.0
+offset_top = 191.0
+offset_right = 742.0
+offset_bottom = 313.0
+mouse_filter = 2

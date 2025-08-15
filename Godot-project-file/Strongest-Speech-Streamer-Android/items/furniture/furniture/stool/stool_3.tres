@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b6pitk5itw30k"]
+
+[ext_resource type="Texture2D" uid="uid://kmfj10o6ax4u" path="res://assets/home/item/normal_item/normal_item.png" id="1_6q5cy"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_birrx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxail"]
+atlas = ExtResource("1_6q5cy")
+region = Rect2(0, 64, 32, 32)
+
+[resource]
+script = ExtResource("2_birrx")
+item_name = "小圆凳"
+stackable = true
+item_texture = SubResource("AtlasTexture_rxail")
+description = "普通的小圆凳"
+item_max_amount = 99
+group_name = "furniture"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 200
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

@@ -1,0 +1,2363 @@
+[gd_scene load_steps=507 format=4 uid="uid://mrfhrvvqflj0"]
+
+[ext_resource type="Script" path="res://scripts/main_page/main_page.gd" id="1_iq6fx"]
+[ext_resource type="Texture2D" uid="uid://c08rsfrq83wbt" path="res://assets/background/sunrise.png" id="1_j6adn"]
+[ext_resource type="Script" path="res://scripts/main_page/control.gd" id="2_3tql7"]
+[ext_resource type="Texture2D" uid="uid://cesix5ibcxrsc" path="res://assets/buildings/Modern_Exteriors_RTU_1_layer_1_32x32.png" id="2_ksuad"]
+[ext_resource type="PackedScene" uid="uid://cqeknhqiynpl2" path="res://scenes/ui/ui_interface.tscn" id="2_w46fe"]
+[ext_resource type="Texture2D" uid="uid://sfsmdky8gi3p" path="res://assets/buildings/office1.png" id="3_hn24x"]
+[ext_resource type="Script" path="res://scripts/main_page/office.gd" id="3_oar3g"]
+[ext_resource type="Shader" path="res://shaders/sprite_outline.gdshader" id="3_u08pq"]
+[ext_resource type="Texture2D" uid="uid://cgrmn57dsptfk" path="res://assets/ui/energy_bar_1.png" id="4_p4lv7"]
+[ext_resource type="Texture2D" uid="uid://khswar02thil" path="res://assets/buildings/shop1.png" id="4_rrdx1"]
+[ext_resource type="Texture2D" uid="uid://vx24gh2v1ian" path="res://assets/ui/exp_bar.png" id="5_3fprx"]
+[ext_resource type="Texture2D" uid="uid://bdysa4nfletay" path="res://assets/ui/energy_bar.png" id="5_ruror"]
+[ext_resource type="Script" path="res://scripts/main_page/shop.gd" id="6_5sbe0"]
+[ext_resource type="Texture2D" uid="uid://n8bad1j1bsk7" path="res://assets/ui/situation/stable.png" id="6_8y54u"]
+[ext_resource type="Script" path="res://scripts/main_page/road.gd" id="8_qyxeg"]
+[ext_resource type="Script" path="res://scripts/start_page/game_paused.gd" id="12_uomvi"]
+[ext_resource type="Texture2D" uid="uid://14kfvo8s13a2" path="res://assets/background/shop.png" id="15_alys3"]
+[ext_resource type="Script" path="res://scripts/main_page/shop_indoor.gd" id="15_jq1ky"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/Inventory_data.gd" id="16_c8532"]
+[ext_resource type="Texture2D" uid="uid://d3lbxvfewm8qx" path="res://assets/background/shop_1.png" id="16_x5y1h"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/slot_data.gd" id="17_2nvb0"]
+[ext_resource type="PackedScene" uid="uid://smuj0cw4xlfb" path="res://scenes/ui/shop.tscn" id="17_riykw"]
+[ext_resource type="FontFile" uid="uid://cf7ocurslf3ii" path="res://assets/font/VonwaonBitmap-12px.ttf" id="17_sjksg"]
+[ext_resource type="PackedScene" uid="uid://dxb68l1s6sob8" path="res://scenes/equipment.tscn" id="18_5lkoe"]
+[ext_resource type="Texture2D" uid="uid://bld81125kafun" path="res://assets/ui/dialogue/dialogue.png" id="18_qmygl"]
+[ext_resource type="PackedScene" uid="uid://diwo8phes7vty" path="res://scenes/player.tscn" id="19_65g3f"]
+[ext_resource type="AudioStream" uid="uid://eyxn762c2dmt" path="res://assets/audio/shop_indoor.wav" id="19_fbi8b"]
+[ext_resource type="Resource" uid="uid://bd6x7kpqojqmm" path="res://items/food/coffee.tres" id="20_ajq2m"]
+[ext_resource type="Resource" uid="uid://vgsjba8i5m42" path="res://items/food/apple.tres" id="20_uld3o"]
+[ext_resource type="Script" path="res://scripts/ui/shop_ui_interface.gd" id="21_3ey0a"]
+[ext_resource type="Resource" uid="uid://k0x4gxkreo3c" path="res://items/food/milk.tres" id="21_gqpct"]
+[ext_resource type="Resource" uid="uid://dvjl1ctcgkvc2" path="res://items/food/watermelon.tres" id="21_hswh4"]
+[ext_resource type="Resource" uid="uid://bl3vf7rcmg7h5" path="res://items/food/orange.tres" id="22_5qhq8"]
+[ext_resource type="Resource" uid="uid://djsfppb1qyk81" path="res://items/food/milktea.tres" id="22_m40jb"]
+[ext_resource type="Resource" uid="uid://bqo0rirm6yc5t" path="res://items/food/cola.tres" id="23_45c4i"]
+[ext_resource type="Resource" uid="uid://c8x32pupaon2a" path="res://items/food/banana.tres" id="23_kh62e"]
+[ext_resource type="Resource" uid="uid://cdbnjck7u16h2" path="res://items/food/sprite.tres" id="24_p2xix"]
+[ext_resource type="Resource" uid="uid://bdm0bwvwcxeat" path="res://items/food/orange_juice.tres" id="25_mf578"]
+[ext_resource type="Resource" uid="uid://v1kh3y7414y3" path="res://items/food/coconut.tres" id="26_2o8np"]
+[ext_resource type="Resource" uid="uid://5xjcoxh5vc3m" path="res://items/food/bread.tres" id="27_hhyah"]
+[ext_resource type="Resource" uid="uid://cquojllfr3pad" path="res://items/food/red_bull.tres" id="27_ycjdd"]
+[ext_resource type="Resource" uid="uid://dn13cnqxxcyyy" path="res://items/food/chocolate.tres" id="28_3tiqk"]
+[ext_resource type="Script" path="res://scripts/ui/popup_location.gd" id="28_rqdsf"]
+[ext_resource type="PackedScene" uid="uid://8u4wvy10ydjr" path="res://scenes/ui/floating_tips.tscn" id="29_xcjq3"]
+[ext_resource type="Resource" uid="uid://da8nwds2n3igq" path="res://items/player_clothes/clothes/1_clothes.tres" id="30_mqm1x"]
+[ext_resource type="Resource" uid="uid://dd2nnipah575t" path="res://items/food/mango.tres" id="30_qveol"]
+[ext_resource type="Resource" uid="uid://b442qlo73tydj" path="res://items/player_clothes/pants/1_pants.tres" id="31_f2e0u"]
+[ext_resource type="Texture2D" uid="uid://crxxny8gh5nr8" path="res://assets/buildings/road_new.png" id="31_irjl4"]
+[ext_resource type="Resource" uid="uid://b65h068kctkw5" path="res://items/food/strawberry.tres" id="31_ospxj"]
+[ext_resource type="Texture2D" uid="uid://47ru5i5x08qa" path="res://assets/button_background_new.png" id="32_n33sa"]
+[ext_resource type="Resource" uid="uid://b8pcnl06v7yqe" path="res://items/player_clothes/shoes/1_shoes.tres" id="32_w380d"]
+[ext_resource type="Texture2D" uid="uid://gp7t0mexx8ec" path="res://assets/buildings/road_block.png" id="32_yigql"]
+[ext_resource type="Texture2D" uid="uid://qjiywcfu6gin" path="res://assets/button_background_new2.png" id="33_83v6n"]
+[ext_resource type="Resource" uid="uid://c8kdn1lh0lx1r" path="res://items/car/bicycle_key.tres" id="33_j2t4b"]
+[ext_resource type="Resource" uid="uid://d0sjhnyqp378j" path="res://items/car/bike_key.tres" id="34_7mqso"]
+[ext_resource type="Resource" uid="uid://bv8gmlnu7ovvn" path="res://items/furniture/toy/toy_1.tres" id="36_ib4g7"]
+[ext_resource type="Resource" uid="uid://c3hii7witwtj1" path="res://items/food/fishball.tres" id="36_y0h2w"]
+[ext_resource type="Resource" uid="uid://dttvwg6jt5x0m" path="res://items/furniture/toy/toy_2.tres" id="37_77p6x"]
+[ext_resource type="Resource" uid="uid://c7hne5f2720we" path="res://items/food/grape.tres" id="37_ushvv"]
+[ext_resource type="Resource" uid="uid://hrsfss7sokce" path="res://items/food/pineapple.tres" id="38_an4h7"]
+[ext_resource type="Resource" uid="uid://b3fwep6pdruun" path="res://items/furniture/draw/draw_2.tres" id="38_aqg4n"]
+[ext_resource type="Resource" uid="uid://bsvaj0nlpremh" path="res://items/furniture/toy/toy_3.tres" id="38_gim4e"]
+[ext_resource type="Resource" uid="uid://benoot7lx1iqp" path="res://items/food/milkshake.tres" id="39_8f41i"]
+[ext_resource type="Resource" uid="uid://bncgo1m58mphx" path="res://items/furniture/toy/toy_4.tres" id="39_bvw8t"]
+[ext_resource type="Resource" uid="uid://dwsr3y04vb7kf" path="res://items/furniture/draw/draw_3.tres" id="39_eka02"]
+[ext_resource type="Resource" uid="uid://dq5dbdyjp0cn3" path="res://items/food/croissant.tres" id="40_3e1md"]
+[ext_resource type="Resource" uid="uid://dcowgp4kfvdoo" path="res://items/furniture/draw/draw_4.tres" id="40_dcyf6"]
+[ext_resource type="Resource" uid="uid://chxjk1oiypfei" path="res://items/furniture/draw/draw_1.tres" id="41_8b22s"]
+[ext_resource type="Resource" uid="uid://740p1xpfl2l0" path="res://items/furniture/furniture/game_machine.tres" id="41_c2rfo"]
+[ext_resource type="Resource" uid="uid://4sxw1siq5raj" path="res://items/food/toast.tres" id="41_k0mpp"]
+[ext_resource type="Resource" uid="uid://wui3dhjrwkl7" path="res://items/car/normal_car_0.tres" id="42_kequg"]
+[ext_resource type="Resource" uid="uid://dfu484lv1b4a" path="res://items/furniture/furniture/bed/bed_1.tres" id="42_nx051"]
+[ext_resource type="Resource" uid="uid://fyis5grlsyhm" path="res://items/food/swiss_roll.tres" id="42_xin3u"]
+[ext_resource type="Resource" uid="uid://dwbvlmv3nssme" path="res://items/furniture/furniture/cabinet/cabinet_1.tres" id="43_d4fp0"]
+[ext_resource type="Resource" uid="uid://duqya4uaeeyc1" path="res://items/car/normal_car_1.tres" id="43_xhnc5"]
+[ext_resource type="Resource" uid="uid://c278ia5jgqadu" path="res://items/food/sushi.tres" id="43_ydklc"]
+[ext_resource type="Resource" uid="uid://bcxw8v65gngld" path="res://items/furniture/furniture/light/light_1.tres" id="44_0maa2"]
+[ext_resource type="Resource" uid="uid://bo10fqhihxje1" path="res://items/food/pudding.tres" id="44_xrirp"]
+[ext_resource type="Resource" uid="uid://c2y0n16v75bhq" path="res://items/food/burger.tres" id="45_2aiik"]
+[ext_resource type="Resource" uid="uid://ct52nsmb87i56" path="res://items/furniture/furniture/plant/plant_1.tres" id="45_i0sfa"]
+[ext_resource type="Resource" uid="uid://cr41x666bkwqs" path="res://items/furniture/furniture/mirror_1.tres" id="46_cwtvh"]
+[ext_resource type="Resource" uid="uid://bqf1lwbp42e8t" path="res://items/furniture/furniture/sofa/sofa_1.tres" id="46_s3cu7"]
+[ext_resource type="Resource" uid="uid://enwkgux1s37d" path="res://items/furniture/furniture/stool/stool_1.tres" id="47_cjkp6"]
+[ext_resource type="Resource" uid="uid://b0iggn6dsoi7m" path="res://items/furniture/furniture/table/table_1.tres" id="48_kg5tc"]
+[ext_resource type="Resource" uid="uid://b2ju7hgsna5in" path="res://items/player_clothes/hat/2_hat.tres" id="49_5hx7c"]
+[ext_resource type="Resource" uid="uid://boqhujpmxtthe" path="res://items/furniture/ground/floor_0.tres" id="49_e4lmk"]
+[ext_resource type="Resource" uid="uid://drn60qq458ecl" path="res://items/furniture/ground/floor_1.tres" id="50_iogtc"]
+[ext_resource type="Resource" uid="uid://cu0odgv1vphvh" path="res://items/furniture/ground/floor_2.tres" id="51_xgfv0"]
+[ext_resource type="Resource" uid="uid://ynb8pwrh4wow" path="res://items/furniture/wall/wall_0.tres" id="52_dnllq"]
+[ext_resource type="Resource" uid="uid://bbkpge8ew05nl" path="res://items/furniture/wall/wall_1.tres" id="53_8oaf2"]
+[ext_resource type="Resource" uid="uid://bkdhbqe27vt7e" path="res://items/furniture/wall/wall_2.tres" id="54_6m8wk"]
+[ext_resource type="Resource" uid="uid://bj4tfgj572s4k" path="res://items/car/sports_car_0.tres" id="54_rd74h"]
+[ext_resource type="Resource" uid="uid://bxpja8flv0nxr" path="res://items/car/sports_car_1.tres" id="55_caifs"]
+[ext_resource type="Resource" uid="uid://cisj2ja361so6" path="res://items/player_clothes/hat/1_hat.tres" id="64_cwcbo"]
+[ext_resource type="Resource" uid="uid://cut6dlpdcvoxc" path="res://items/player_clothes/hat/3_hat.tres" id="65_8d2qb"]
+[ext_resource type="PackedScene" uid="uid://ch22abtcs8mhb" path="res://scenes/office/office_state_1.tscn" id="65_mpywi"]
+[ext_resource type="Resource" uid="uid://biey6afhnh7el" path="res://items/player_clothes/hat/4_hat.tres" id="66_byrsa"]
+[ext_resource type="Resource" uid="uid://bk4jh64royw3e" path="res://items/player_clothes/hat/5_hat.tres" id="67_gg3iq"]
+[ext_resource type="Resource" uid="uid://bc8lr53mul1dc" path="res://items/player_clothes/hat/6_hat.tres" id="68_cpdjc"]
+[ext_resource type="Resource" uid="uid://m16cplukcquu" path="res://items/player_clothes/hat/7_hat.tres" id="69_qdetn"]
+[ext_resource type="Resource" uid="uid://d132fr7g18ki5" path="res://items/player_clothes/hat/8_hat.tres" id="70_sl2e0"]
+[ext_resource type="PackedScene" uid="uid://dqipvg83r7t5n" path="res://scenes/home_builder/home/warehouse.tscn" id="70_u4diw"]
+[ext_resource type="Resource" uid="uid://dbcdl6f2hhwn3" path="res://items/player_clothes/hat/9_hat.tres" id="71_bj2fd"]
+[ext_resource type="Resource" uid="uid://bofj5qob1ej80" path="res://items/player_clothes/clothes/2_clothes.tres" id="72_skyxt"]
+[ext_resource type="Resource" uid="uid://dpl7chgn7gh2x" path="res://items/player_clothes/clothes/3_clothes.tres" id="73_l205c"]
+[ext_resource type="Resource" uid="uid://d1w53dpembak7" path="res://items/player_clothes/clothes/4_clothes.tres" id="74_dcn6g"]
+[ext_resource type="PackedScene" uid="uid://hoe7c2pla8n5" path="res://scenes/achievement_panel.tscn" id="74_k67f8"]
+[ext_resource type="PackedScene" uid="uid://d4fpy41wao1s8" path="res://scenes/achi_show.tscn" id="75_sj1r8"]
+[ext_resource type="Resource" uid="uid://nxk1ee6wjp8l" path="res://items/player_clothes/clothes/5_clothes.tres" id="75_x5ygd"]
+[ext_resource type="Resource" uid="uid://c85v67fqlbrwn" path="res://items/player_clothes/clothes/6_clothes.tres" id="76_k25lw"]
+[ext_resource type="Resource" uid="uid://cmjy2n03pudqa" path="res://items/furniture/draw/draw_5.tres" id="76_pll5w"]
+[ext_resource type="Resource" uid="uid://o0q0boivbyy3" path="res://items/furniture/draw/draw_6.tres" id="77_5fsnk"]
+[ext_resource type="Resource" uid="uid://buokgnjgrxit1" path="res://items/player_clothes/clothes/7_clothes.tres" id="77_x2t7x"]
+[ext_resource type="Resource" uid="uid://c16oijtq450aa" path="res://items/furniture/draw/draw_7.tres" id="78_n87q6"]
+[ext_resource type="Resource" uid="uid://cmq3wh6xuwde6" path="res://items/player_clothes/clothes/8_clothes.tres" id="78_thjv1"]
+[ext_resource type="Resource" uid="uid://k8hek7ktxlu7" path="res://items/furniture/draw/draw_8.tres" id="79_j3u8k"]
+[ext_resource type="Resource" uid="uid://dl3cbla4o7eu2" path="res://items/furniture/draw/draw_9.tres" id="80_fgjbq"]
+[ext_resource type="Resource" uid="uid://bo21u8dq67a2y" path="res://items/player_clothes/pants/2_pants.tres" id="80_xomed"]
+[ext_resource type="Resource" uid="uid://c7c71canb7tt2" path="res://items/player_clothes/pants/3_pants.tres" id="81_2ktox"]
+[ext_resource type="Resource" uid="uid://da48qn8prrfd4" path="res://items/furniture/furniture/bed/bed_2.tres" id="81_ssivs"]
+[ext_resource type="Resource" uid="uid://orpdadsv77b4" path="res://items/player_clothes/pants/4_pants.tres" id="82_8gp5v"]
+[ext_resource type="Resource" uid="uid://62atdx4pfvmp" path="res://items/furniture/furniture/bed/bed_4.tres" id="82_tpnhv"]
+[ext_resource type="Resource" uid="uid://b08mhfrk46krq" path="res://items/player_clothes/pants/5_pants.tres" id="83_80tlf"]
+[ext_resource type="Resource" uid="uid://kwq3ce6orvfj" path="res://items/furniture/furniture/light/light_5.tres" id="83_p3x8l"]
+[ext_resource type="Resource" uid="uid://bs4ncgomcm75w" path="res://items/player_clothes/pants/6_pants.tres" id="84_ggg13"]
+[ext_resource type="Resource" uid="uid://dn8ohk7hhmsht" path="res://items/furniture/furniture/plant/plant_2.tres" id="84_v3v2c"]
+[ext_resource type="Resource" uid="uid://b1q0aav0b5qg5" path="res://items/player_clothes/pants/7_pants.tres" id="85_0phb3"]
+[ext_resource type="Resource" uid="uid://62ugf8bwla8w" path="res://items/furniture/furniture/plant/plant_3.tres" id="85_e2wfq"]
+[ext_resource type="Resource" uid="uid://c8d061up26yvo" path="res://items/player_clothes/pants/8_pants.tres" id="86_g8qgf"]
+[ext_resource type="Resource" uid="uid://sp8jlafxpnv2" path="res://items/player_clothes/shoes/2_shoes.tres" id="87_8gwkh"]
+[ext_resource type="Resource" uid="uid://bxs5gc16qfd1o" path="res://items/furniture/furniture/sofa/sofa_3.tres" id="87_154dx"]
+[ext_resource type="Resource" uid="uid://iyqdgx68f8j4" path="res://items/player_clothes/shoes/3_shoes.tres" id="88_qmmwj"]
+[ext_resource type="Resource" uid="uid://drexbp3277rw3" path="res://items/player_clothes/shoes/5_shoes.tres" id="90_fnvum"]
+[ext_resource type="Resource" uid="uid://bbnfymascaelr" path="res://items/player_clothes/shoes/4_shoes.tres" id="90_qr18l"]
+[ext_resource type="Resource" uid="uid://bqvh4aqyulsjh" path="res://items/player_clothes/shoes/6_shoes.tres" id="91_1khbd"]
+[ext_resource type="Resource" uid="uid://dxii4m0y0oso2" path="res://items/player_clothes/shoes/7_shoes.tres" id="92_4oq7d"]
+[ext_resource type="Resource" uid="uid://cgvejpsa3hkgn" path="res://items/player_clothes/shoes/8_shoes.tres" id="93_73dpf"]
+[ext_resource type="Resource" uid="uid://dgrr4ja1s68qh" path="res://items/furniture/wall/wall_3.tres" id="94_7asfn"]
+[ext_resource type="Resource" uid="uid://bc0itnjh1krk1" path="res://items/furniture/ground/floor_4.tres" id="95_3p0lv"]
+[ext_resource type="Resource" uid="uid://c776n3aarnoy0" path="res://items/furniture/furniture/closet.tres" id="96_is1cj"]
+[ext_resource type="Resource" uid="uid://hxgwxo1iguns" path="res://items/furniture/furniture/desk.tres" id="97_b1mp0"]
+[ext_resource type="Resource" uid="uid://bcsm2a2tydn3b" path="res://items/car/sports_car_2.tres" id="99_y6jtv"]
+[ext_resource type="Resource" uid="uid://dj4xraufvrg1f" path="res://items/furniture/toy/toy_6.tres" id="102_caxaa"]
+[ext_resource type="Resource" uid="uid://xvvu48g04d1" path="res://items/furniture/toy/toy_7.tres" id="103_jfkyf"]
+[ext_resource type="Resource" uid="uid://crsh2h1pt73sp" path="res://items/furniture/draw/draw_10.tres" id="107_i8mpe"]
+[ext_resource type="Resource" uid="uid://c67aa02oyh6mq" path="res://items/furniture/furniture/coffice_machine.tres" id="127_pftfn"]
+[ext_resource type="Resource" uid="uid://doh2kegyatx4e" path="res://items/furniture/furniture/cupboard.tres" id="128_j5qf6"]
+[ext_resource type="Resource" uid="uid://chk7ks1iyealr" path="res://items/furniture/furniture/fish_tank.tres" id="130_0e6hu"]
+[ext_resource type="Resource" uid="uid://0l3rudmpj87b" path="res://items/furniture/furniture/frige.tres" id="131_bc3yr"]
+[ext_resource type="Resource" uid="uid://ccy7qkyu6m4ww" path="res://items/furniture/furniture/globe.tres" id="132_254pi"]
+[ext_resource type="Resource" uid="uid://c4ws7whs0njhx" path="res://items/furniture/furniture/microwave.tres" id="133_4p52f"]
+[ext_resource type="Resource" uid="uid://c8i4nhoorjwh3" path="res://items/furniture/furniture/mirror_2.tres" id="134_ukkbu"]
+[ext_resource type="Resource" uid="uid://c7q4aa3x14ifh" path="res://items/furniture/furniture/mixer.tres" id="135_pn0n8"]
+[ext_resource type="Resource" uid="uid://cgdi32ovu0owl" path="res://items/furniture/furniture/rice_cooker.tres" id="136_p7rer"]
+[ext_resource type="Resource" uid="uid://03vkqie28ko6" path="res://items/furniture/furniture/shelf.tres" id="137_k42hp"]
+[ext_resource type="Resource" uid="uid://bficlq401dbuj" path="res://items/furniture/draw/draw_11.tres" id="138_o1gv3"]
+[ext_resource type="Resource" uid="uid://bgo0ykmapbu0n" path="res://items/furniture/draw/draw_12.tres" id="139_qeypy"]
+[ext_resource type="Resource" uid="uid://d15skmhnf6tje" path="res://items/furniture/draw/draw_13.tres" id="140_d60hq"]
+[ext_resource type="Resource" uid="uid://iea7yhytdevh" path="res://items/furniture/draw/draw_14.tres" id="141_s4uvd"]
+[ext_resource type="Resource" uid="uid://cggk41ww2i8lq" path="res://items/furniture/draw/draw_15.tres" id="142_g2k7m"]
+[ext_resource type="Resource" uid="uid://b3kfs8erwv006" path="res://items/furniture/furniture/bed/bed_3.tres" id="143_d16bq"]
+[ext_resource type="Resource" uid="uid://u50opbligxnl" path="res://items/furniture/furniture/bed/bed_5.tres" id="144_eova8"]
+[ext_resource type="Resource" uid="uid://b4u6wq8q3s3ys" path="res://items/furniture/furniture/cabinet/cabinet_2.tres" id="145_1bv3b"]
+[ext_resource type="Resource" uid="uid://c2e2f5rk86q1b" path="res://items/furniture/furniture/cabinet/cabinet_3.tres" id="146_axb14"]
+[ext_resource type="Resource" uid="uid://c012ynic3l4sq" path="res://items/furniture/furniture/cabinet/cabinet_4.tres" id="147_6g8ce"]
+[ext_resource type="Resource" uid="uid://f81xv8qbrh10" path="res://items/furniture/furniture/light/light_2.tres" id="148_vt8a1"]
+[ext_resource type="Resource" uid="uid://daodfitata276" path="res://items/furniture/furniture/light/light_3.tres" id="149_qrs7c"]
+[ext_resource type="Resource" uid="uid://dbuo5fmo2uabx" path="res://items/furniture/furniture/light/light_4.tres" id="150_oeyyj"]
+[ext_resource type="Resource" uid="uid://cppfdlycrsh7h" path="res://items/furniture/furniture/plant/plant_4.tres" id="151_843ky"]
+[ext_resource type="Resource" uid="uid://bwyigcn8u84bk" path="res://items/furniture/furniture/plant/plant_5.tres" id="152_uuf0l"]
+[ext_resource type="Resource" uid="uid://bjyq6v7fccvn4" path="res://items/furniture/furniture/plant/plant_6.tres" id="153_j81f1"]
+[ext_resource type="Resource" uid="uid://lhx5joh64yj2" path="res://items/furniture/furniture/plant/plant_7.tres" id="154_2qi1s"]
+[ext_resource type="Resource" uid="uid://bbuvt2kpemqck" path="res://items/furniture/furniture/sofa/sofa_2.tres" id="155_hip8u"]
+[ext_resource type="Resource" uid="uid://cplxb5kpf3y6a" path="res://items/furniture/furniture/sofa/sofa_4.tres" id="156_02m6r"]
+[ext_resource type="Resource" uid="uid://dnhf83hjlyddk" path="res://items/furniture/furniture/sofa/sofa_5.tres" id="157_0yoi2"]
+[ext_resource type="Resource" uid="uid://cs8w6ojhayddw" path="res://items/furniture/furniture/sofa/sofa_6.tres" id="158_woldh"]
+[ext_resource type="Resource" uid="uid://bw0shjmfwian7" path="res://items/furniture/furniture/sofa/sofa_7.tres" id="159_3fknf"]
+[ext_resource type="Resource" uid="uid://sy21cie8ehcr" path="res://items/furniture/furniture/sofa/sofa_8.tres" id="160_oueiw"]
+[ext_resource type="Resource" uid="uid://b5wm087wr0pv7" path="res://items/furniture/furniture/stool/stool_2.tres" id="161_6gmx1"]
+[ext_resource type="Resource" uid="uid://b6pitk5itw30k" path="res://items/furniture/furniture/stool/stool_3.tres" id="162_ye2vt"]
+[ext_resource type="Resource" uid="uid://cetvvlw6wy8eq" path="res://items/furniture/furniture/stool/stool_4.tres" id="163_2aiuc"]
+[ext_resource type="Resource" uid="uid://ctxplow0fm55p" path="res://items/furniture/furniture/stool/stool_5.tres" id="164_ukmqw"]
+[ext_resource type="Resource" uid="uid://dgjv1t8o86o6h" path="res://items/furniture/furniture/stool/stool_6.tres" id="165_lxjn8"]
+[ext_resource type="Resource" uid="uid://cdlidg5wtmjmi" path="res://items/furniture/furniture/table/table_2.tres" id="166_eypyd"]
+[ext_resource type="Resource" uid="uid://doha1ytb8j6q7" path="res://items/furniture/furniture/table/table_3.tres" id="167_dybr6"]
+[ext_resource type="Resource" uid="uid://c57ph2khuphwh" path="res://items/furniture/furniture/table/table_4.tres" id="168_hfhli"]
+[ext_resource type="Resource" uid="uid://cv2bel6bucrh7" path="res://items/furniture/furniture/table/table_5.tres" id="169_j3ecd"]
+[ext_resource type="Resource" uid="uid://coha1782rbv8j" path="res://items/furniture/furniture/table/table_6.tres" id="170_3a2jb"]
+[ext_resource type="Resource" uid="uid://dsgl2eplv8yjd" path="res://items/furniture/furniture/sink_1.tres" id="170_8vgak"]
+[ext_resource type="Resource" uid="uid://8idqjh3cifry" path="res://items/furniture/furniture/toaster.tres" id="171_2qy5j"]
+[ext_resource type="Resource" uid="uid://dp3hjnug2408d" path="res://items/furniture/furniture/TV.tres" id="172_eo3r1"]
+[ext_resource type="Resource" uid="uid://dau0nxblatd7j" path="res://items/furniture/ground/floor_3.tres" id="173_733lj"]
+[ext_resource type="Resource" uid="uid://becxn6ya25id6" path="res://items/furniture/ground/floor_5.tres" id="175_j4bm8"]
+[ext_resource type="Resource" uid="uid://cxj7pusnsk88q" path="res://items/furniture/ground/floor_6.tres" id="176_q7ip4"]
+[ext_resource type="Resource" uid="uid://ba8jfguyu0cs6" path="res://items/furniture/ground/floor_7.tres" id="177_8gxcl"]
+[ext_resource type="Resource" uid="uid://buxpiyevbtsbf" path="res://items/furniture/ground/floor_8.tres" id="178_8eovb"]
+[ext_resource type="Resource" uid="uid://cdyuly16hrl2p" path="res://items/furniture/ground/floor_9.tres" id="179_l4inb"]
+[ext_resource type="Resource" uid="uid://cc7owopjhpir" path="res://items/furniture/ground/floor_10.tres" id="180_wmj6p"]
+[ext_resource type="Resource" uid="uid://nod8e248yu7c" path="res://items/furniture/wall/wall_4.tres" id="182_n5bxq"]
+[ext_resource type="Resource" uid="uid://sws1fugrdkeo" path="res://items/furniture/wall/wall_5.tres" id="183_r5o5y"]
+[ext_resource type="Resource" uid="uid://nk2auqurh405" path="res://items/furniture/wall/wall_6.tres" id="184_5np2i"]
+[ext_resource type="Resource" uid="uid://d301nxu220lry" path="res://items/furniture/wall/wall_7.tres" id="185_loyve"]
+[ext_resource type="Resource" uid="uid://3nn8ci0dunhl" path="res://items/furniture/wall/wall_8.tres" id="186_ou63a"]
+[ext_resource type="Resource" uid="uid://cbdt30bdpw2xr" path="res://items/furniture/wall/wall_9.tres" id="187_8uo4i"]
+[ext_resource type="Resource" uid="uid://da41rp7gvrc2d" path="res://items/furniture/wall/wall_10.tres" id="188_d6pbi"]
+[ext_resource type="Resource" uid="uid://dfm4jphibkcbk" path="res://items/furniture/toilet/bathtub.tres" id="189_m0q22"]
+[ext_resource type="Resource" uid="uid://dog5spsej6ls5" path="res://items/furniture/toilet/closestool.tres" id="190_h6e04"]
+[ext_resource type="Resource" uid="uid://bxwbglixuvhy0" path="res://items/furniture/toilet/mirror_3.tres" id="191_ubtsi"]
+[ext_resource type="Resource" uid="uid://dprj1d0m67ju3" path="res://items/furniture/toilet/sink_2.tres" id="192_6oj1m"]
+[ext_resource type="Resource" uid="uid://bplidwg4821gh" path="res://items/furniture/toy/toy_5.tres" id="192_pwxvm"]
+[ext_resource type="Resource" uid="uid://cwlra1ffc6iq5" path="res://items/furniture/toilet/wash_machine.tres" id="193_gqsh2"]
+[ext_resource type="PackedScene" uid="uid://dxnfhl4cdlllt" path="res://scenes/player_rank.tscn" id="212_adugn"]
+
+[sub_resource type="Environment" id="Environment_pwryh"]
+background_mode = 3
+glow_enabled = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c63im"]
+atlas = ExtResource("4_p4lv7")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bum6"]
+atlas = ExtResource("5_3fprx")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x0d0"]
+atlas = ExtResource("5_ruror")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gn2l"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c04k6"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4dnj6"]
+texture = ExtResource("2_ksuad")
+23:34/0 = 0
+23:35/0 = 0
+24:35/0 = 0
+24:36/0 = 0
+25:36/0 = 0
+25:35/0 = 0
+25:34/0 = 0
+24:34/0 = 0
+23:36/0 = 0
+38:37/0 = 0
+38:38/0 = 0
+39:38/0 = 0
+39:37/0 = 0
+42:41/0 = 0
+42:42/0 = 0
+42:43/0 = 0
+43:43/0 = 0
+43:42/0 = 0
+43:41/0 = 0
+30:41/0 = 0
+30:42/0 = 0
+30:43/0 = 0
+31:43/0 = 0
+31:42/0 = 0
+31:41/0 = 0
+13:42/0 = 0
+13:43/0 = 0
+14:43/0 = 0
+14:42/0 = 0
+6:29/0 = 0
+6:28/0 = 0
+6:25/0 = 0
+5:29/0 = 0
+5:28/0 = 0
+5:27/0 = 0
+5:26/0 = 0
+5:25/0 = 0
+5:40/0 = 0
+6:39/0 = 0
+5:39/0 = 0
+23:40/0 = 0
+23:39/0 = 0
+24:40/0 = 0
+4:40/0 = 0
+4:39/0 = 0
+3:39/0 = 0
+3:40/0 = 0
+6:30/0 = 0
+6:31/0 = 0
+7:31/0 = 0
+7:30/0 = 0
+13:40/size_in_atlas = Vector2i(2, 2)
+13:40/next_alternative_id = 2
+13:40/0 = 0
+13:40/1 = 1
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+14:11/0 = 0
+13:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ycv8q"]
+sources/0 = SubResource("TileSetAtlasSource_4dnj6")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1clnv"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svt5c"]
+size = Vector2(190, 223)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1j62e"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5jlo"]
+size = Vector2(159, 238)
+
+[sub_resource type="Resource" id="Resource_8ghog"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("20_uld3o")
+
+[sub_resource type="Resource" id="Resource_0t82x"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("21_hswh4")
+
+[sub_resource type="Resource" id="Resource_vm724"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("22_5qhq8")
+
+[sub_resource type="Resource" id="Resource_ajybx"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("23_kh62e")
+
+[sub_resource type="Resource" id="Resource_iulws"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("20_ajq2m")
+
+[sub_resource type="Resource" id="Resource_6j3ut"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("23_45c4i")
+
+[sub_resource type="Resource" id="Resource_v4gnc"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("24_p2xix")
+
+[sub_resource type="Resource" id="Resource_f05o4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("25_mf578")
+
+[sub_resource type="Resource" id="Resource_4okm0"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("21_gqpct")
+
+[sub_resource type="Resource" id="Resource_l84d5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("27_hhyah")
+
+[sub_resource type="Resource" id="Resource_alnus"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("30_mqm1x")
+
+[sub_resource type="Resource" id="Resource_1ci4u"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("31_f2e0u")
+
+[sub_resource type="Resource" id="Resource_xse2a"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("32_w380d")
+
+[sub_resource type="Resource" id="Resource_7qmkp"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("33_j2t4b")
+
+[sub_resource type="Resource" id="Resource_02jnx"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("34_7mqso")
+
+[sub_resource type="Resource" id="Resource_po3de"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("36_ib4g7")
+
+[sub_resource type="Resource" id="Resource_evynx"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("41_c2rfo")
+
+[sub_resource type="Resource" id="Resource_5lo02"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("38_aqg4n")
+
+[sub_resource type="Resource" id="Resource_8dqo3"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("39_eka02")
+
+[sub_resource type="Resource" id="Resource_hsb3a"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("40_dcyf6")
+
+[sub_resource type="Resource" id="Resource_fifjd"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("41_8b22s")
+
+[sub_resource type="Resource" id="Resource_vbg68"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("42_nx051")
+
+[sub_resource type="Resource" id="Resource_7m0xo"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("43_d4fp0")
+
+[sub_resource type="Resource" id="Resource_te3xh"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("44_0maa2")
+
+[sub_resource type="Resource" id="Resource_xs3wv"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("45_i0sfa")
+
+[sub_resource type="Resource" id="Resource_xwa3y"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("46_cwtvh")
+
+[sub_resource type="Resource" id="Resource_hndd2"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("47_cjkp6")
+
+[sub_resource type="Resource" id="Resource_6dhhv"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("48_kg5tc")
+
+[sub_resource type="Resource" id="Resource_80nmh"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("97_b1mp0")
+
+[sub_resource type="Resource" id="Resource_qibgc"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("49_e4lmk")
+
+[sub_resource type="Resource" id="Resource_sasdl"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("50_iogtc")
+
+[sub_resource type="Resource" id="Resource_8w3ee"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("51_xgfv0")
+
+[sub_resource type="Resource" id="Resource_tywxx"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("52_dnllq")
+
+[sub_resource type="Resource" id="Resource_co6ch"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("53_8oaf2")
+
+[sub_resource type="Resource" id="Resource_7segb"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("54_6m8wk")
+
+[sub_resource type="Resource" id="Resource_mphqn"]
+script = ExtResource("16_c8532")
+slot_datas = Array[ExtResource("17_2nvb0")]([SubResource("Resource_8ghog"), SubResource("Resource_0t82x"), SubResource("Resource_vm724"), SubResource("Resource_ajybx"), SubResource("Resource_iulws"), SubResource("Resource_6j3ut"), SubResource("Resource_v4gnc"), SubResource("Resource_f05o4"), SubResource("Resource_4okm0"), SubResource("Resource_l84d5"), SubResource("Resource_alnus"), SubResource("Resource_1ci4u"), SubResource("Resource_xse2a"), SubResource("Resource_7qmkp"), SubResource("Resource_02jnx"), SubResource("Resource_po3de"), SubResource("Resource_evynx"), SubResource("Resource_5lo02"), SubResource("Resource_8dqo3"), SubResource("Resource_hsb3a"), SubResource("Resource_fifjd"), SubResource("Resource_vbg68"), SubResource("Resource_7m0xo"), SubResource("Resource_te3xh"), SubResource("Resource_xs3wv"), SubResource("Resource_xwa3y"), SubResource("Resource_hndd2"), SubResource("Resource_6dhhv"), SubResource("Resource_80nmh"), SubResource("Resource_qibgc"), SubResource("Resource_sasdl"), SubResource("Resource_8w3ee"), SubResource("Resource_tywxx"), SubResource("Resource_co6ch"), SubResource("Resource_7segb"), null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[sub_resource type="Resource" id="Resource_o1u2g"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("20_uld3o")
+
+[sub_resource type="Resource" id="Resource_63qtk"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("21_hswh4")
+
+[sub_resource type="Resource" id="Resource_7lvkg"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("22_5qhq8")
+
+[sub_resource type="Resource" id="Resource_ippj5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("23_kh62e")
+
+[sub_resource type="Resource" id="Resource_jfhw7"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("30_qveol")
+
+[sub_resource type="Resource" id="Resource_wuytr"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("31_ospxj")
+
+[sub_resource type="Resource" id="Resource_ijojr"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("20_ajq2m")
+
+[sub_resource type="Resource" id="Resource_mpbo7"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("23_45c4i")
+
+[sub_resource type="Resource" id="Resource_pd8gl"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("24_p2xix")
+
+[sub_resource type="Resource" id="Resource_8luat"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("21_gqpct")
+
+[sub_resource type="Resource" id="Resource_xld2a"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("22_m40jb")
+
+[sub_resource type="Resource" id="Resource_tco8u"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("27_ycjdd")
+
+[sub_resource type="Resource" id="Resource_r5noy"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("25_mf578")
+
+[sub_resource type="Resource" id="Resource_phqu6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("26_2o8np")
+
+[sub_resource type="Resource" id="Resource_o7dyr"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("27_hhyah")
+
+[sub_resource type="Resource" id="Resource_17vm0"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("28_3tiqk")
+
+[sub_resource type="Resource" id="Resource_mjjtq"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("36_y0h2w")
+
+[sub_resource type="Resource" id="Resource_ssch3"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("30_mqm1x")
+
+[sub_resource type="Resource" id="Resource_dgs5b"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("31_f2e0u")
+
+[sub_resource type="Resource" id="Resource_kyal5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("32_w380d")
+
+[sub_resource type="Resource" id="Resource_ciq7w"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("72_skyxt")
+
+[sub_resource type="Resource" id="Resource_0rhbr"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("80_xomed")
+
+[sub_resource type="Resource" id="Resource_tdoyk"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("87_8gwkh")
+
+[sub_resource type="Resource" id="Resource_cyw8j"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("64_cwcbo")
+
+[sub_resource type="Resource" id="Resource_513f8"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("49_5hx7c")
+
+[sub_resource type="Resource" id="Resource_hwsgl"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("65_8d2qb")
+
+[sub_resource type="Resource" id="Resource_dxdxl"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("74_dcn6g")
+
+[sub_resource type="Resource" id="Resource_8qpl1"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("75_x5ygd")
+
+[sub_resource type="Resource" id="Resource_d52ch"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("82_8gp5v")
+
+[sub_resource type="Resource" id="Resource_ifkia"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("83_80tlf")
+
+[sub_resource type="Resource" id="Resource_kjrrd"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("90_qr18l")
+
+[sub_resource type="Resource" id="Resource_knq75"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("90_fnvum")
+
+[sub_resource type="Resource" id="Resource_ryeps"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("42_kequg")
+
+[sub_resource type="Resource" id="Resource_a0dmy"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("43_xhnc5")
+
+[sub_resource type="Resource" id="Resource_s41jw"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("37_77p6x")
+
+[sub_resource type="Resource" id="Resource_5u6jg"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("76_pll5w")
+
+[sub_resource type="Resource" id="Resource_hwrt4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("77_5fsnk")
+
+[sub_resource type="Resource" id="Resource_26lu2"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("78_n87q6")
+
+[sub_resource type="Resource" id="Resource_4rm6a"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("79_j3u8k")
+
+[sub_resource type="Resource" id="Resource_aynrw"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("80_fgjbq")
+
+[sub_resource type="Resource" id="Resource_5kg5g"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("81_ssivs")
+
+[sub_resource type="Resource" id="Resource_susjt"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("82_tpnhv")
+
+[sub_resource type="Resource" id="Resource_vk6vs"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("83_p3x8l")
+
+[sub_resource type="Resource" id="Resource_2iy8r"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("84_v3v2c")
+
+[sub_resource type="Resource" id="Resource_ckpj7"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("85_e2wfq")
+
+[sub_resource type="Resource" id="Resource_inlna"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("46_s3cu7")
+
+[sub_resource type="Resource" id="Resource_vwb2t"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("87_154dx")
+
+[sub_resource type="Resource" id="Resource_bmohd"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("96_is1cj")
+
+[sub_resource type="Resource" id="Resource_ofqpa"]
+script = ExtResource("16_c8532")
+slot_datas = Array[ExtResource("17_2nvb0")]([SubResource("Resource_o1u2g"), SubResource("Resource_63qtk"), SubResource("Resource_7lvkg"), SubResource("Resource_ippj5"), SubResource("Resource_jfhw7"), SubResource("Resource_wuytr"), SubResource("Resource_ijojr"), SubResource("Resource_mpbo7"), SubResource("Resource_pd8gl"), SubResource("Resource_8luat"), SubResource("Resource_xld2a"), SubResource("Resource_tco8u"), SubResource("Resource_r5noy"), SubResource("Resource_phqu6"), SubResource("Resource_o7dyr"), SubResource("Resource_17vm0"), SubResource("Resource_mjjtq"), SubResource("Resource_ssch3"), SubResource("Resource_dgs5b"), SubResource("Resource_kyal5"), SubResource("Resource_ciq7w"), SubResource("Resource_0rhbr"), SubResource("Resource_tdoyk"), SubResource("Resource_cyw8j"), SubResource("Resource_513f8"), SubResource("Resource_hwsgl"), SubResource("Resource_dxdxl"), SubResource("Resource_8qpl1"), SubResource("Resource_d52ch"), SubResource("Resource_ifkia"), SubResource("Resource_kjrrd"), SubResource("Resource_knq75"), SubResource("Resource_ryeps"), SubResource("Resource_a0dmy"), SubResource("Resource_s41jw"), SubResource("Resource_5u6jg"), SubResource("Resource_hwrt4"), SubResource("Resource_26lu2"), SubResource("Resource_4rm6a"), SubResource("Resource_aynrw"), SubResource("Resource_5kg5g"), SubResource("Resource_susjt"), SubResource("Resource_vk6vs"), SubResource("Resource_2iy8r"), SubResource("Resource_ckpj7"), SubResource("Resource_inlna"), SubResource("Resource_vwb2t"), SubResource("Resource_bmohd")])
+
+[sub_resource type="Resource" id="Resource_n0343"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("20_uld3o")
+
+[sub_resource type="Resource" id="Resource_x6qyl"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("23_kh62e")
+
+[sub_resource type="Resource" id="Resource_dyp12"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("37_ushvv")
+
+[sub_resource type="Resource" id="Resource_u41nq"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("30_qveol")
+
+[sub_resource type="Resource" id="Resource_bx4ll"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("22_5qhq8")
+
+[sub_resource type="Resource" id="Resource_8u8jf"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("38_an4h7")
+
+[sub_resource type="Resource" id="Resource_jd7ms"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("31_ospxj")
+
+[sub_resource type="Resource" id="Resource_jr22p"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("21_hswh4")
+
+[sub_resource type="Resource" id="Resource_grow7"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("26_2o8np")
+
+[sub_resource type="Resource" id="Resource_at7ok"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("25_mf578")
+
+[sub_resource type="Resource" id="Resource_1a6qc"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("22_m40jb")
+
+[sub_resource type="Resource" id="Resource_l5125"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("39_8f41i")
+
+[sub_resource type="Resource" id="Resource_5bo0j"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("21_gqpct")
+
+[sub_resource type="Resource" id="Resource_kqxv3"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("20_ajq2m")
+
+[sub_resource type="Resource" id="Resource_cxyn2"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("23_45c4i")
+
+[sub_resource type="Resource" id="Resource_gg6ct"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("24_p2xix")
+
+[sub_resource type="Resource" id="Resource_aj32b"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("27_ycjdd")
+
+[sub_resource type="Resource" id="Resource_7ils6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("27_hhyah")
+
+[sub_resource type="Resource" id="Resource_8lwg0"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("40_3e1md")
+
+[sub_resource type="Resource" id="Resource_w4jvk"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("41_k0mpp")
+
+[sub_resource type="Resource" id="Resource_npli6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("42_xin3u")
+
+[sub_resource type="Resource" id="Resource_1ny0a"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("43_ydklc")
+
+[sub_resource type="Resource" id="Resource_t8ptp"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("36_y0h2w")
+
+[sub_resource type="Resource" id="Resource_x4ljw"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("28_3tiqk")
+
+[sub_resource type="Resource" id="Resource_6lje4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("44_xrirp")
+
+[sub_resource type="Resource" id="Resource_ep17p"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("45_2aiik")
+
+[sub_resource type="Resource" id="Resource_ptqti"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("33_j2t4b")
+
+[sub_resource type="Resource" id="Resource_07qgv"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("34_7mqso")
+
+[sub_resource type="Resource" id="Resource_8neqj"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("42_kequg")
+
+[sub_resource type="Resource" id="Resource_757yk"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("43_xhnc5")
+
+[sub_resource type="Resource" id="Resource_uaij5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("99_y6jtv")
+
+[sub_resource type="Resource" id="Resource_j56jl"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("55_caifs")
+
+[sub_resource type="Resource" id="Resource_xnhn5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("41_8b22s")
+
+[sub_resource type="Resource" id="Resource_ws8ui"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("38_aqg4n")
+
+[sub_resource type="Resource" id="Resource_u0anh"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("39_eka02")
+
+[sub_resource type="Resource" id="Resource_yciat"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("40_dcyf6")
+
+[sub_resource type="Resource" id="Resource_4t45g"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("76_pll5w")
+
+[sub_resource type="Resource" id="Resource_kco42"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("77_5fsnk")
+
+[sub_resource type="Resource" id="Resource_jl1x4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("78_n87q6")
+
+[sub_resource type="Resource" id="Resource_3ou56"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("79_j3u8k")
+
+[sub_resource type="Resource" id="Resource_njuwy"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("80_fgjbq")
+
+[sub_resource type="Resource" id="Resource_kpfsi"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("107_i8mpe")
+
+[sub_resource type="Resource" id="Resource_rq04p"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("138_o1gv3")
+
+[sub_resource type="Resource" id="Resource_vvpf6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("139_qeypy")
+
+[sub_resource type="Resource" id="Resource_cfn6d"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("140_d60hq")
+
+[sub_resource type="Resource" id="Resource_krkou"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("141_s4uvd")
+
+[sub_resource type="Resource" id="Resource_slblu"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("142_g2k7m")
+
+[sub_resource type="Resource" id="Resource_fpbkv"]
+script = ExtResource("16_c8532")
+slot_datas = Array[ExtResource("17_2nvb0")]([SubResource("Resource_n0343"), SubResource("Resource_x6qyl"), SubResource("Resource_dyp12"), SubResource("Resource_u41nq"), SubResource("Resource_bx4ll"), SubResource("Resource_8u8jf"), SubResource("Resource_jd7ms"), SubResource("Resource_jr22p"), SubResource("Resource_grow7"), SubResource("Resource_at7ok"), SubResource("Resource_1a6qc"), SubResource("Resource_l5125"), SubResource("Resource_5bo0j"), SubResource("Resource_kqxv3"), SubResource("Resource_cxyn2"), SubResource("Resource_gg6ct"), SubResource("Resource_aj32b"), SubResource("Resource_7ils6"), SubResource("Resource_8lwg0"), SubResource("Resource_w4jvk"), SubResource("Resource_npli6"), SubResource("Resource_1ny0a"), SubResource("Resource_t8ptp"), SubResource("Resource_x4ljw"), SubResource("Resource_6lje4"), SubResource("Resource_ep17p"), SubResource("Resource_ptqti"), SubResource("Resource_07qgv"), SubResource("Resource_8neqj"), SubResource("Resource_757yk"), SubResource("Resource_uaij5"), SubResource("Resource_j56jl"), SubResource("Resource_xnhn5"), SubResource("Resource_ws8ui"), SubResource("Resource_u0anh"), SubResource("Resource_yciat"), SubResource("Resource_4t45g"), SubResource("Resource_kco42"), SubResource("Resource_jl1x4"), SubResource("Resource_3ou56"), SubResource("Resource_njuwy"), SubResource("Resource_kpfsi"), SubResource("Resource_rq04p"), SubResource("Resource_vvpf6"), SubResource("Resource_cfn6d"), SubResource("Resource_krkou"), SubResource("Resource_slblu"), null])
+
+[sub_resource type="Resource" id="Resource_luqlj"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("64_cwcbo")
+
+[sub_resource type="Resource" id="Resource_d2048"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("49_5hx7c")
+
+[sub_resource type="Resource" id="Resource_fqeq2"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("65_8d2qb")
+
+[sub_resource type="Resource" id="Resource_p51tc"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("66_byrsa")
+
+[sub_resource type="Resource" id="Resource_v0fcy"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("67_gg3iq")
+
+[sub_resource type="Resource" id="Resource_dqmwr"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("68_cpdjc")
+
+[sub_resource type="Resource" id="Resource_yqosc"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("69_qdetn")
+
+[sub_resource type="Resource" id="Resource_uepwr"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("70_sl2e0")
+
+[sub_resource type="Resource" id="Resource_xkglc"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("71_bj2fd")
+
+[sub_resource type="Resource" id="Resource_5cg48"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("30_mqm1x")
+
+[sub_resource type="Resource" id="Resource_mb1co"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("72_skyxt")
+
+[sub_resource type="Resource" id="Resource_h6f2w"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("73_l205c")
+
+[sub_resource type="Resource" id="Resource_ju1dt"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("74_dcn6g")
+
+[sub_resource type="Resource" id="Resource_txaxo"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("75_x5ygd")
+
+[sub_resource type="Resource" id="Resource_56t2i"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("76_k25lw")
+
+[sub_resource type="Resource" id="Resource_k0p8e"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("77_x2t7x")
+
+[sub_resource type="Resource" id="Resource_108vh"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("78_thjv1")
+
+[sub_resource type="Resource" id="Resource_ieipt"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("31_f2e0u")
+
+[sub_resource type="Resource" id="Resource_davms"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("80_xomed")
+
+[sub_resource type="Resource" id="Resource_8xp1h"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("81_2ktox")
+
+[sub_resource type="Resource" id="Resource_pacxa"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("82_8gp5v")
+
+[sub_resource type="Resource" id="Resource_66mqs"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("83_80tlf")
+
+[sub_resource type="Resource" id="Resource_wntl3"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("84_ggg13")
+
+[sub_resource type="Resource" id="Resource_c82a5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("85_0phb3")
+
+[sub_resource type="Resource" id="Resource_gqixo"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("86_g8qgf")
+
+[sub_resource type="Resource" id="Resource_itqoo"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("32_w380d")
+
+[sub_resource type="Resource" id="Resource_xve2f"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("87_8gwkh")
+
+[sub_resource type="Resource" id="Resource_0kmrx"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("88_qmmwj")
+
+[sub_resource type="Resource" id="Resource_oywh6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("90_qr18l")
+
+[sub_resource type="Resource" id="Resource_3lkpi"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("90_fnvum")
+
+[sub_resource type="Resource" id="Resource_jravx"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("91_1khbd")
+
+[sub_resource type="Resource" id="Resource_336wa"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("92_4oq7d")
+
+[sub_resource type="Resource" id="Resource_sbqpr"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("93_73dpf")
+
+[sub_resource type="Resource" id="Resource_yaehf"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("127_pftfn")
+
+[sub_resource type="Resource" id="Resource_eig2a"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("128_j5qf6")
+
+[sub_resource type="Resource" id="Resource_1r6uv"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("97_b1mp0")
+
+[sub_resource type="Resource" id="Resource_mouxd"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("130_0e6hu")
+
+[sub_resource type="Resource" id="Resource_tnxxn"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("131_bc3yr")
+
+[sub_resource type="Resource" id="Resource_6pwgv"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("41_c2rfo")
+
+[sub_resource type="Resource" id="Resource_2m5fh"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("132_254pi")
+
+[sub_resource type="Resource" id="Resource_3g8nm"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("133_4p52f")
+
+[sub_resource type="Resource" id="Resource_vanh6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("46_cwtvh")
+
+[sub_resource type="Resource" id="Resource_jntya"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("134_ukkbu")
+
+[sub_resource type="Resource" id="Resource_6hwaf"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("135_pn0n8")
+
+[sub_resource type="Resource" id="Resource_uu7fy"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("136_p7rer")
+
+[sub_resource type="Resource" id="Resource_jemjv"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("137_k42hp")
+
+[sub_resource type="Resource" id="Resource_4yyi4"]
+script = ExtResource("16_c8532")
+slot_datas = Array[ExtResource("17_2nvb0")]([SubResource("Resource_luqlj"), SubResource("Resource_d2048"), SubResource("Resource_fqeq2"), SubResource("Resource_p51tc"), SubResource("Resource_v0fcy"), SubResource("Resource_dqmwr"), SubResource("Resource_yqosc"), SubResource("Resource_uepwr"), SubResource("Resource_xkglc"), SubResource("Resource_5cg48"), SubResource("Resource_mb1co"), SubResource("Resource_h6f2w"), SubResource("Resource_ju1dt"), SubResource("Resource_txaxo"), SubResource("Resource_56t2i"), SubResource("Resource_k0p8e"), SubResource("Resource_108vh"), SubResource("Resource_ieipt"), SubResource("Resource_davms"), SubResource("Resource_8xp1h"), SubResource("Resource_pacxa"), SubResource("Resource_66mqs"), SubResource("Resource_wntl3"), SubResource("Resource_c82a5"), SubResource("Resource_gqixo"), SubResource("Resource_itqoo"), SubResource("Resource_xve2f"), SubResource("Resource_0kmrx"), SubResource("Resource_oywh6"), SubResource("Resource_3lkpi"), SubResource("Resource_jravx"), SubResource("Resource_336wa"), SubResource("Resource_sbqpr"), SubResource("Resource_yaehf"), SubResource("Resource_eig2a"), SubResource("Resource_1r6uv"), SubResource("Resource_mouxd"), SubResource("Resource_tnxxn"), SubResource("Resource_6pwgv"), SubResource("Resource_2m5fh"), SubResource("Resource_3g8nm"), SubResource("Resource_vanh6"), SubResource("Resource_jntya"), SubResource("Resource_6hwaf"), SubResource("Resource_uu7fy"), SubResource("Resource_jemjv"), null, null])
+
+[sub_resource type="Resource" id="Resource_lkkj4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("42_nx051")
+
+[sub_resource type="Resource" id="Resource_gw8w4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("81_ssivs")
+
+[sub_resource type="Resource" id="Resource_ybwqv"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("143_d16bq")
+
+[sub_resource type="Resource" id="Resource_vabpm"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("82_tpnhv")
+
+[sub_resource type="Resource" id="Resource_78s77"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("144_eova8")
+
+[sub_resource type="Resource" id="Resource_j8i3p"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("43_d4fp0")
+
+[sub_resource type="Resource" id="Resource_rf0cn"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("145_1bv3b")
+
+[sub_resource type="Resource" id="Resource_6rob3"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("146_axb14")
+
+[sub_resource type="Resource" id="Resource_hs0tt"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("147_6g8ce")
+
+[sub_resource type="Resource" id="Resource_b3chs"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("44_0maa2")
+
+[sub_resource type="Resource" id="Resource_q8pgc"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("148_vt8a1")
+
+[sub_resource type="Resource" id="Resource_r1ngj"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("149_qrs7c")
+
+[sub_resource type="Resource" id="Resource_k31if"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("150_oeyyj")
+
+[sub_resource type="Resource" id="Resource_bxtf2"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("83_p3x8l")
+
+[sub_resource type="Resource" id="Resource_n1fh4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("45_i0sfa")
+
+[sub_resource type="Resource" id="Resource_dfcw4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("84_v3v2c")
+
+[sub_resource type="Resource" id="Resource_g2ytn"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("85_e2wfq")
+
+[sub_resource type="Resource" id="Resource_h5y4k"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("151_843ky")
+
+[sub_resource type="Resource" id="Resource_k78vw"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("152_uuf0l")
+
+[sub_resource type="Resource" id="Resource_xbcip"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("153_j81f1")
+
+[sub_resource type="Resource" id="Resource_edfw6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("154_2qi1s")
+
+[sub_resource type="Resource" id="Resource_dbubk"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("46_s3cu7")
+
+[sub_resource type="Resource" id="Resource_c5317"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("155_hip8u")
+
+[sub_resource type="Resource" id="Resource_2psxl"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("87_154dx")
+
+[sub_resource type="Resource" id="Resource_ju118"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("156_02m6r")
+
+[sub_resource type="Resource" id="Resource_ump7j"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("157_0yoi2")
+
+[sub_resource type="Resource" id="Resource_8ktyj"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("158_woldh")
+
+[sub_resource type="Resource" id="Resource_16tvt"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("159_3fknf")
+
+[sub_resource type="Resource" id="Resource_tl7gm"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("160_oueiw")
+
+[sub_resource type="Resource" id="Resource_v2ito"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("47_cjkp6")
+
+[sub_resource type="Resource" id="Resource_xujiw"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("161_6gmx1")
+
+[sub_resource type="Resource" id="Resource_hmp5f"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("162_ye2vt")
+
+[sub_resource type="Resource" id="Resource_erj1x"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("163_2aiuc")
+
+[sub_resource type="Resource" id="Resource_6j3ol"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("164_ukmqw")
+
+[sub_resource type="Resource" id="Resource_muvgp"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("165_lxjn8")
+
+[sub_resource type="Resource" id="Resource_bk5p6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("48_kg5tc")
+
+[sub_resource type="Resource" id="Resource_3gbtb"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("166_eypyd")
+
+[sub_resource type="Resource" id="Resource_m4i20"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("167_dybr6")
+
+[sub_resource type="Resource" id="Resource_76w80"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("168_hfhli")
+
+[sub_resource type="Resource" id="Resource_san33"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("169_j3ecd")
+
+[sub_resource type="Resource" id="Resource_bedhf"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("170_3a2jb")
+
+[sub_resource type="Resource" id="Resource_jtn5s"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("96_is1cj")
+
+[sub_resource type="Resource" id="Resource_kw2q7"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("127_pftfn")
+
+[sub_resource type="Resource" id="Resource_ap5qp"]
+script = ExtResource("16_c8532")
+slot_datas = Array[ExtResource("17_2nvb0")]([SubResource("Resource_lkkj4"), SubResource("Resource_gw8w4"), SubResource("Resource_ybwqv"), SubResource("Resource_vabpm"), SubResource("Resource_78s77"), SubResource("Resource_j8i3p"), SubResource("Resource_rf0cn"), SubResource("Resource_6rob3"), SubResource("Resource_hs0tt"), SubResource("Resource_b3chs"), SubResource("Resource_q8pgc"), SubResource("Resource_r1ngj"), SubResource("Resource_k31if"), SubResource("Resource_bxtf2"), SubResource("Resource_n1fh4"), SubResource("Resource_dfcw4"), SubResource("Resource_g2ytn"), SubResource("Resource_h5y4k"), SubResource("Resource_k78vw"), SubResource("Resource_xbcip"), SubResource("Resource_edfw6"), SubResource("Resource_dbubk"), SubResource("Resource_c5317"), SubResource("Resource_2psxl"), SubResource("Resource_ju118"), SubResource("Resource_ump7j"), SubResource("Resource_8ktyj"), SubResource("Resource_16tvt"), SubResource("Resource_tl7gm"), SubResource("Resource_v2ito"), SubResource("Resource_xujiw"), SubResource("Resource_hmp5f"), SubResource("Resource_erj1x"), SubResource("Resource_6j3ol"), SubResource("Resource_muvgp"), SubResource("Resource_bk5p6"), SubResource("Resource_3gbtb"), SubResource("Resource_m4i20"), SubResource("Resource_76w80"), SubResource("Resource_san33"), SubResource("Resource_bedhf"), SubResource("Resource_jtn5s"), SubResource("Resource_kw2q7"), null, null, null, null, null])
+
+[sub_resource type="Resource" id="Resource_tmh7r"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("170_8vgak")
+
+[sub_resource type="Resource" id="Resource_rw3my"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("171_2qy5j")
+
+[sub_resource type="Resource" id="Resource_y6wom"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("172_eo3r1")
+
+[sub_resource type="Resource" id="Resource_d3w72"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("49_e4lmk")
+
+[sub_resource type="Resource" id="Resource_w7ri8"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("50_iogtc")
+
+[sub_resource type="Resource" id="Resource_k1njy"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("51_xgfv0")
+
+[sub_resource type="Resource" id="Resource_kmlek"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("173_733lj")
+
+[sub_resource type="Resource" id="Resource_a5m0e"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("95_3p0lv")
+
+[sub_resource type="Resource" id="Resource_58t2s"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("175_j4bm8")
+
+[sub_resource type="Resource" id="Resource_mjana"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("176_q7ip4")
+
+[sub_resource type="Resource" id="Resource_nddik"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("177_8gxcl")
+
+[sub_resource type="Resource" id="Resource_h31oi"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("178_8eovb")
+
+[sub_resource type="Resource" id="Resource_y8sgn"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("179_l4inb")
+
+[sub_resource type="Resource" id="Resource_n3wak"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("180_wmj6p")
+
+[sub_resource type="Resource" id="Resource_8dbfk"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("52_dnllq")
+
+[sub_resource type="Resource" id="Resource_v2vgp"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("53_8oaf2")
+
+[sub_resource type="Resource" id="Resource_ljcga"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("54_6m8wk")
+
+[sub_resource type="Resource" id="Resource_hiyuc"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("94_7asfn")
+
+[sub_resource type="Resource" id="Resource_qocom"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("182_n5bxq")
+
+[sub_resource type="Resource" id="Resource_53ws0"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("183_r5o5y")
+
+[sub_resource type="Resource" id="Resource_jtptk"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("184_5np2i")
+
+[sub_resource type="Resource" id="Resource_uhusq"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("185_loyve")
+
+[sub_resource type="Resource" id="Resource_u23qa"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("186_ou63a")
+
+[sub_resource type="Resource" id="Resource_235eh"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("187_8uo4i")
+
+[sub_resource type="Resource" id="Resource_q48o6"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("188_d6pbi")
+
+[sub_resource type="Resource" id="Resource_flthh"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("189_m0q22")
+
+[sub_resource type="Resource" id="Resource_txyj5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("190_h6e04")
+
+[sub_resource type="Resource" id="Resource_x30ef"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("191_ubtsi")
+
+[sub_resource type="Resource" id="Resource_xt6px"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("192_6oj1m")
+
+[sub_resource type="Resource" id="Resource_sg6d5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("193_gqsh2")
+
+[sub_resource type="Resource" id="Resource_egric"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("36_ib4g7")
+
+[sub_resource type="Resource" id="Resource_sfhlj"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("37_77p6x")
+
+[sub_resource type="Resource" id="Resource_qqldh"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("38_gim4e")
+
+[sub_resource type="Resource" id="Resource_5u2tx"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("39_bvw8t")
+
+[sub_resource type="Resource" id="Resource_nqjux"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("102_caxaa")
+
+[sub_resource type="Resource" id="Resource_yv8a1"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("103_jfkyf")
+
+[sub_resource type="Resource" id="Resource_ncg1x"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("192_pwxvm")
+
+[sub_resource type="Resource" id="Resource_0sgh4"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("54_rd74h")
+
+[sub_resource type="Resource" id="Resource_q7cvj"]
+script = ExtResource("16_c8532")
+slot_datas = Array[ExtResource("17_2nvb0")]([SubResource("Resource_tmh7r"), SubResource("Resource_rw3my"), SubResource("Resource_y6wom"), SubResource("Resource_d3w72"), SubResource("Resource_w7ri8"), SubResource("Resource_k1njy"), SubResource("Resource_kmlek"), SubResource("Resource_a5m0e"), SubResource("Resource_58t2s"), SubResource("Resource_mjana"), SubResource("Resource_nddik"), SubResource("Resource_h31oi"), SubResource("Resource_y8sgn"), SubResource("Resource_n3wak"), SubResource("Resource_8dbfk"), SubResource("Resource_v2vgp"), SubResource("Resource_ljcga"), SubResource("Resource_hiyuc"), SubResource("Resource_qocom"), SubResource("Resource_53ws0"), SubResource("Resource_jtptk"), SubResource("Resource_uhusq"), SubResource("Resource_u23qa"), SubResource("Resource_235eh"), SubResource("Resource_q48o6"), SubResource("Resource_flthh"), SubResource("Resource_txyj5"), SubResource("Resource_x30ef"), SubResource("Resource_xt6px"), SubResource("Resource_sg6d5"), SubResource("Resource_egric"), SubResource("Resource_sfhlj"), SubResource("Resource_qqldh"), SubResource("Resource_5u2tx"), SubResource("Resource_nqjux"), SubResource("Resource_yv8a1"), SubResource("Resource_ncg1x"), SubResource("Resource_0sgh4"), null, null, null, null, null, null, null, null, null, null])
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hmsyy"]
+texture = ExtResource("32_n33sa")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tswvh"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0lfcl"]
+texture = ExtResource("18_qmygl")
+texture_margin_left = 12.0
+texture_margin_top = 18.0
+texture_margin_right = 12.0
+texture_margin_bottom = 22.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6vec8"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o8ejl"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8r5a3"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kfhvb"]
+shader = ExtResource("3_u08pq")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2taga"]
+size = Vector2(98, 222)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_au7dp"]
+texture = ExtResource("32_n33sa")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r46fs"]
+texture = ExtResource("33_83v6n")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="Resource" id="Resource_1fgj5"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("20_ajq2m")
+
+[sub_resource type="Resource" id="Resource_wki8l"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("23_45c4i")
+
+[sub_resource type="Resource" id="Resource_opiae"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("27_ycjdd")
+
+[sub_resource type="Resource" id="Resource_by3xa"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("24_p2xix")
+
+[sub_resource type="Resource" id="Resource_8gg0w"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("41_k0mpp")
+
+[sub_resource type="Resource" id="Resource_qym68"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("44_xrirp")
+
+[sub_resource type="Resource" id="Resource_y285n"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("28_3tiqk")
+
+[sub_resource type="Resource" id="Resource_cmjcd"]
+script = ExtResource("17_2nvb0")
+quantity = 1
+item_data = ExtResource("40_3e1md")
+
+[sub_resource type="Resource" id="Resource_item1"]
+script = ExtResource("16_c8532")
+slot_datas = Array[ExtResource("17_2nvb0")]([SubResource("Resource_1fgj5"), SubResource("Resource_wki8l"), SubResource("Resource_opiae"), SubResource("Resource_by3xa"), SubResource("Resource_8gg0w"), SubResource("Resource_qym68"), SubResource("Resource_y285n"), SubResource("Resource_cmjcd")])
+
+[node name="main_page" type="Node2D"]
+script = ExtResource("1_iq6fx")
+
+[node name="background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j6adn")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pwryh")
+
+[node name="Bag" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ui_interface" parent="Bag" instance=ExtResource("2_w46fe")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 59.0
+script = ExtResource("2_3tql7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_constants/separation = 160
+alignment = 1
+
+[node name="exp" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "等级"
+
+[node name="level" type="Label" parent="Control/HBoxContainer/exp"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = -21.0
+offset_right = 79.0
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exp_bar" type="TextureProgressBar" parent="Control/HBoxContainer/exp/level"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 61.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+step = 0.0
+texture_over = SubResource("AtlasTexture_c63im")
+texture_progress = SubResource("AtlasTexture_2bum6")
+texture_progress_offset = Vector2(1, 1)
+
+[node name="gold" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "金币"
+
+[node name="gold_num" type="Label" parent="Control/HBoxContainer/gold"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = -21.0
+offset_right = 113.0
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="situation" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "公司情况"
+
+[node name="office_situation" type="TextureRect" parent="Control/HBoxContainer/situation"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -23.0
+offset_right = 34.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_8y54u")
+
+[node name="nickname" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "称号:"
+
+[node name="nick_text" type="Label" parent="Control/HBoxContainer/nickname"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -21.0
+offset_right = 101.0
+offset_bottom = 21.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "实习生"
+vertical_alignment = 1
+
+[node name="energy" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.647059, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "体力"
+
+[node name="energy_bar" type="TextureProgressBar" parent="Control/HBoxContainer/energy"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 61.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.0
+value = 1.0
+texture_over = SubResource("AtlasTexture_c63im")
+texture_progress = SubResource("AtlasTexture_1x0d0")
+texture_progress_offset = Vector2(1, 1)
+
+[node name="bag" type="Label" parent="Control/HBoxContainer"]
+material = SubResource("ShaderMaterial_0gn2l")
+layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 30
+text = "背包"
+
+[node name="AchievementPanel" parent="Control" instance=ExtResource("74_k67f8")]
+visible = false
+layout_mode = 1
+offset_top = 41.0
+offset_bottom = 644.0
+
+[node name="rank" type="Label" parent="Control"]
+material = SubResource("ShaderMaterial_c04k6")
+layout_mode = 0
+offset_left = 1180.0
+offset_top = 58.0
+offset_right = 1270.0
+offset_bottom = 100.0
+mouse_filter = 0
+theme_override_font_sizes/font_size = 30
+text = "积分榜"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAACoAAAADACcAAAAAACsAAAADACgAAAABACoAAAAEACcAAAABACsAAAAEACgAAAACACoAAAADACcAAAACACsAAAADACgAAAADACoAAAAEACcAAAADACsAAAAEACgAAAAEACoAAAADACcAAAAEACsAAAADACgAAAAFACoAAAAEACcAAAAFACsAAAAEACgAAAAGACoAAAADACcAAAAGACsAAAADACgAAAAHACoAAAAEACcAAAAHACsAAAAEACgAAAAIACoAAAADACcAAAAIACsAAAADACgAAAAJACoAAAAEACcAAAAJACsAAAAEACgAAAAKACoAAAADACcAAAAKACsAAAADACgAAAALACoAAAAEACcAAAALACsAAAAEACgAAAAMACoAAAADACcAAAAMACsAAAADACgAAAANACoAAAAEACcAAAANACsAAAAEACgAAAAOACoAAAADACcAAAAOACsAAAADACgAAAAPACoAAAAEACcAAAAPACsAAAAEACgAAAAQACoAAAADACcAAAAQACsAAAADACgAAAARACoAAAAEACcAAAARACsAAAAEACgAAAASACoAAAADACcAAAASACsAAAADACgAAAATACoAAAAEACcAAAATACsAAAAEACgAAAAUACoAAAADACcAAAAUACsAAAADACgAAAAVACoAAAAEACcAAAAVACsAAAAEACgAAAAWACoAAAADACcAAAAWACsAAAADACgAAAAXACoAAAAEACcAAAAXACsAAAAEACgAAAAYACoAAAADACcAAAAYACsAAAADACgAAAAZACoAAAAEACcAAAAZACsAAAAEACgAAAAaACoAAAADACcAAAAaACsAAAADACgAAAAbACoAAAAEACcAAAAbACsAAAAEACgAAAAcACoAAAADACcAAAAcACsAAAADACgAAAAdACoAAAAEACcAAAAdACsAAAAEACgAAAAeACoAAAADACcAAAAeACsAAAADACgAAAAfACoAAAAEACcAAAAfACsAAAAEACgAAAAgACoAAAADACcAAAAgACsAAAADACgAAAAhACoAAAAEACcAAAAhACsAAAAEACgAAAAiACoAAAADACcAAAAiACsAAAADACgAAAAjACoAAAAEACcAAAAjACsAAAAEACgAAAAkACoAAAADACcAAAAkACsAAAADACgAAAAlACoAAAAEACcAAAAlACsAAAAEACgAAAAmACoAAAADACcAAAAmACsAAAADACgAAAAnACoAAAAEACcAAAAnACsAAAAEACgAAAAoACoAAAADACcAAAAoACsAAAADACgAAAApACoAAAAEACcAAAApACsAAAAEACgAAAAqACoAAAADACcAAAAqACsAAAADACgAAAArACoAAAAEACcAAAArACsAAAAEACgAAAAsACoAAAADACcAAAAsACsAAAADACgAAAAtACoAAAAEACcAAAAtACsAAAAEACgAAAAuACoAAAADACcAAAAuACsAAAADACgAAAAvACoAAAAEACcAAAAvACsAAAAEACgAAAAwACoAAAADACcAAAAwACsAAAADACgAAAAxACoAAAAEACcAAAAxACsAAAAEACgAAAAyACoAAAADACcAAAAyACsAAAADACgAAAAzACoAAAAEACcAAAAzACsAAAAEACgAAAA0ACoAAAADACcAAAA0ACsAAAADACgAAAA1ACoAAAAEACcAAAA1ACsAAAAEACgAAAA2ACoAAAADACcAAAA2ACsAAAADACgAAAA3ACoAAAAEACcAAAA3ACsAAAAEACgAAAA4ACoAAAADACcAAAA4ACsAAAADACgAAAA5ACoAAAAEACcAAAA5ACsAAAAEACgAAAA6ACoAAAADACcAAAA6ACsAAAADACgAAAA7ACoAAAAEACcAAAA7ACsAAAAEACgAAAA8ACoAAAADACcAAAA8ACsAAAADACgAAAA9ACoAAAAEACcAAAA9ACsAAAAEACgAAAA+ACoAAAADACcAAAA+ACsAAAADACgAAAA/ACoAAAAEACcAAAA/ACsAAAAEACgAAABAACoAAAADACcAAABAACsAAAADACgAAABBACoAAAAEACcAAABBACsAAAAEACgAAABCACoAAAADACcAAABCACsAAAADACgAAABDACoAAAAEACcAAABDACsAAAAEACgAAABEACoAAAAFACcAAABEACsAAAAFACgAAABFACoAAAAGAB4AAABFACsAAAAGAB8AAABGACoAAAAHAB4AAABGACsAAAAHAB8AAABHACoAAAAGAB4AAABHACsAAAAGAB8AAABIACoAAAAHAB4AAABIACsAAAAHAB8AAABJACoAAAAGAB4AAABJACsAAAAGAB8AAABKACoAAAAHAB4AAABKACsAAAAHAB8AAABLACoAAAAGAB8AAABLACsAAAAGAB8AAABMACoAAAAPAAkAAFBMACsAAAAQAAkAAFBNACoAAAAGAB4AAABNACsAAAAGAB8AAABOACoAAAAHAB4AAABOACsAAAAqACkAAABPACoAAAAGAB4AAABPACsAAAArACkAAAAAACgAAAAYACIAAAAAACkAAAAYACMAAAABACgAAAAZACIAAAABACkAAAAZACMAAAAAACcAAAAYACMAAAABACcAAAAZACMAAAACACgAAAAYACIAAAACACkAAAAYACMAAAADACgAAAAZACIAAAADACkAAAAZACMAAAACACcAAAAYACMAAAADACcAAAAZACMAAAAEACgAAAAYACIAAAAEACkAAAAYACMAAAAFACgAAAAZACIAAAAFACkAAAAZACMAAAAEACcAAAAYACMAAAAFACcAAAAZACMAAAAGACgAAAAYACIAAAAGACkAAAAYACMAAAAHACgAAAAZACIAAAAHACkAAAAZACMAAAAIACgAAAAYACIAAAAIACkAAAAYACMAAAAJACgAAAAZACIAAAAJACkAAAAZACMAAAAKACgAAAAYACIAAAAKACkAAAAYACMAAAALACgAAAAZACIAAAALACkAAAAZACMAAAAMACgAAAAYACIAAAAMACkAAAAYACMAAAANACgAAAAZACIAAAANACkAAAAZACMAAAAOACgAAAAYACIAAAAOACkAAAAYACMAAAAPACgAAAAZACIAAAAPACkAAAAZACMAAAAQACgAAAAYACIAAAAQACkAAAAYACMAAAARACgAAAAZACIAAAARACkAAAAZACMAAAASACgAAAAYACIAAAASACkAAAAYACMAAAATACgAAAAZACIAAAATACkAAAAZACMAAAAUACgAAAAYACIAAAAUACkAAAAYACMAAAAVACgAAAAZACIAAAAVACkAAAAZACMAAAAWACgAAAAYACIAAAAWACkAAAAYACMAAAAXACgAAAAZACIAAAAXACkAAAAZACMAAAAYACgAAAAYACIAAAAYACkAAAAYACMAAAAZACgAAAAZACIAAAAZACkAAAAZACMAAAAaACgAAAAYACIAAAAaACkAAAAYACMAAAAbACgAAAAZACIAAAAbACkAAAAZACMAAAAcACgAAAAYACIAAAAcACkAAAAYACMAAAAdACgAAAAZACIAAAAdACkAAAAZACMAAAAeACgAAAAYACIAAAAeACkAAAAYACMAAAAfACgAAAAZACIAAAAfACkAAAAZACMAAAAgACgAAAAYACIAAAAgACkAAAAYACMAAAAhACgAAAAZACIAAAAhACkAAAAZACMAAAAiACgAAAAYACIAAAAiACkAAAAYACMAAAAjACgAAAAZACIAAAAjACkAAAAZACMAAAAkACgAAAAYACIAAAAkACkAAAAYACMAAAAlACgAAAAZACIAAAAlACkAAAAZACMAAAAmACgAAAAYACIAAAAmACkAAAAYACMAAAAnACgAAAAZACIAAAAnACkAAAAZACMAAAAoACgAAAAYACIAAAAoACkAAAAYACMAAAApACgAAAAZACIAAAApACkAAAAZACMAAAAqACgAAAAYACIAAAAqACkAAAAYACMAAAArACgAAAAZACIAAAArACkAAAAZACMAAAAsACgAAAAYACIAAAAsACkAAAAYACMAAAAtACgAAAAZACIAAAAtACkAAAAZACMAAAAuACgAAAAYACIAAAAuACkAAAAYACMAAAAvACgAAAAZACIAAAAvACkAAAAZACMAAAAwACgAAAAYACIAAAAwACkAAAAYACMAAAAxACgAAAAZACIAAAAxACkAAAAZACMAAAAyACgAAAAYACIAAAAyACkAAAAYACMAAAAzACgAAAAZACIAAAAzACkAAAAZACMAAAA0ACgAAAAYACIAAAA0ACkAAAAYACMAAAA1ACgAAAAZACIAAAA1ACkAAAAZACMAAAA2ACgAAAAYACIAAAA2ACkAAAAYACMAAAA3ACgAAAAZACIAAAA3ACkAAAAZACMAAAA4ACgAAAAYACIAAAA4ACkAAAAYACMAAAA5ACgAAAAZACIAAAA5ACkAAAAZACMAAAA6ACgAAAAYACIAAAA6ACkAAAAYACMAAAA7ACgAAAAZACIAAAA7ACkAAAAZACMAAAA8ACgAAAAmACUAAAA8ACkAAAAmACYAAAA9ACgAAAAnACUAAAA9ACkAAAAnACYAAAA+ACgAAAAYACIAAAA+ACkAAAAYACMAAAA/ACgAAAAZACIAAAA/ACkAAAAZACMAAABAACgAAAAYACIAAABAACkAAAAYACMAAABBACgAAAAZACIAAABBACkAAAAZACMAAABCACgAAAAYACIAAABCACkAAAAYACMAAABDACgAAAAZACIAAABDACkAAAAZACMAAABEACgAAAAFABsAAABEACkAAAAFAB0AAABFACgAAAAGABwAAABFACkAAAAGAB0AAABGACgAAAAGABwAAABGACkAAAAGAB0AAABHACgAAAAGABwAAABHACkAAAAGAB0AAABIACgAAAAGABwAAABIACkAAAAGAB0AAABJACgAAAAGABwAAABJACkAAAAGAB0AAABKACgAAAAGABwAAABKACkAAAAGAB0AAABLACgAAAAGABwAAABLACkAAAAGAB0AAABMACgAAAAGABwAAABMACkAAAAGAB0AAABNACgAAAAGABwAAABNACkAAAAGAB0AAABOACgAAAAGABwAAABOACkAAAAGAB0AAABPACgAAAAGABwAAABPACkAAAAGAB0AAABOACcAAAAGABwAAABPACcAAAAGABwAAABMACcAAAAGABwAAABNACcAAAAGABwAAABKACcAAAAGABwAAABLACcAAAAGABwAAABIACcAAAAGABwAAABJACcAAAAGABwAAABGACcAAAAGABwAAABHACcAAAAGABwAAABEACcAAAAFABsAAABFACcAAAAGABwAAABCACcAAAAYACMAAABDACcAAAAZACMAAABAACcAAAAYACMAAABBACcAAAAZACMAAAA+ACcAAAAYACMAAAA/ACcAAAAZACMAAAA8ACcAAAAYACMAAAA9ACcAAAAZACMAAAA6ACcAAAAYACMAAAA7ACcAAAAZACMAAAA4ACcAAAAYACMAAAA5ACcAAAAZACMAAAA2ACcAAAAYACMAAAA3ACcAAAAZACMAAAA0ACcAAAAYACMAAAA1ACcAAAAZACMAAAAyACcAAAAYACMAAAAzACcAAAAZACMAAAAwACcAAAAYACMAAAAxACcAAAAZACMAAAAuACcAAAAYACMAAAAvACcAAAAZACMAAAAsACcAAAAYACMAAAAtACcAAAAZACMAAAAqACcAAAAYACMAAAArACcAAAAZACMAAAAoACcAAAAYACMAAAApACcAAAAZACMAAAAmACcAAAAYACMAAAAnACcAAAAZACMAAAAkACcAAAAYACMAAAAlACcAAAAZACMAAAAiACcAAAAYACMAAAAjACcAAAAZACMAAAAgACcAAAAYACMAAAAhACcAAAAZACMAAAAeACcAAAAYACMAAAAfACcAAAAZACMAAAAcACcAAAAYACMAAAAdACcAAAAZACMAAAAaACcAAAAYACMAAAAbACcAAAAZACMAAAAYACcAAAAYACMAAAAZACcAAAAZACMAAAAWACcAAAAYACMAAAAXACcAAAAZACMAAAAUACcAAAAYACMAAAAVACcAAAAZACMAAAASACcAAAAYACMAAAATACcAAAAZACMAAAAQACcAAAAYACMAAAARACcAAAAZACMAAAAOACcAAAAYACMAAAAPACcAAAAZACMAAAAMACcAAAAYACMAAAANACcAAAAZACMAAAAKACcAAAAYACMAAAALACcAAAAZACMAAAAIACcAAAAYACMAAAAJACcAAAAZACMAAAAGACcAAAAYACMAAAAHACcAAAAZACMAAABOACwAAAAqACoAAABPACwAAAArACoAAABMACwAAAAOAAkAAHBNACwAAAAHAB4AAABKACwAAAANAAsAAFBLACwAAAANAAoAAFBIACwAAAANAAsAAFBJACwAAAANAAoAAFBGACwAAAANAAsAAFBHACwAAAANAAoAAFBEACwAAAANAAsAAFBFACwAAAANAAoAAFBCACwAAAANAAsAAFBDACwAAAANAAoAAFBAACwAAAANAAsAAFBBACwAAAANAAoAAFA+ACwAAAANAAsAAFA/ACwAAAANAAoAAFA8ACwAAAANAAsAAFA9ACwAAAANAAoAAFA6ACwAAAANAAsAAFA7ACwAAAANAAoAAFA4ACwAAAANAAsAAFA5ACwAAAANAAoAAFA2ACwAAAANAAsAAFA3ACwAAAANAAoAAFA0ACwAAAANAAsAAFA1ACwAAAANAAoAAFAyACwAAAANAAsAAFAzACwAAAANAAoAAFAwACwAAAANAAsAAFAxACwAAAANAAoAAFAuACwAAAANAAsAAFAvACwAAAANAAoAAFAsACwAAAANAAsAAFAtACwAAAANAAoAAFAqACwAAAANAAsAAFArACwAAAANAAoAAFAoACwAAAANAAsAAFApACwAAAANAAoAAFAmACwAAAANAAsAAFAnACwAAAANAAoAAFAkACwAAAANAAsAAFAlACwAAAANAAoAAFAiACwAAAANAAsAAFAjACwAAAANAAoAAFAgACwAAAANAAsAAFAhACwAAAANAAoAAFAeACwAAAANAAsAAFAfACwAAAANAAoAAFAcACwAAAANAAsAAFAdACwAAAANAAoAAFAaACwAAAANAAsAAFAbACwAAAANAAoAAFAYACwAAAANAAsAAFAZACwAAAANAAoAAFAWACwAAAANAAsAAFAXACwAAAANAAoAAFAUACwAAAANAAsAAFAVACwAAAANAAoAAFASACwAAAANAAsAAFATACwAAAANAAoAAFAQACwAAAANAAsAAFARACwAAAANAAoAAFAOACwAAAANAAsAAFAPACwAAAANAAoAAFAMACwAAAANAAsAAFANACwAAAANAAoAAFAKACwAAAANAAsAAFALACwAAAANAAoAAFAIACwAAAANAAsAAFAJACwAAAANAAoAAFAGACwAAAANAAsAAFAHACwAAAANAAoAAFAEACwAAAANAAsAAFAFACwAAAANAAoAAFACACwAAAANAAsAAFADACwAAAANAAoAAFAAACwAAAANAAsAAFABACwAAAANAAoAAFABAC0AAAAOAAoAAFAAAC0AAAAOAAsAAFACAC0AAAAOAAsAAFADAC0AAAAOAAoAAFAEAC0AAAAOAAsAAFAFAC0AAAAOAAoAAFAGAC0AAAAOAAsAAFAHAC0AAAAOAAoAAFAIAC0AAAAOAAsAAFAJAC0AAAAOAAoAAFAKAC0AAAAOAAsAAFALAC0AAAAOAAoAAFAMAC0AAAAOAAsAAFANAC0AAAAOAAoAAFAOAC0AAAAOAAsAAFAPAC0AAAAOAAoAAFAQAC0AAAAOAAsAAFARAC0AAAAOAAoAAFASAC0AAAAOAAsAAFATAC0AAAAOAAoAAFAUAC0AAAAOAAsAAFAVAC0AAAAOAAoAAFAWAC0AAAAOAAsAAFAXAC0AAAAOAAoAAFAYAC0AAAAOAAsAAFAZAC0AAAAOAAoAAFAaAC0AAAAOAAsAAFAbAC0AAAAOAAoAAFAcAC0AAAAOAAsAAFAdAC0AAAAOAAoAAFAeAC0AAAAOAAsAAFAfAC0AAAAOAAoAAFAgAC0AAAAOAAsAAFAhAC0AAAAOAAoAAFAiAC0AAAAOAAsAAFAjAC0AAAAOAAoAAFAkAC0AAAAOAAsAAFAlAC0AAAAOAAoAAFAmAC0AAAAOAAsAAFAnAC0AAAAOAAoAAFAoAC0AAAAOAAsAAFApAC0AAAAOAAoAAFAqAC0AAAAOAAsAAFArAC0AAAAOAAoAAFAsAC0AAAAOAAsAAFAtAC0AAAAOAAoAAFAuAC0AAAAOAAsAAFAvAC0AAAAOAAoAAFAwAC0AAAAOAAsAAFAxAC0AAAAOAAoAAFAyAC0AAAAOAAsAAFAzAC0AAAAOAAoAAFA0AC0AAAAOAAsAAFA1AC0AAAAOAAoAAFA2AC0AAAAOAAsAAFA3AC0AAAAOAAoAAFA4AC0AAAAOAAsAAFA5AC0AAAAOAAoAAFA6AC0AAAAOAAsAAFA7AC0AAAAOAAoAAFA8AC0AAAAOAAsAAFA9AC0AAAAOAAoAAFA+AC0AAAAOAAsAAFA/AC0AAAAOAAoAAFBAAC0AAAAOAAsAAFBBAC0AAAAOAAoAAFBCAC0AAAAOAAsAAFBDAC0AAAAOAAoAAFBEAC0AAAAOAAsAAFBFAC0AAAAOAAoAAFBGAC0AAAAOAAsAAFBHAC0AAAAOAAoAAFBIAC0AAAAOAAsAAFBJAC0AAAAOAAoAAFBKAC0AAAAOAAsAAFBLAC0AAAAOAAoAAFBMAC0AAAANAAkAAHBNAC0AAAAeACoAAABOAC0AAAAqACsAAABPAC0AAAArACsAAAA=")
+tile_set = SubResource("TileSet_ycv8q")
+
+[node name="office" type="StaticBody2D" parent="."]
+position = Vector2(0, -30)
+script = ExtResource("3_oar3g")
+
+[node name="office1" type="Sprite2D" parent="office"]
+material = SubResource("ShaderMaterial_1clnv")
+position = Vector2(662, 579)
+texture = ExtResource("3_hn24x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="office"]
+position = Vector2(662, 579.5)
+shape = SubResource("RectangleShape2D_svt5c")
+
+[node name="Control" type="Control" parent="office"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 570.0
+offset_top = 471.0
+offset_right = 756.0
+offset_bottom = 694.0
+
+[node name="PopupLocation" type="Marker2D" parent="office"]
+position = Vector2(345, 190)
+script = ExtResource("28_rqdsf")
+damage_node = ExtResource("29_xcjq3")
+
+[node name="shop" type="StaticBody2D" parent="."]
+position = Vector2(149, 539)
+script = ExtResource("6_5sbe0")
+
+[node name="shop1" type="Sprite2D" parent="shop"]
+material = SubResource("ShaderMaterial_1j62e")
+texture = ExtResource("4_rrdx1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shop"]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_e5jlo")
+
+[node name="Control" type="Control" parent="shop"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -110.0
+offset_top = -140.0
+offset_right = 109.0
+offset_bottom = 133.0
+
+[node name="shop_indoor" type="Node2D" parent="shop"]
+visible = false
+z_index = 20
+position = Vector2(-149, -539)
+script = ExtResource("15_jq1ky")
+inventory_data1 = SubResource("Resource_mphqn")
+inventory_data2 = SubResource("Resource_ofqpa")
+inventory_data3 = SubResource("Resource_fpbkv")
+inventory_data4 = SubResource("Resource_4yyi4")
+inventory_data5 = SubResource("Resource_ap5qp")
+inventory_data6 = SubResource("Resource_q7cvj")
+
+[node name="shop_background" type="TextureRect" parent="shop/shop_indoor"]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("15_alys3")
+
+[node name="gold" type="Label" parent="shop/shop_indoor"]
+offset_left = 580.0
+offset_top = 8.0
+offset_right = 640.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmsyy")
+text = "金币"
+
+[node name="Button" type="Button" parent="shop/shop_indoor"]
+offset_left = 1152.0
+offset_right = 1280.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 60
+text = "离开"
+
+[node name="shopping" type="Sprite2D" parent="shop/shop_indoor"]
+material = SubResource("ShaderMaterial_tswvh")
+position = Vector2(640, 360)
+texture = ExtResource("16_x5y1h")
+
+[node name="shopping_control" type="Control" parent="shop/shop_indoor/shopping"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -799.0
+offset_top = -320.0
+offset_right = -553.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="speech" type="Label" parent="shop/shop_indoor"]
+visible = false
+offset_left = 641.0
+offset_top = 164.0
+offset_right = 873.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_sjksg")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_0lfcl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="speech_timer" type="Timer" parent="shop/shop_indoor"]
+wait_time = 1.3
+
+[node name="quit_timer" type="Timer" parent="shop/shop_indoor"]
+wait_time = 1.3
+
+[node name="open_door_audio" type="AudioStreamPlayer" parent="shop/shop_indoor"]
+stream = ExtResource("19_fbi8b")
+
+[node name="shop_ui" type="Control" parent="shop/shop_indoor"]
+visible = false
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 621.0
+offset_top = 380.0
+offset_right = 621.0
+offset_bottom = 380.0
+grow_vertical = 2
+script = ExtResource("21_3ey0a")
+
+[node name="shop" parent="shop/shop_indoor/shop_ui" instance=ExtResource("17_riykw")]
+layout_mode = 1
+
+[node name="PopupLocation" type="Marker2D" parent="shop/shop_indoor/shop_ui"]
+position = Vector2(47, -25)
+script = ExtResource("28_rqdsf")
+damage_node = ExtResource("29_xcjq3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="shop/shop_indoor/shop_ui"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = 200.0
+offset_right = 133.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="last" type="Button" parent="shop/shop_indoor/shop_ui/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "上一页"
+
+[node name="page" type="Label" parent="shop/shop_indoor/shop_ui/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "2/2"
+
+[node name="next" type="Button" parent="shop/shop_indoor/shop_ui/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "下一页"
+
+[node name="road" type="StaticBody2D" parent="."]
+position = Vector2(1184, 648)
+script = ExtResource("8_qyxeg")
+
+[node name="road_background" type="Sprite2D" parent="road"]
+material = SubResource("ShaderMaterial_6vec8")
+position = Vector2(-102, -106)
+scale = Vector2(3, 3)
+texture = ExtResource("31_irjl4")
+
+[node name="level_1" type="Node2D" parent="road"]
+
+[node name="level_1_s" type="Sprite2D" parent="road/level_1"]
+material = SubResource("ShaderMaterial_o8ejl")
+position = Vector2(-102, -181)
+scale = Vector2(3, 3)
+texture = ExtResource("32_yigql")
+
+[node name="level_1_c" type="Control" parent="road/level_1"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -150.0
+offset_top = -202.0
+offset_right = -54.0
+offset_bottom = -160.0
+
+[node name="Label" type="Label" parent="road/level_1"]
+offset_left = -138.0
+offset_top = -190.0
+offset_right = -66.0
+offset_bottom = -166.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_sjksg")
+theme_override_font_sizes/font_size = 24
+text = "去公园"
+
+[node name="level_2" type="Node2D" parent="road"]
+
+[node name="level_2_s" type="Sprite2D" parent="road/level_2"]
+material = SubResource("ShaderMaterial_8r5a3")
+position = Vector2(-102, -127)
+scale = Vector2(3, 3)
+texture = ExtResource("32_yigql")
+
+[node name="level_2_c" type="Control" parent="road/level_2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -150.0
+offset_top = -148.0
+offset_right = -54.0
+offset_bottom = -106.0
+
+[node name="Label" type="Label" parent="road/level_2"]
+offset_left = -138.0
+offset_top = -136.0
+offset_right = -66.0
+offset_bottom = -112.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_sjksg")
+theme_override_font_sizes/font_size = 24
+text = "赶公交"
+
+[node name="level_3" type="Node2D" parent="road"]
+
+[node name="level_3_s" type="Sprite2D" parent="road/level_3"]
+material = SubResource("ShaderMaterial_kfhvb")
+position = Vector2(-102, -73)
+scale = Vector2(3, 3)
+texture = ExtResource("32_yigql")
+
+[node name="level_3_c" type="Control" parent="road/level_3"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -150.0
+offset_top = -94.0
+offset_right = -54.0
+offset_bottom = -52.0
+
+[node name="Label" type="Label" parent="road/level_3"]
+offset_left = -138.0
+offset_top = -82.0
+offset_right = -66.0
+offset_bottom = -58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_sjksg")
+theme_override_font_sizes/font_size = 24
+text = "请假"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="road"]
+position = Vector2(-102, -109)
+shape = SubResource("RectangleShape2D_2taga")
+
+[node name="tip" type="Label" parent="road"]
+visible = false
+offset_left = -645.0
+offset_top = -392.0
+offset_right = -413.0
+offset_bottom = -305.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_au7dp")
+text = "是否请假？"
+
+[node name="confirm" type="Button" parent="road/tip"]
+layout_mode = 0
+offset_top = 84.0
+offset_right = 112.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_r46fs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_au7dp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_au7dp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_au7dp")
+text = "确认"
+
+[node name="cancel" type="Button" parent="road/tip"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 84.0
+offset_right = 232.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_r46fs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_au7dp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_au7dp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_au7dp")
+text = "取消"
+
+[node name="pause_screen" type="Control" parent="."]
+process_mode = 2
+visible = false
+z_index = 99
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_uomvi")
+
+[node name="ColorRect" type="ColorRect" parent="pause_screen"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.54902)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pause_screen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="pause_screen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "暂停"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pause_screen/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="resume" type="Button" parent="pause_screen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "继续游戏"
+
+[node name="quit" type="Button" parent="pause_screen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "退出游戏"
+
+[node name="equipment" parent="." instance=ExtResource("18_5lkoe")]
+
+[node name="Player" parent="." instance=ExtResource("19_65g3f")]
+
+[node name="office_state_1" parent="." instance=ExtResource("65_mpywi")]
+visible = false
+z_index = 30
+position = Vector2(-100, 109)
+inventory_data = SubResource("Resource_item1")
+
+[node name="warehouse" parent="." instance=ExtResource("70_u4diw")]
+
+[node name="achi_show" parent="." instance=ExtResource("75_sj1r8")]
+z_index = 100
+anchors_preset = 5
+anchor_top = 0.0
+anchor_bottom = 0.0
+offset_left = 429.5
+offset_top = -60.0
+offset_right = 850.5
+offset_bottom = 0.0
+grow_vertical = 1
+
+[node name="Node" type="Node" parent="."]
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="Node"]
+
+[node name="BGMTimer" type="Timer" parent="Node"]
+autostart = true
+
+[node name="PlayerRank" parent="." instance=ExtResource("212_adugn")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="gui_input" from="Control/HBoxContainer/bag" to="Control" method="_on_bag_gui_input"]
+[connection signal="mouse_entered" from="Control/HBoxContainer/bag" to="Control" method="_on_bag_mouse_entered"]
+[connection signal="mouse_exited" from="Control/HBoxContainer/bag" to="Control" method="_on_bag_mouse_exited"]
+[connection signal="gui_input" from="Control/rank" to="Control" method="_on_rank_gui_input"]
+[connection signal="mouse_entered" from="Control/rank" to="Control" method="_on_rank_mouse_entered"]
+[connection signal="mouse_exited" from="Control/rank" to="Control" method="_on_rank_mouse_exited"]
+[connection signal="gui_input" from="office/Control" to="office" method="_on_control_gui_input"]
+[connection signal="mouse_entered" from="office/Control" to="office" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="office/Control" to="office" method="_on_control_mouse_exited"]
+[connection signal="gui_input" from="shop/Control" to="shop" method="_on_control_gui_input"]
+[connection signal="mouse_entered" from="shop/Control" to="shop" method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="shop/Control" to="shop" method="_on_control_mouse_exited"]
+[connection signal="pressed" from="shop/shop_indoor/Button" to="shop" method="_on_button_pressed"]
+[connection signal="gui_input" from="shop/shop_indoor/shopping/shopping_control" to="shop" method="_on_shopping_control_gui_input"]
+[connection signal="mouse_entered" from="shop/shop_indoor/shopping/shopping_control" to="shop" method="_on_shopping_control_mouse_entered"]
+[connection signal="mouse_exited" from="shop/shop_indoor/shopping/shopping_control" to="shop" method="_on_shopping_control_mouse_exited"]
+[connection signal="timeout" from="shop/shop_indoor/speech_timer" to="shop" method="_on_speech_timer_timeout"]
+[connection signal="timeout" from="shop/shop_indoor/quit_timer" to="shop" method="_on_quit_timer_timeout"]
+[connection signal="pressed" from="shop/shop_indoor/shop_ui/HBoxContainer/last" to="shop/shop_indoor/shop_ui" method="_on_last_pressed"]
+[connection signal="pressed" from="shop/shop_indoor/shop_ui/HBoxContainer/next" to="shop/shop_indoor/shop_ui" method="_on_next_pressed"]
+[connection signal="gui_input" from="road/level_1/level_1_c" to="road" method="_on_level_1_c_gui_input"]
+[connection signal="mouse_entered" from="road/level_1/level_1_c" to="road" method="_on_level_1_c_mouse_entered"]
+[connection signal="mouse_exited" from="road/level_1/level_1_c" to="road" method="_on_level_1_c_mouse_exited"]
+[connection signal="gui_input" from="road/level_2/level_2_c" to="road" method="_on_level_2_c_gui_input"]
+[connection signal="mouse_entered" from="road/level_2/level_2_c" to="road" method="_on_level_2_c_mouse_entered"]
+[connection signal="mouse_exited" from="road/level_2/level_2_c" to="road" method="_on_level_2_c_mouse_exited"]
+[connection signal="gui_input" from="road/level_3/level_3_c" to="road" method="_on_level_3_c_gui_input"]
+[connection signal="mouse_entered" from="road/level_3/level_3_c" to="road" method="_on_level_3_c_mouse_entered"]
+[connection signal="mouse_exited" from="road/level_3/level_3_c" to="road" method="_on_level_3_c_mouse_exited"]
+[connection signal="pressed" from="road/tip/confirm" to="road" method="_on_confirm_pressed"]
+[connection signal="pressed" from="road/tip/cancel" to="road" method="_on_cancel_pressed"]
+[connection signal="pressed" from="pause_screen/VBoxContainer/HBoxContainer/resume" to="pause_screen" method="_on_resume_pressed"]
+[connection signal="pressed" from="pause_screen/VBoxContainer/HBoxContainer/quit" to="pause_screen" method="_on_quit_pressed"]
+[connection signal="timeout" from="Node/BGMTimer" to="." method="_on_bgm_timer_timeout"]

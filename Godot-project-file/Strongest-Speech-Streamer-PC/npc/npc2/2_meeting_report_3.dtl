@@ -1,0 +1,5 @@
+join npc_2 center
+npc_2: [shake amp=50 freq=5]哇！[/shake]突然要召开[color=#FF0000]紧急会议[/color]啊！
+npc_2: 不知道会是什么事情。
+npc_2: 走吧，快去准备一下！
+leave npc_2

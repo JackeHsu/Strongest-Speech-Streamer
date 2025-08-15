@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://sws1fugrdkeo"]
+
+[ext_resource type="Texture2D" uid="uid://dwtkbg4nob6j7" path="res://assets/home/home_wall.png" id="1_ucgrh"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_nb46o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02gob"]
+atlas = ExtResource("1_ucgrh")
+region = Rect2(0, 272, 16, 16)
+
+[resource]
+script = ExtResource("2_nb46o")
+item_name = "壁纸样式5"
+stackable = false
+item_texture = SubResource("AtlasTexture_02gob")
+description = "可以更换房间地板"
+item_max_amount = 0
+group_name = "wall"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 300
+is_commodity = true
+layer = 0
+source_id = 5
+interactive_type = ""

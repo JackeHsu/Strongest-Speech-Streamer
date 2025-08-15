@@ -1,0 +1,7 @@
+join npc_2 center
+npc_2: 嘿~这里来了一个[color=#FF0000]新直播任务[/color]！
+npc_2: 大家互相合作，看看这个直播任务要怎么完成吧！
+npc_2: 需要帮助尽管说哦！
+join npc_1 right
+npc_1: 对！大家互相帮助！
+leave --All--

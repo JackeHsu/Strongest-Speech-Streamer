@@ -1,0 +1,585 @@
+[gd_scene load_steps=34 format=4 uid="uid://blay3ekmaom34"]
+
+[ext_resource type="Script" path="res://scripts/home_page/home_page.gd" id="1_ai51h"]
+[ext_resource type="Texture2D" uid="uid://vg7jn1rannel" path="res://assets/background/sunset.png" id="2_mcsph"]
+[ext_resource type="Texture2D" uid="uid://cgrmn57dsptfk" path="res://assets/ui/energy_bar_1.png" id="3_r4iga"]
+[ext_resource type="Texture2D" uid="uid://cesix5ibcxrsc" path="res://assets/buildings/Modern_Exteriors_RTU_1_layer_1_32x32.png" id="3_xxm0f"]
+[ext_resource type="PackedScene" uid="uid://ryvaagqxxfi8" path="res://scenes/home_builder/home/home.tscn" id="4_fur5t"]
+[ext_resource type="Texture2D" uid="uid://vx24gh2v1ian" path="res://assets/ui/exp_bar.png" id="4_pv2d5"]
+[ext_resource type="Texture2D" uid="uid://n8bad1j1bsk7" path="res://assets/ui/situation/stable.png" id="5_ex8j6"]
+[ext_resource type="Texture2D" uid="uid://bdysa4nfletay" path="res://assets/ui/energy_bar.png" id="6_wic1l"]
+[ext_resource type="Script" path="res://scripts/ui/popup_location.gd" id="9_uhtn4"]
+[ext_resource type="PackedScene" uid="uid://8u4wvy10ydjr" path="res://scenes/ui/floating_tips.tscn" id="10_81a20"]
+[ext_resource type="Texture2D" uid="uid://47ru5i5x08qa" path="res://assets/button_background_new.png" id="11_t0oh6"]
+[ext_resource type="Texture2D" uid="uid://qjiywcfu6gin" path="res://assets/button_background_new2.png" id="12_rctp1"]
+[ext_resource type="Script" path="res://scripts/home_page/pause_screen.gd" id="13_cncxc"]
+[ext_resource type="Shader" path="res://shaders/sprite_outline.gdshader" id="13_cq3ea"]
+[ext_resource type="Texture2D" uid="uid://6s6nd2hiqrx" path="res://assets/home/back_button/walk_sign.png" id="14_d7wuq"]
+[ext_resource type="Script" path="res://scripts/home_page/speech_tips_script.gd" id="14_t5cln"]
+[ext_resource type="Texture2D" uid="uid://cs4xalc38d5t6" path="res://assets/bag_ui/close_button.png" id="14_ykinr"]
+[ext_resource type="PackedScene" uid="uid://dqipvg83r7t5n" path="res://scenes/home_builder/home/warehouse.tscn" id="16_la4ve"]
+[ext_resource type="PackedScene" uid="uid://hoe7c2pla8n5" path="res://scenes/achievement_panel.tscn" id="19_veqi8"]
+[ext_resource type="PackedScene" uid="uid://d4fpy41wao1s8" path="res://scenes/achi_show.tscn" id="20_mgour"]
+[ext_resource type="AudioStream" uid="uid://bwjd317klw4c1" path="res://assets/audio/Home_bgm.wav" id="21_8ftqo"]
+[ext_resource type="PackedScene" uid="uid://dxnfhl4cdlllt" path="res://scenes/player_rank.tscn" id="22_cuxxg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l0gv"]
+atlas = ExtResource("3_r4iga")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx7lg"]
+atlas = ExtResource("4_pv2d5")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjkj1"]
+atlas = ExtResource("6_wic1l")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_us4sa"]
+shader = ExtResource("13_cq3ea")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b6jly"]
+shader = ExtResource("13_cq3ea")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3k26f"]
+texture = ExtResource("3_xxm0f")
+23:34/0 = 0
+23:35/0 = 0
+24:35/0 = 0
+24:36/0 = 0
+25:36/0 = 0
+25:35/0 = 0
+25:34/0 = 0
+24:34/0 = 0
+23:36/0 = 0
+38:37/0 = 0
+38:38/0 = 0
+39:38/0 = 0
+39:37/0 = 0
+42:41/0 = 0
+42:42/0 = 0
+42:43/0 = 0
+43:43/0 = 0
+43:42/0 = 0
+43:41/0 = 0
+30:41/0 = 0
+30:42/0 = 0
+30:43/0 = 0
+31:43/0 = 0
+31:42/0 = 0
+31:41/0 = 0
+13:42/0 = 0
+13:43/0 = 0
+14:43/0 = 0
+14:42/0 = 0
+6:29/0 = 0
+6:28/0 = 0
+6:25/0 = 0
+5:29/0 = 0
+5:28/0 = 0
+5:27/0 = 0
+5:26/0 = 0
+5:25/0 = 0
+5:40/0 = 0
+6:39/0 = 0
+5:39/0 = 0
+23:40/0 = 0
+23:39/0 = 0
+24:40/0 = 0
+4:40/0 = 0
+4:39/0 = 0
+3:39/0 = 0
+3:40/0 = 0
+6:30/0 = 0
+6:31/0 = 0
+7:31/0 = 0
+7:30/0 = 0
+13:40/size_in_atlas = Vector2i(2, 2)
+13:40/next_alternative_id = 2
+13:40/0 = 0
+13:40/1 = 1
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+14:11/0 = 0
+13:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rrs6e"]
+sources/0 = SubResource("TileSetAtlasSource_3k26f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vebmq"]
+texture = ExtResource("11_t0oh6")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqw1j"]
+texture = ExtResource("12_rctp1")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7esk4"]
+shader = ExtResource("13_cq3ea")
+shader_parameter/outline_width = 0.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lc7y"]
+texture = ExtResource("11_t0oh6")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="home_page" type="Node2D"]
+script = ExtResource("1_ai51h")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_mcsph")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 59.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_constants/separation = 160
+alignment = 1
+
+[node name="exp" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "等级"
+
+[node name="level" type="Label" parent="Control/HBoxContainer/exp"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = -21.0
+offset_right = 79.0
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exp_bar" type="TextureProgressBar" parent="Control/HBoxContainer/exp/level"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 61.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+step = 0.0
+texture_over = SubResource("AtlasTexture_7l0gv")
+texture_progress = SubResource("AtlasTexture_tx7lg")
+texture_progress_offset = Vector2(1, 1)
+
+[node name="gold" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "金币"
+
+[node name="gold_num" type="Label" parent="Control/HBoxContainer/gold"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 62.0
+offset_top = -21.0
+offset_right = 113.0
+offset_bottom = 21.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="situation" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "公司情况"
+
+[node name="office_situation" type="TextureRect" parent="Control/HBoxContainer/situation"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -23.0
+offset_right = 34.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_ex8j6")
+
+[node name="nickname" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "称号:"
+
+[node name="nick_text" type="Label" parent="Control/HBoxContainer/nickname"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -21.0
+offset_right = 101.0
+offset_bottom = 21.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "实习生"
+vertical_alignment = 1
+
+[node name="energy" type="Label" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.647059, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "体力"
+
+[node name="energy_bar" type="TextureProgressBar" parent="Control/HBoxContainer/energy"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 61.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.0
+value = 1.0
+texture_over = SubResource("AtlasTexture_7l0gv")
+texture_progress = SubResource("AtlasTexture_mjkj1")
+texture_progress_offset = Vector2(1, 1)
+
+[node name="achi" type="Label" parent="Control/HBoxContainer"]
+material = SubResource("ShaderMaterial_us4sa")
+layout_mode = 2
+mouse_filter = 0
+theme_override_font_sizes/font_size = 30
+text = "成就"
+
+[node name="rank" type="Label" parent="Control"]
+material = SubResource("ShaderMaterial_b6jly")
+layout_mode = 0
+offset_left = 1180.0
+offset_top = 58.0
+offset_right = 1270.0
+offset_bottom = 100.0
+mouse_filter = 0
+theme_override_font_sizes/font_size = 30
+text = "积分榜"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAACoAAAADACcAAAAAACsAAAADACgAAAABACoAAAAEACcAAAABACsAAAAEACgAAAACACoAAAADACcAAAACACsAAAADACgAAAADACoAAAAEACcAAAADACsAAAAEACgAAAAEACoAAAADACcAAAAEACsAAAADACgAAAAFACoAAAAEACcAAAAFACsAAAAEACgAAAAGACoAAAADACcAAAAGACsAAAADACgAAAAHACoAAAAEACcAAAAHACsAAAAEACgAAAAIACoAAAADACcAAAAIACsAAAADACgAAAAJACoAAAAEACcAAAAJACsAAAAEACgAAAAKACoAAAADACcAAAAKACsAAAADACgAAAALACoAAAAEACcAAAALACsAAAAEACgAAAAMACoAAAADACcAAAAMACsAAAADACgAAAANACoAAAAEACcAAAANACsAAAAEACgAAAAOACoAAAADACcAAAAOACsAAAADACgAAAAPACoAAAAEACcAAAAPACsAAAAEACgAAAAQACoAAAADACcAAAAQACsAAAADACgAAAARACoAAAAEACcAAAARACsAAAAEACgAAAASACoAAAADACcAAAASACsAAAADACgAAAATACoAAAAEACcAAAATACsAAAAEACgAAAAUACoAAAADACcAAAAUACsAAAADACgAAAAVACoAAAAEACcAAAAVACsAAAAEACgAAAAWACoAAAADACcAAAAWACsAAAADACgAAAAXACoAAAAEACcAAAAXACsAAAAEACgAAAAYACoAAAADACcAAAAYACsAAAADACgAAAAZACoAAAAEACcAAAAZACsAAAAEACgAAAAaACoAAAADACcAAAAaACsAAAADACgAAAAbACoAAAAEACcAAAAbACsAAAAEACgAAAAcACoAAAADACcAAAAcACsAAAADACgAAAAdACoAAAAEACcAAAAdACsAAAAEACgAAAAeACoAAAADACcAAAAeACsAAAADACgAAAAfACoAAAAEACcAAAAfACsAAAAEACgAAAAgACoAAAADACcAAAAgACsAAAADACgAAAAhACoAAAAEACcAAAAhACsAAAAEACgAAAAiACoAAAADACcAAAAiACsAAAADACgAAAAjACoAAAAEACcAAAAjACsAAAAEACgAAAAkACoAAAADACcAAAAkACsAAAADACgAAAAlACoAAAAEACcAAAAlACsAAAAEACgAAAAmACoAAAADACcAAAAmACsAAAADACgAAAAnACoAAAAEACcAAAAnACsAAAAEACgAAAAoACoAAAADACcAAAAoACsAAAADACgAAAApACoAAAAEACcAAAApACsAAAAEACgAAAAqACoAAAADACcAAAAqACsAAAADACgAAAArACoAAAAEACcAAAArACsAAAAEACgAAAAsACoAAAADACcAAAAsACsAAAADACgAAAAtACoAAAAEACcAAAAtACsAAAAEACgAAAAuACoAAAADACcAAAAuACsAAAADACgAAAAvACoAAAAEACcAAAAvACsAAAAEACgAAAAwACoAAAADACcAAAAwACsAAAADACgAAAAxACoAAAAEACcAAAAxACsAAAAEACgAAAAyACoAAAADACcAAAAyACsAAAADACgAAAAzACoAAAAEACcAAAAzACsAAAAEACgAAAA0ACoAAAADACcAAAA0ACsAAAADACgAAAA1ACoAAAAEACcAAAA1ACsAAAAEACgAAAA2ACoAAAADACcAAAA2ACsAAAADACgAAAA3ACoAAAAEACcAAAA3ACsAAAAEACgAAAA4ACoAAAADACcAAAA4ACsAAAADACgAAAA5ACoAAAAEACcAAAA5ACsAAAAEACgAAAA6ACoAAAADACcAAAA6ACsAAAADACgAAAA7ACoAAAAEACcAAAA7ACsAAAAEACgAAAA8ACoAAAADACcAAAA8ACsAAAADACgAAAA9ACoAAAAEACcAAAA9ACsAAAAEACgAAAA+ACoAAAADACcAAAA+ACsAAAADACgAAAA/ACoAAAAEACcAAAA/ACsAAAAEACgAAABAACoAAAADACcAAABAACsAAAADACgAAABBACoAAAAEACcAAABBACsAAAAEACgAAABCACoAAAADACcAAABCACsAAAADACgAAABDACoAAAAEACcAAABDACsAAAAEACgAAABEACoAAAADACcAAABEACsAAAADACgAAABFACoAAAAEACcAAABFACsAAAAEACgAAABGACoAAAADACcAAABGACsAAAADACgAAABHACoAAAAEACcAAABHACsAAAAEACgAAABIACoAAAADACcAAABIACsAAAADACgAAABJACoAAAAEACcAAABJACsAAAAEACgAAABKACoAAAADACcAAABKACsAAAADACgAAABLACoAAAAEACcAAABLACsAAAAEACgAAABMACoAAAADACcAAABMACsAAAADACgAAABNACoAAAAEACcAAABNACsAAAAEACgAAABOACoAAAADACcAAABOACsAAAADACgAAABPACoAAAAEACcAAABPACsAAAAEACgAAAAAACgAAAAYACIAAAAAACkAAAAYACMAAAABACgAAAAZACIAAAABACkAAAAZACMAAAAAACcAAAAYACMAAAABACcAAAAZACMAAAACACgAAAAYACIAAAACACkAAAAYACMAAAADACgAAAAmACUAAAADACkAAAAmACYAAAACACcAAAAYACMAAAADACcAAAAZACMAAAAEACgAAAAnACUAAAAEACkAAAAnACYAAAAFACgAAAAZACIAAAAFACkAAAAZACMAAAAEACcAAAAYACMAAAAFACcAAAAZACMAAAAGACgAAAAYACIAAAAGACkAAAAYACMAAAAHACgAAAAZACIAAAAHACkAAAAZACMAAAAIACgAAAAYACIAAAAIACkAAAAYACMAAAAJACgAAAAZACIAAAAJACkAAAAZACMAAAAKACgAAAAYACIAAAAKACkAAAAYACMAAAALACgAAAAZACIAAAALACkAAAAZACMAAAAMACgAAAAYACIAAAAMACkAAAAYACMAAAANACgAAAAZACIAAAANACkAAAAZACMAAAAOACgAAAAYACIAAAAOACkAAAAYACMAAAAPACgAAAAZACIAAAAPACkAAAAZACMAAAAQACgAAAAYACIAAAAQACkAAAAYACMAAAARACgAAAAZACIAAAARACkAAAAZACMAAAASACgAAAAYACIAAAASACkAAAAYACMAAAATACgAAAAZACIAAAATACkAAAAZACMAAAAUACgAAAAYACIAAAAUACkAAAAYACMAAAAVACgAAAAZACIAAAAVACkAAAAZACMAAAAWACgAAAAYACIAAAAWACkAAAAYACMAAAAXACgAAAAZACIAAAAXACkAAAAZACMAAAAYACgAAAAYACIAAAAYACkAAAAYACMAAAAZACgAAAAZACIAAAAZACkAAAAZACMAAAAaACgAAAAYACIAAAAaACkAAAAYACMAAAAbACgAAAAZACIAAAAbACkAAAAZACMAAAAcACgAAAAYACIAAAAcACkAAAAYACMAAAAdACgAAAAZACIAAAAdACkAAAAZACMAAAAeACgAAAAYACIAAAAeACkAAAAYACMAAAAfACgAAAAZACIAAAAfACkAAAAZACMAAAAgACgAAAAYACIAAAAgACkAAAAYACMAAAAhACgAAAAZACIAAAAhACkAAAAZACMAAAAiACgAAAAYACIAAAAiACkAAAAYACMAAAAjACgAAAAZACIAAAAjACkAAAAZACMAAAAkACgAAAAYACIAAAAkACkAAAAYACMAAAAlACgAAAAZACIAAAAlACkAAAAZACMAAAAmACgAAAAYACIAAAAmACkAAAAYACMAAAAnACgAAAAZACIAAAAnACkAAAAZACMAAAAoACgAAAAYACIAAAAoACkAAAAYACMAAAApACgAAAAZACIAAAApACkAAAAZACMAAAAqACgAAAAYACIAAAAqACkAAAAYACMAAAArACgAAAAZACIAAAArACkAAAAZACMAAAAsACgAAAAYACIAAAAsACkAAAAYACMAAAAtACgAAAAZACIAAAAtACkAAAAZACMAAAAuACgAAAAYACIAAAAuACkAAAAYACMAAAAvACgAAAAZACIAAAAvACkAAAAZACMAAAAwACgAAAAYACIAAAAwACkAAAAYACMAAAAxACgAAAAZACIAAAAxACkAAAAZACMAAAAyACgAAAAYACIAAAAyACkAAAAYACMAAAAzACgAAAAZACIAAAAzACkAAAAZACMAAAA0ACgAAAAYACIAAAA0ACkAAAAYACMAAAA1ACgAAAAZACIAAAA1ACkAAAAZACMAAAA2ACgAAAAYACIAAAA2ACkAAAAYACMAAAA3ACgAAAAZACIAAAA3ACkAAAAZACMAAAA4ACgAAAAYACIAAAA4ACkAAAAYACMAAAA5ACgAAAAZACIAAAA5ACkAAAAZACMAAAA6ACgAAAAYACIAAAA6ACkAAAAYACMAAAA7ACgAAAAZACIAAAA7ACkAAAAZACMAAAA8ACgAAAAmACUAAAA8ACkAAAAmACYAAAA9ACgAAAAnACUAAAA9ACkAAAAnACYAAAA+ACgAAAAYACIAAAA+ACkAAAAYACMAAAA/ACgAAAAZACIAAAA/ACkAAAAZACMAAABAACgAAAAYACIAAABAACkAAAAYACMAAABBACgAAAAZACIAAABBACkAAAAZACMAAABCACgAAAAYACIAAABCACkAAAAYACMAAABDACgAAAAZACIAAABDACkAAAAZACMAAABEACgAAAAYACMAAABEACkAAAAYACQAAABFACgAAAAZACMAAABFACkAAAAZACQAAABGACgAAAAYACMAAABGACkAAAAYACQAAABHACgAAAAZACMAAABHACkAAAAZACQAAABIACgAAAAYACMAAABIACkAAAAYACQAAABJACgAAAAZACMAAABJACkAAAAZACQAAABKACgAAAAYACMAAABKACkAAAAYACQAAABLACgAAAAZACMAAABLACkAAAAZACQAAABMACgAAAAYACMAAABMACkAAAAYACQAAABNACgAAAAZACMAAABNACkAAAAZACQAAABOACgAAAAYACMAAABOACkAAAAYACQAAABPACgAAAAZACMAAABPACkAAAAZACQAAABOACcAAAAYACIAAABPACcAAAAZACIAAABMACcAAAAYACIAAABNACcAAAAZACIAAABKACcAAAAYACIAAABLACcAAAAZACIAAABIACcAAAAYACIAAABJACcAAAAZACIAAABGACcAAAAYACIAAABHACcAAAAZACIAAABEACcAAAAYACIAAABFACcAAAAZACIAAABCACcAAAAYACMAAABDACcAAAAZACMAAABAACcAAAAYACMAAABBACcAAAAZACMAAAA+ACcAAAAYACMAAAA/ACcAAAAZACMAAAA8ACcAAAAYACMAAAA9ACcAAAAZACMAAAA6ACcAAAAYACMAAAA7ACcAAAAZACMAAAA4ACcAAAAYACMAAAA5ACcAAAAZACMAAAA2ACcAAAAYACMAAAA3ACcAAAAZACMAAAA0ACcAAAAYACMAAAA1ACcAAAAZACMAAAAyACcAAAAYACMAAAAzACcAAAAZACMAAAAwACcAAAAYACMAAAAxACcAAAAZACMAAAAuACcAAAAYACMAAAAvACcAAAAZACMAAAAsACcAAAAYACMAAAAtACcAAAAZACMAAAAqACcAAAAYACMAAAArACcAAAAZACMAAAAoACcAAAAYACMAAAApACcAAAAZACMAAAAmACcAAAAYACMAAAAnACcAAAAZACMAAAAkACcAAAAYACMAAAAlACcAAAAZACMAAAAiACcAAAAYACMAAAAjACcAAAAZACMAAAAgACcAAAAYACMAAAAhACcAAAAZACMAAAAeACcAAAAYACMAAAAfACcAAAAZACMAAAAcACcAAAAYACMAAAAdACcAAAAZACMAAAAaACcAAAAYACMAAAAbACcAAAAZACMAAAAYACcAAAAYACMAAAAZACcAAAAZACMAAAAWACcAAAAYACMAAAAXACcAAAAZACMAAAAUACcAAAAYACMAAAAVACcAAAAZACMAAAASACcAAAAYACMAAAATACcAAAAZACMAAAAQACcAAAAYACMAAAARACcAAAAZACMAAAAOACcAAAAYACMAAAAPACcAAAAZACMAAAAMACcAAAAYACMAAAANACcAAAAZACMAAAAKACcAAAAYACMAAAALACcAAAAZACMAAAAIACcAAAAYACMAAAAJACcAAAAZACMAAAAGACcAAAAYACMAAAAHACcAAAAZACMAAABOACwAAAANACsAAFBPACwAAAANACoAAFBMACwAAAANACsAAFBNACwAAAANACoAAFBKACwAAAANAAsAAFBLACwAAAANAAoAAFBIACwAAAANAAsAAFBJACwAAAANAAoAAFBGACwAAAANAAsAAFBHACwAAAANAAoAAFBEACwAAAANAAsAAFBFACwAAAANAAoAAFBCACwAAAANAAsAAFBDACwAAAANAAoAAFBAACwAAAANAAsAAFBBACwAAAANAAoAAFA+ACwAAAANAAsAAFA/ACwAAAANAAoAAFA8ACwAAAANAAsAAFA9ACwAAAANAAoAAFA6ACwAAAANAAsAAFA7ACwAAAANAAoAAFA4ACwAAAANAAsAAFA5ACwAAAANAAoAAFA2ACwAAAANAAsAAFA3ACwAAAANAAoAAFA0ACwAAAANAAsAAFA1ACwAAAANAAoAAFAyACwAAAANAAsAAFAzACwAAAANAAoAAFAwACwAAAANAAsAAFAxACwAAAANAAoAAFAuACwAAAANAAsAAFAvACwAAAANAAoAAFAsACwAAAANAAsAAFAtACwAAAANAAoAAFAqACwAAAANAAsAAFArACwAAAANAAoAAFAoACwAAAANAAsAAFApACwAAAANAAoAAFAmACwAAAANAAsAAFAnACwAAAANAAoAAFAkACwAAAANAAsAAFAlACwAAAANAAoAAFAiACwAAAANAAsAAFAjACwAAAANAAoAAFAgACwAAAANAAsAAFAhACwAAAANAAoAAFAeACwAAAANAAsAAFAfACwAAAANAAoAAFAcACwAAAANAAsAAFAdACwAAAANAAoAAFAaACwAAAANAAsAAFAbACwAAAANAAoAAFAYACwAAAANAAsAAFAZACwAAAANAAoAAFAWACwAAAANAAsAAFAXACwAAAANAAoAAFAUACwAAAANAAsAAFAVACwAAAANAAoAAFASACwAAAANAAsAAFATACwAAAANAAoAAFAQACwAAAANAAsAAFARACwAAAANAAoAAFAOACwAAAANAAsAAFAPACwAAAANAAoAAFAMACwAAAANAAsAAFANACwAAAANAAoAAFAKACwAAAANAAsAAFALACwAAAANAAoAAFAIACwAAAANAAsAAFAJACwAAAANAAoAAFAGACwAAAANAAsAAFAHACwAAAANAAoAAFAEACwAAAANAAsAAFAFACwAAAANAAoAAFACACwAAAANAAsAAFADACwAAAANAAoAAFAAACwAAAANAAsAAFABACwAAAANAAoAAFABAC0AAAAOAAoAAFAAAC0AAAAOAAsAAFACAC0AAAAOAAsAAFADAC0AAAAOAAoAAFAEAC0AAAAOAAsAAFAFAC0AAAAOAAoAAFAGAC0AAAAOAAsAAFAHAC0AAAAOAAoAAFAIAC0AAAAOAAsAAFAJAC0AAAAOAAoAAFAKAC0AAAAOAAsAAFALAC0AAAAOAAoAAFAMAC0AAAAOAAsAAFANAC0AAAAOAAoAAFAOAC0AAAAOAAsAAFAPAC0AAAAOAAoAAFAQAC0AAAAOAAsAAFARAC0AAAAOAAoAAFASAC0AAAAOAAsAAFATAC0AAAAOAAoAAFAUAC0AAAAOAAsAAFAVAC0AAAAOAAoAAFAWAC0AAAAOAAsAAFAXAC0AAAAOAAoAAFAYAC0AAAAOAAsAAFAZAC0AAAAOAAoAAFAaAC0AAAAOAAsAAFAbAC0AAAAOAAoAAFAcAC0AAAAOAAsAAFAdAC0AAAAOAAoAAFAeAC0AAAAOAAsAAFAfAC0AAAAOAAoAAFAgAC0AAAAOAAsAAFAhAC0AAAAOAAoAAFAiAC0AAAAOAAsAAFAjAC0AAAAOAAoAAFAkAC0AAAAOAAsAAFAlAC0AAAAOAAoAAFAmAC0AAAAOAAsAAFAnAC0AAAAOAAoAAFAoAC0AAAAOAAsAAFApAC0AAAAOAAoAAFAqAC0AAAAOAAsAAFArAC0AAAAOAAoAAFAsAC0AAAAOAAsAAFAtAC0AAAAOAAoAAFAuAC0AAAAOAAsAAFAvAC0AAAAOAAoAAFAwAC0AAAAOAAsAAFAxAC0AAAAOAAoAAFAyAC0AAAAOAAsAAFAzAC0AAAAOAAoAAFA0AC0AAAAOAAsAAFA1AC0AAAAOAAoAAFA2AC0AAAAOAAsAAFA3AC0AAAAOAAoAAFA4AC0AAAAOAAsAAFA5AC0AAAAOAAoAAFA6AC0AAAAOAAsAAFA7AC0AAAAOAAoAAFA8AC0AAAAOAAsAAFA9AC0AAAAOAAoAAFA+AC0AAAAOAAsAAFA/AC0AAAAOAAoAAFBAAC0AAAAOAAsAAFBBAC0AAAAOAAoAAFBCAC0AAAAOAAsAAFBDAC0AAAAOAAoAAFBEAC0AAAAOAAsAAFBFAC0AAAAOAAoAAFBGAC0AAAAOAAsAAFBHAC0AAAAOAAoAAFBIAC0AAAAOAAsAAFBJAC0AAAAOAAoAAFBKAC0AAAAOAAsAAFBLAC0AAAAOAAoAAFBMAC0AAAAOACsAAFBNAC0AAAAOACoAAFBOAC0AAAAOACsAAFBPAC0AAAAOACoAAFA=")
+tile_set = SubResource("TileSet_rrs6e")
+
+[node name="home" parent="." instance=ExtResource("4_fur5t")]
+
+[node name="PopupLocation" type="Marker2D" parent="."]
+position = Vector2(345, 190)
+script = ExtResource("9_uhtn4")
+damage_node = ExtResource("10_81a20")
+
+[node name="tip" type="Label" parent="."]
+visible = false
+offset_left = 459.0
+offset_top = 252.0
+offset_right = 771.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_vebmq")
+text = "今天要睡了吗？"
+
+[node name="confirm" type="Button" parent="tip"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 84.0
+offset_right = 144.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_hqw1j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vebmq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vebmq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vebmq")
+text = "确认"
+
+[node name="cancel" type="Button" parent="tip"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 84.0
+offset_right = 280.0
+offset_bottom = 171.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_hqw1j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vebmq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vebmq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vebmq")
+text = "取消"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Back" type="TextureButton" parent="."]
+material = SubResource("ShaderMaterial_7esk4")
+offset_top = 464.0
+offset_right = 128.0
+offset_bottom = 592.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("14_d7wuq")
+
+[node name="Label" type="Label" parent="Back"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -42.0
+offset_right = 45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "去公司"
+
+[node name="pause_screen" type="Control" parent="."]
+process_mode = 2
+visible = false
+z_index = 99
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_cncxc")
+
+[node name="ColorRect" type="ColorRect" parent="pause_screen"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.54902)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pause_screen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="pause_screen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "暂停"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pause_screen/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="resume" type="Button" parent="pause_screen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "继续游戏"
+
+[node name="quit" type="Button" parent="pause_screen/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "退出游戏"
+
+[node name="PanelContainer4" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 320.0
+offset_top = 180.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpeechTipContainer" type="MarginContainer" parent="PanelContainer4"]
+layout_mode = 2
+theme_override_constants/margin_right = 45
+script = ExtResource("14_t5cln")
+
+[node name="record_gird" type="GridContainer" parent="PanelContainer4/SpeechTipContainer"]
+layout_mode = 2
+columns = 10
+
+[node name="Advice" type="RichTextLabel" parent="PanelContainer4/SpeechTipContainer"]
+visible = false
+z_index = 10
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_4lc7y")
+scroll_following = true
+autowrap_mode = 1
+
+[node name="advice_close" type="TextureButton" parent="PanelContainer4/SpeechTipContainer/Advice"]
+z_index = 11
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_top = 1.0
+offset_right = -5.0
+offset_bottom = 41.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("14_ykinr")
+stretch_mode = 0
+
+[node name="speech_tip_close" type="TextureButton" parent="PanelContainer4"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("14_ykinr")
+stretch_mode = 5
+
+[node name="warehouse" parent="." instance=ExtResource("16_la4ve")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+
+[node name="achi_panel" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AchievementPanel" parent="achi_panel" instance=ExtResource("19_veqi8")]
+layout_mode = 1
+offset_left = -244.0
+offset_right = 207.0
+
+[node name="achi_show" parent="." instance=ExtResource("20_mgour")]
+z_index = 100
+offset_left = 429.5
+offset_top = -60.0
+offset_right = 850.5
+offset_bottom = 0.0
+
+[node name="Node" type="Node" parent="."]
+
+[node name="BGMTimer" type="Timer" parent="Node"]
+autostart = true
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("21_8ftqo")
+
+[node name="PlayerRank" parent="." instance=ExtResource("22_cuxxg")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="pause_button" type="Button" parent="."]
+offset_left = 1168.0
+offset_top = 638.0
+offset_right = 1256.0
+offset_bottom = 701.0
+theme_override_font_sizes/font_size = 40
+text = "暂停"
+
+[connection signal="gui_input" from="Control/HBoxContainer/achi" to="." method="_on_achi_gui_input"]
+[connection signal="mouse_entered" from="Control/HBoxContainer/achi" to="." method="_on_achi_mouse_entered"]
+[connection signal="mouse_exited" from="Control/HBoxContainer/achi" to="." method="_on_achi_mouse_exited"]
+[connection signal="gui_input" from="Control/rank" to="." method="_on_rank_gui_input"]
+[connection signal="mouse_entered" from="Control/rank" to="." method="_on_rank_mouse_entered"]
+[connection signal="mouse_exited" from="Control/rank" to="." method="_on_rank_mouse_exited"]
+[connection signal="pressed" from="tip/confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="tip/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="Back" to="." method="_on_back_mouse_exited"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="pause_screen/VBoxContainer/HBoxContainer/resume" to="pause_screen" method="_on_resume_pressed"]
+[connection signal="pressed" from="pause_screen/VBoxContainer/HBoxContainer/quit" to="pause_screen" method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer4/SpeechTipContainer/Advice/advice_close" to="PanelContainer4/SpeechTipContainer" method="_on_advice_close_pressed"]
+[connection signal="pressed" from="PanelContainer4/speech_tip_close" to="." method="_on_speech_tip_close_pressed"]
+[connection signal="timeout" from="Node/BGMTimer" to="." method="_on_bgm_timer_timeout"]
+[connection signal="gui_input" from="pause_button" to="." method="_on_pause_button_gui_input"]

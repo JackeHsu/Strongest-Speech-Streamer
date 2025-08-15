@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ynb8pwrh4wow"]
+
+[ext_resource type="Texture2D" uid="uid://dgbncelojbdnd" path="res://assets/home/wall/wall_0.png" id="1_ajfwx"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_wqi71"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5e3m"]
+atlas = ExtResource("1_ajfwx")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_wqi71")
+item_name = "初始壁纸"
+stackable = false
+item_texture = SubResource("AtlasTexture_q5e3m")
+description = "初始壁纸"
+item_max_amount = 0
+group_name = "wall"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 200
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

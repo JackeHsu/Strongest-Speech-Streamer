@@ -1,0 +1,19 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqipvg83r7t5n"]
+
+[ext_resource type="Script" path="res://scenes/home_builder/home/warehouse.gd" id="1_8eern"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/Inventory_data.gd" id="2_r3hey"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/slot_data.gd" id="3_7c6lb"]
+[ext_resource type="Resource" uid="uid://dfu484lv1b4a" path="res://items/furniture/furniture/bed/bed_1.tres" id="6_2kaho"]
+
+[sub_resource type="Resource" id="Resource_nennc"]
+script = ExtResource("3_7c6lb")
+quantity = 1
+item_data = ExtResource("6_2kaho")
+
+[sub_resource type="Resource" id="Resource_s1bet"]
+script = ExtResource("2_r3hey")
+slot_datas = Array[ExtResource("3_7c6lb")]([SubResource("Resource_nennc"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[node name="warehouse" type="Node2D"]
+script = ExtResource("1_8eern")
+inventory_data = SubResource("Resource_s1bet")

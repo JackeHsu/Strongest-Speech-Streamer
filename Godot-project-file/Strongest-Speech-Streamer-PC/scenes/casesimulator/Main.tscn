@@ -1,0 +1,72 @@
+[gd_scene load_steps=17 format=3 uid="uid://dm2kabja0nm4e"]
+
+[ext_resource type="PackedScene" uid="uid://dcj3uqddsqr6p" path="res://scenes/casesimulator/Case.tscn" id="1"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/slot_data.gd" id="2_xrkg2"]
+[ext_resource type="Resource" uid="uid://vgsjba8i5m42" path="res://items/food/apple.tres" id="3_jwtp2"]
+[ext_resource type="Resource" uid="uid://c8x32pupaon2a" path="res://items/food/banana.tres" id="4_wle3l"]
+[ext_resource type="Resource" uid="uid://5xjcoxh5vc3m" path="res://items/food/bread.tres" id="5_tsffp"]
+[ext_resource type="Resource" uid="uid://c2y0n16v75bhq" path="res://items/food/burger.tres" id="6_n3dxn"]
+[ext_resource type="Resource" uid="uid://dn13cnqxxcyyy" path="res://items/food/chocolate.tres" id="7_bxk78"]
+[ext_resource type="Resource" uid="uid://v1kh3y7414y3" path="res://items/food/coconut.tres" id="8_tqmrf"]
+[ext_resource type="Resource" uid="uid://bd6x7kpqojqmm" path="res://items/food/coffee.tres" id="9_8x0xm"]
+
+[sub_resource type="Resource" id="Resource_sf2jh"]
+script = ExtResource("2_xrkg2")
+quantity = 1
+item_data = ExtResource("3_jwtp2")
+
+[sub_resource type="Resource" id="Resource_w3vlp"]
+script = ExtResource("2_xrkg2")
+quantity = 1
+item_data = ExtResource("4_wle3l")
+
+[sub_resource type="Resource" id="Resource_pqlqf"]
+script = ExtResource("2_xrkg2")
+quantity = 1
+item_data = ExtResource("5_tsffp")
+
+[sub_resource type="Resource" id="Resource_2io7r"]
+script = ExtResource("2_xrkg2")
+quantity = 1
+item_data = ExtResource("6_n3dxn")
+
+[sub_resource type="Resource" id="Resource_s5j7o"]
+script = ExtResource("2_xrkg2")
+quantity = 1
+item_data = ExtResource("7_bxk78")
+
+[sub_resource type="Resource" id="Resource_ptfmk"]
+script = ExtResource("2_xrkg2")
+quantity = 1
+item_data = ExtResource("8_tqmrf")
+
+[sub_resource type="Resource" id="Resource_j3vw4"]
+script = ExtResource("2_xrkg2")
+quantity = 1
+item_data = ExtResource("9_8x0xm")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Case" parent="." instance=ExtResource("1")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+blue_items = Array[ExtResource("2_xrkg2")]([SubResource("Resource_sf2jh"), SubResource("Resource_w3vlp"), SubResource("Resource_pqlqf")])
+purple_items = Array[ExtResource("2_xrkg2")]([SubResource("Resource_2io7r"), SubResource("Resource_s5j7o")])
+red_items = Array[ExtResource("2_xrkg2")]([SubResource("Resource_ptfmk")])
+special_items = Array[ExtResource("2_xrkg2")]([SubResource("Resource_j3vw4")])

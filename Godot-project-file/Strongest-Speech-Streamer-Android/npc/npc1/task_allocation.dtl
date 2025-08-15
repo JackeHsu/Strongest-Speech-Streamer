@@ -1,0 +1,5 @@
+join npc_1 center
+npc_1: <嘿，你好啊！/嗨，昨天做得不错！！/嘿，早上好！>
+npc_1: 今天请继续加油哦！
+npc_1: 这是今天的[color=#FF0000]直播任务[/color]。
+leave npc_1

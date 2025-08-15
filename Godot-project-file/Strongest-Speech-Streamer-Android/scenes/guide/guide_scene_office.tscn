@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://qsvldd6qai6i"]
+
+[ext_resource type="Script" path="res://scripts/guide/guide_scene_office.gd" id="1_udm3l"]
+[ext_resource type="PackedScene" uid="uid://drg8scqpg4jky" path="res://scenes/guide/pointer.tscn" id="2_o2igj"]
+
+[node name="GuideScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_udm3l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.509804)
+
+[node name="Pointer" parent="." instance=ExtResource("2_o2igj")]
+layout_mode = 1
+offset_left = 1224.0
+offset_top = 47.0
+offset_right = -16.0
+offset_bottom = -633.0

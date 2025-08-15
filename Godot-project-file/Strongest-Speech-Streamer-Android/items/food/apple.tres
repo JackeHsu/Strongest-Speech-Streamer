@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://vgsjba8i5m42"]
+
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_q5buj"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_ueknm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3bo6"]
+atlas = ExtResource("1_q5buj")
+region = Rect2(128, 32, 32, 32)
+
+[resource]
+script = ExtResource("1_ueknm")
+item_name = "苹果"
+stackable = true
+item_texture = SubResource("AtlasTexture_e3bo6")
+description = "一天一苹果，医生远离我！（体力+10，获得少量经验加成，获得少量金币加成）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 10
+exp_buff_value = 0.1
+gold_buff_value = 0.1
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 25
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

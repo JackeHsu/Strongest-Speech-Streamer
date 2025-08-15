@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://1hwxuqdckqa5"]
+
+[ext_resource type="Script" path="res://scenes/home_builder/item/home_item.gd" id="1_poikm"]
+
+[node name="Item" type="Sprite2D"]
+script = ExtResource("1_poikm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="OK" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0, 1, 0.0862745, 1)
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Deny" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 0, 0, 1)
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

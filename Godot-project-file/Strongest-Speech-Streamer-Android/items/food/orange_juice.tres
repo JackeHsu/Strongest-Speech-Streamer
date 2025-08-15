@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bdm0bwvwcxeat"]
+
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_12ovk"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_f5hch"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11srg"]
+atlas = ExtResource("1_12ovk")
+region = Rect2(160, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_f5hch")
+item_name = "橙汁"
+stackable = true
+item_texture = SubResource("AtlasTexture_11srg")
+description = "一杯鲜榨橙汁（体力+10，获得少量经验加成，获得少量金币加成）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 10
+exp_buff_value = 0.1
+gold_buff_value = 0.1
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 15
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqeknhqiynpl2"]
+
+[ext_resource type="Script" path="res://scripts/ui/ui_interface.gd" id="1_4sunt"]
+[ext_resource type="PackedScene" uid="uid://dckysxd8mwsir" path="res://scenes/ui/slot.tscn" id="2_4ieuo"]
+[ext_resource type="PackedScene" uid="uid://ccbouixbmtxpm" path="res://scenes/ui/bag.tscn" id="3_7iog0"]
+
+[node name="ui_interface" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4sunt")
+
+[node name="grabbed_slot" parent="." instance=ExtResource("2_4ieuo")]
+visible = false
+z_index = 50
+mouse_filter = 2
+
+[node name="bag" parent="." instance=ExtResource("3_7iog0")]
+visible = false
+layout_mode = 1
+
+[connection signal="visibility_changed" from="bag" to="." method="_on_bag_visibility_changed"]
+
+[editable path="bag"]

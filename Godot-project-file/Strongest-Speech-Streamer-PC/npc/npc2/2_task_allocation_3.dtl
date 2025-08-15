@@ -1,0 +1,5 @@
+join npc_2 center
+npc_2: [shake amp=50 freq=5]快快快！[/shake]我们接到了个[color=#FF0000]紧急直播任务[/color]！
+npc_2: 时间紧迫，我们一起[shake amp=50 freq=5]全力以赴！[/shake]解决这个[color=#FF0000]任务[/color]！
+npc_2: [shake amp=50 freq=5]加油加油！[/shake]
+leave npc_2

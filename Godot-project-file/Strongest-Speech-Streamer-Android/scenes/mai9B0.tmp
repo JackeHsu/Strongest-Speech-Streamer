@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://boaq4yauehfwj"]
+
+[ext_resource type="WhisperResource" path="res://addons/godot_whisper/models/ggml-small-q8_0.bin" id="1_25qac"]
+[ext_resource type="Script" path="res://addons/godot_whisper/capture_stream_to_text.gd" id="3_dxvhm"]
+[ext_resource type="Script" path="res://addons/godot_whisper/label_transcribe.gd" id="5_blb70"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_0gdau"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AskQuestion" type="HTTPRequest" parent="."]
+
+[node name="CreateDialog" type="HTTPRequest" parent="."]
+
+[node name="Submit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 336.0
+offset_right = 623.0
+offset_bottom = 374.0
+text = "提交问题"
+
+[node name="answer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 447.0
+offset_right = 1081.0
+offset_bottom = 575.0
+
+[node name="record_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 450.0
+offset_right = 638.0
+offset_bottom = 543.0
+text = "开始录音"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_0gdau")
+autoplay = true
+bus = &"Record"
+
+[node name="SpeechToText" type="SpeechToText" parent="."]
+language = 2
+language_model = ExtResource("1_25qac")
+script = ExtResource("3_dxvhm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 98.0
+offset_right = 814.0
+offset_bottom = 138.0
+script = ExtResource("5_blb70")
+
+[connection signal="request_completed" from="AskQuestion" to="." method="_on_ask_question_request_completed"]
+[connection signal="request_completed" from="CreateDialog" to="." method="_on_create_dialog_request_completed"]
+[connection signal="pressed" from="record_button" to="RichTextLabel" method="_on_record_button_pressed"]
+[connection signal="transcribed_msg" from="SpeechToText" to="RichTextLabel" method="_on_speech_to_text_transcribed_msg"]

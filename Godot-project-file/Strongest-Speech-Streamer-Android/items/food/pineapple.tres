@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://hrsfss7sokce"]
+
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_h48oc"]
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_ifgwp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmxmx"]
+atlas = ExtResource("1_ifgwp")
+region = Rect2(224, 32, 32, 32)
+
+[resource]
+script = ExtResource("1_h48oc")
+item_name = "菠萝"
+stackable = true
+item_texture = SubResource("AtlasTexture_fmxmx")
+description = "酸甜脆爽，很受欢迎的热带水果（体力+10，获得少量经验加成）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 10
+exp_buff_value = 0.1
+gold_buff_value = 0.0
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 20
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

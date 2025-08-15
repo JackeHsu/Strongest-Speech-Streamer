@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dttvwg6jt5x0m"]
+
+[ext_resource type="Texture2D" uid="uid://kmfj10o6ax4u" path="res://assets/home/item/normal_item/normal_item.png" id="1_5ga1f"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_mh7ue"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnefs"]
+atlas = ExtResource("1_5ga1f")
+region = Rect2(528, 96, 32, 32)
+
+[resource]
+script = ExtResource("2_mh7ue")
+item_name = "小熊"
+stackable = false
+item_texture = SubResource("AtlasTexture_vnefs")
+description = "玩偶小熊！"
+item_max_amount = 0
+group_name = "furniture"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 2
+price = 3000
+is_commodity = true
+layer = 2
+source_id = 0
+interactive_type = ""

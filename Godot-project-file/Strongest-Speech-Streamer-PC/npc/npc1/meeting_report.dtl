@@ -1,0 +1,4 @@
+join npc_1 center
+npc_1: 嘿！待会儿有一场[shake amp=50 freq=5][color=#FF0000]直播[/color]！[/shake]
+npc_1: 你快去准备一下！
+leave npc_1

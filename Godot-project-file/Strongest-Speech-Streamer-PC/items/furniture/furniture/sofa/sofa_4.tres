@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cplxb5kpf3y6a"]
+
+[ext_resource type="Texture2D" uid="uid://kmfj10o6ax4u" path="res://assets/home/item/normal_item/normal_item.png" id="1_hraps"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_bnyv4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4aag1"]
+atlas = ExtResource("1_hraps")
+region = Rect2(96, 424, 96, 56)
+
+[resource]
+script = ExtResource("2_bnyv4")
+item_name = "沙发4"
+stackable = true
+item_texture = SubResource("AtlasTexture_4aag1")
+description = "真想躺沙发，你值得拥有"
+item_max_amount = 99
+group_name = "furniture"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 700
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

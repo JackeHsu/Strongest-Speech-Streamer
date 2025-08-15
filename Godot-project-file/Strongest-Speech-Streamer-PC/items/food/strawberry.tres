@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b65h068kctkw5"]
+
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_3umfk"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_o81wl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idpxv"]
+atlas = ExtResource("1_3umfk")
+region = Rect2(160, 32, 32, 32)
+
+[resource]
+script = ExtResource("1_o81wl")
+item_name = "草莓"
+stackable = true
+item_texture = SubResource("AtlasTexture_idpxv")
+description = "酸酸甜甜，色泽鲜艳的草莓（体力+5，获得少量经验加成）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 5
+exp_buff_value = 0.1
+gold_buff_value = 0.0
+buff_round = 1
+equipment_type = 0
+equipment_value = 0
+price = 20
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

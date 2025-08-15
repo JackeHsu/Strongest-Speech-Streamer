@@ -1,0 +1,276 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu8aorlell4j8"]
+
+[ext_resource type="Script" path="res://scripts/start_page/main_menu.gd" id="1_6j7hm"]
+[ext_resource type="Texture2D" uid="uid://cpe08gkg4616d" path="res://assets/background/start_page.png" id="1_mhyns"]
+[ext_resource type="PackedScene" uid="uid://br53allf54t2g" path="res://scenes/vulume_show.tscn" id="2_3kivx"]
+[ext_resource type="Script" path="res://scripts/start_page/start_game.gd" id="2_v1bx5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agmwd"]
+bg_color = Color(0, 0, 0, 0.694118)
+
+[node name="start_page" type="CanvasLayer"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_mhyns")
+
+[node name="ui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6j7hm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -81.5
+offset_right = 40.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="ui/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.0745098, 0.156863, 0.262745, 1)
+theme_override_font_sizes/font_size = 100
+text = "最强演讲主播"
+
+[node name="main_menu" type="VBoxContainer" parent="ui/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="start" type="Button" parent="ui/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_colors/font_color = Color(0.380392, 0.568627, 0.827451, 1)
+theme_override_font_sizes/font_size = 60
+text = "新的游戏"
+
+[node name="load" type="Button" parent="ui/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_colors/font_color = Color(0.380392, 0.568627, 0.827451, 1)
+theme_override_font_sizes/font_size = 60
+text = "继续游戏"
+
+[node name="expain" type="Button" parent="ui/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_colors/font_color = Color(0.380392, 0.568627, 0.827451, 1)
+theme_override_font_sizes/font_size = 60
+text = "游戏说明"
+
+[node name="quit" type="Button" parent="ui/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_colors/font_color = Color(0.380392, 0.568627, 0.827451, 1)
+theme_override_font_sizes/font_size = 60
+text = "退出游戏"
+
+[node name="expain_page" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="Control" type="Control" parent="expain_page"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="expain_text" type="Label" parent="expain_page/Control"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -553.0
+offset_top = -195.0
+offset_right = 447.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_agmwd")
+text = "1.测试手机麦克风是否可用，右边没变化可能是手机麦克风不可用。
+2.确保网络连接正常！"
+autowrap_mode = 1
+
+[node name="back1" type="Button" parent="expain_page/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -91.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_colors/font_color = Color(0.380392, 0.568627, 0.827451, 1)
+theme_override_font_sizes/font_size = 60
+text = "返 回"
+
+[node name="vulume_show" parent="expain_page/Control" instance=ExtResource("2_3kivx")]
+
+[node name="player_name_ui" type="VBoxContainer" parent="." node_paths=PackedStringArray("current_player_name")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.5
+offset_top = -98.5
+offset_right = 161.5
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_v1bx5")
+current_player_name = NodePath("get_player_name")
+
+[node name="get_player_name" type="LineEdit" parent="player_name_ui"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+placeholder_text = "请输入玩家编号"
+alignment = 1
+
+[node name="confirm" type="Button" parent="player_name_ui"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_colors/font_color = Color(0.380392, 0.568627, 0.827451, 1)
+theme_override_font_sizes/font_size = 40
+text = "确 认"
+
+[node name="back2" type="Button" parent="player_name_ui"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_colors/font_color = Color(0.380392, 0.568627, 0.827451, 1)
+theme_override_font_sizes/font_size = 40
+text = "返 回"
+
+[node name="Label" type="Label" parent="player_name_ui"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_font_sizes/font_size = 40
+text = "请输入编号！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="player_name_ui"]
+
+[node name="Node2D" type="Node2D" parent="player_name_ui"]
+position = Vector2(-50, -120)
+
+[node name="Label2" type="Label" parent="player_name_ui/Node2D"]
+offset_top = -55.0
+offset_right = 480.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_agmwd")
+text = "开始前请确保已阅读说明！
+点击确认后开始新的游戏！
+请输入自己的编号！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="expain_page_load" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="Control" type="Control" parent="expain_page_load"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="expain_text" type="Label" parent="expain_page_load/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_font_sizes/font_size = 60
+text = "没有新存档，请点击新的游戏！"
+
+[node name="back3" type="Button" parent="expain_page_load/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -144.0
+offset_top = -91.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.996078, 0.427451, 0.172549, 1)
+theme_override_colors/font_color = Color(0.380392, 0.568627, 0.827451, 1)
+theme_override_font_sizes/font_size = 60
+text = "返 回"
+
+[node name="version" type="Label" parent="."]
+visible = false
+offset_top = 697.0
+offset_right = 40.0
+offset_bottom = 720.0
+text = "beta_v1.2"
+
+[node name="save_tip" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "保存中！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ui/VBoxContainer/main_menu/start" to="ui" method="_on_start_pressed"]
+[connection signal="pressed" from="ui/VBoxContainer/main_menu/load" to="ui" method="_on_load_pressed"]
+[connection signal="pressed" from="ui/VBoxContainer/main_menu/expain" to="ui" method="_on_expain_pressed"]
+[connection signal="pressed" from="ui/VBoxContainer/main_menu/quit" to="ui" method="_on_quit_pressed"]
+[connection signal="pressed" from="expain_page/Control/back1" to="ui" method="_on_back_1_pressed"]
+[connection signal="pressed" from="player_name_ui/confirm" to="player_name_ui" method="_on_confirm_pressed"]
+[connection signal="pressed" from="player_name_ui/back2" to="ui" method="_on_back_pressed"]
+[connection signal="timeout" from="player_name_ui/Timer" to="player_name_ui" method="_on_timer_timeout"]
+[connection signal="pressed" from="expain_page_load/Control/back3" to="ui" method="_on_back_3_pressed"]

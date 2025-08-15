@@ -1,0 +1,194 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="最强演讲主播-安卓"
+run/main_scene="res://scenes/Start_gif.tscn"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://microphone3.png"
+config/windows_native_icon="res://microphone3.ico"
+
+[audio]
+
+driver/driver="Andriod"
+driver/enable_input=true
+
+[autoload]
+
+global="*res://scripts/global/global.gd"
+Game="*res://scenes/game.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+GameManager="*res://scenes/home_builder/home/GameManager.gd"
+AchiManager="*res://scripts/global/achi_manager.gd"
+
+[dialogic]
+
+directories/dch_directory={
+"npc/npc1/npc_1": "res://android/build/build/intermediates/assets/debug/npc/npc1/npc_1.dch",
+"npc/npc2/npc_2": "res://android/build/build/intermediates/assets/debug/npc/npc2/npc_2.dch",
+"npc1/npc_1": "res://android/build/assets/npc/npc1/npc_1.dch",
+"npc2/npc_2": "res://android/build/assets/npc/npc2/npc_2.dch",
+"npc_1": "res://npc/npc1/npc_1.dch",
+"npc_2": "res://npc/npc2/npc_2.dch"
+}
+directories/dtl_directory={
+"2_meeting_report": "res://npc/npc2/2_meeting_report.dtl",
+"2_meeting_report_2": "res://npc/npc2/2_meeting_report_2.dtl",
+"2_meeting_report_3": "res://npc/npc2/2_meeting_report_3.dtl",
+"2_task_allocation": "res://npc/npc2/2_task_allocation.dtl",
+"2_task_allocation_2": "res://npc/npc2/2_task_allocation_2.dtl",
+"2_task_allocation_3": "res://npc/npc2/2_task_allocation_3.dtl",
+"first_into_office": "res://npc/npc1/first_into_office.dtl",
+"meeting_report": "res://npc/npc1/meeting_report.dtl",
+"meeting_report_2": "res://npc/npc1/meeting_report_2.dtl",
+"meeting_report_3": "res://npc/npc1/meeting_report_3.dtl",
+"npc/npc1/first_into_office": "res://android/build/build/intermediates/assets/debug/npc/npc1/first_into_office.dtl",
+"npc/npc1/meeting_report": "res://android/build/build/intermediates/assets/debug/npc/npc1/meeting_report.dtl",
+"npc/npc1/meeting_report_2": "res://android/build/build/intermediates/assets/debug/npc/npc1/meeting_report_2.dtl",
+"npc/npc1/meeting_report_3": "res://android/build/build/intermediates/assets/debug/npc/npc1/meeting_report_3.dtl",
+"npc/npc1/task_allocation": "res://android/build/build/intermediates/assets/debug/npc/npc1/task_allocation.dtl",
+"npc/npc1/task_allocation_2": "res://android/build/build/intermediates/assets/debug/npc/npc1/task_allocation_2.dtl",
+"npc/npc1/task_allocation_3": "res://android/build/build/intermediates/assets/debug/npc/npc1/task_allocation_3.dtl",
+"npc/npc2/2_meeting_report": "res://android/build/build/intermediates/assets/debug/npc/npc2/2_meeting_report.dtl",
+"npc/npc2/2_meeting_report_2": "res://android/build/build/intermediates/assets/debug/npc/npc2/2_meeting_report_2.dtl",
+"npc/npc2/2_meeting_report_3": "res://android/build/build/intermediates/assets/debug/npc/npc2/2_meeting_report_3.dtl",
+"npc/npc2/2_task_allocation": "res://android/build/build/intermediates/assets/debug/npc/npc2/2_task_allocation.dtl",
+"npc/npc2/2_task_allocation_2": "res://android/build/build/intermediates/assets/debug/npc/npc2/2_task_allocation_2.dtl",
+"npc/npc2/2_task_allocation_3": "res://android/build/build/intermediates/assets/debug/npc/npc2/2_task_allocation_3.dtl",
+"npc/player/start_level_1": "res://android/build/build/intermediates/assets/debug/npc/player/start_level_1.dtl",
+"npc/player/start_level_2": "res://android/build/build/intermediates/assets/debug/npc/player/start_level_2.dtl",
+"npc/player/start_level_3": "res://android/build/build/intermediates/assets/debug/npc/player/start_level_3.dtl",
+"npc1/first_into_office": "res://android/build/assets/npc/npc1/first_into_office.dtl",
+"npc1/meeting_report": "res://android/build/assets/npc/npc1/meeting_report.dtl",
+"npc1/meeting_report_2": "res://android/build/assets/npc/npc1/meeting_report_2.dtl",
+"npc1/meeting_report_3": "res://android/build/assets/npc/npc1/meeting_report_3.dtl",
+"npc1/task_allocation": "res://android/build/assets/npc/npc1/task_allocation.dtl",
+"npc1/task_allocation_2": "res://android/build/assets/npc/npc1/task_allocation_2.dtl",
+"npc1/task_allocation_3": "res://android/build/assets/npc/npc1/task_allocation_3.dtl",
+"npc2/2_meeting_report": "res://android/build/assets/npc/npc2/2_meeting_report.dtl",
+"npc2/2_meeting_report_2": "res://android/build/assets/npc/npc2/2_meeting_report_2.dtl",
+"npc2/2_meeting_report_3": "res://android/build/assets/npc/npc2/2_meeting_report_3.dtl",
+"npc2/2_task_allocation": "res://android/build/assets/npc/npc2/2_task_allocation.dtl",
+"npc2/2_task_allocation_2": "res://android/build/assets/npc/npc2/2_task_allocation_2.dtl",
+"npc2/2_task_allocation_3": "res://android/build/assets/npc/npc2/2_task_allocation_3.dtl",
+"player/start_level_1": "res://android/build/assets/npc/player/start_level_1.dtl",
+"player/start_level_2": "res://android/build/assets/npc/player/start_level_2.dtl",
+"player/start_level_3": "res://android/build/assets/npc/player/start_level_3.dtl",
+"start_level_1": "res://npc/player/start_level_1.dtl",
+"start_level_2": "res://npc/player/start_level_2.dtl",
+"start_level_3": "res://npc/player/start_level_3.dtl",
+"task_allocation": "res://npc/npc1/task_allocation.dtl",
+"task_allocation_2": "res://npc/npc1/task_allocation_2.dtl",
+"task_allocation_3": "res://npc/npc1/task_allocation_3.dtl"
+}
+variables={}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+audio/max_channels=4.0
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+layout/style_list=[]
+layout/default_style=""
+glossary/default_case_sensitive=true
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[input]
+
+test={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"key_label":0,"unicode":106,"location":0,"echo":false,"script":null)
+]
+}
+open_bag={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":66,"key_label":0,"unicode":98,"location":0,"echo":false,"script":null)
+]
+}
+pause={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+add={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194437,"key_label":0,"unicode":43,"location":0,"echo":false,"script":null)
+]
+}
+sub={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194435,"key_label":0,"unicode":45,"location":0,"echo":false,"script":null)
+]
+}
+esc={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+jump={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+upload_data={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":47,"key_label":0,"unicode":47,"location":0,"echo":false,"script":null)
+]
+}
+click={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(175, 5),"global_position":Vector2(184, 51),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+viewport/hdr_2d=true

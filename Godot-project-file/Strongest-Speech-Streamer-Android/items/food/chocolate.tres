@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dn13cnqxxcyyy"]
+
+[ext_resource type="Texture2D" uid="uid://d3bwasufmwfy0" path="res://assets/items/food/item_icon.png" id="1_65av6"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="1_fgyui"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpk0m"]
+atlas = ExtResource("1_65av6")
+region = Rect2(32, 64, 32, 32)
+
+[resource]
+script = ExtResource("1_fgyui")
+item_name = "巧克力"
+stackable = true
+item_texture = SubResource("AtlasTexture_hpk0m")
+description = "牛奶巧克力！！吃太多可不好哦！（体力+15，小幅降低经验获得，获得少量金币加成）"
+item_max_amount = 99
+group_name = "food"
+energy_value = 15
+exp_buff_value = -0.1
+gold_buff_value = 0.15
+buff_round = 2
+equipment_type = 0
+equipment_value = 0
+price = 80
+is_commodity = true
+layer = 0
+source_id = 0
+interactive_type = ""

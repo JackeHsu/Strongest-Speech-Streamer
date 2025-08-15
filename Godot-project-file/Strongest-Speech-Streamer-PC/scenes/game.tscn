@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpyul4vdnkj3p"]
+
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_hlsp1"]
+[ext_resource type="Script" path="res://scripts/global/upload_date_text.gd" id="2_m24u7"]
+
+[node name="Game" type="CanvasLayer"]
+layer = 99
+visible = false
+script = ExtResource("1_hlsp1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="upload_date_txt" type="Node2D" parent="."]
+script = ExtResource("2_m24u7")
+
+[node name="get_url" type="HTTPRequest" parent="upload_date_txt"]
+
+[node name="upload_txt" type="HTTPRequest" parent="upload_date_txt"]
+
+[node name="Update" type="HTTPRequest" parent="upload_date_txt"]
+
+[connection signal="request_completed" from="upload_date_txt/get_url" to="upload_date_txt" method="_on_get_url_request_completed"]
+[connection signal="request_completed" from="upload_date_txt/upload_txt" to="upload_date_txt" method="_on_upload_txt_request_completed"]

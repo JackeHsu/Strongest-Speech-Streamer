@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ba8jfguyu0cs6"]
+
+[ext_resource type="Texture2D" uid="uid://bheyhct6ltnps" path="res://assets/home/home_floor.png" id="1_ytqhj"]
+[ext_resource type="Script" path="res://scripts/Inventorydata/item.gd" id="2_5ahvl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_numna"]
+atlas = ExtResource("1_ytqhj")
+region = Rect2(144, 112, 16, 16)
+
+[resource]
+script = ExtResource("2_5ahvl")
+item_name = "地板样式7"
+stackable = false
+item_texture = SubResource("AtlasTexture_numna")
+description = "可以更换房间地板"
+item_max_amount = 0
+group_name = "ground"
+energy_value = 0
+exp_buff_value = 0.0
+gold_buff_value = 0.0
+buff_round = 0
+equipment_type = 0
+equipment_value = 0
+price = 300
+is_commodity = true
+layer = 0
+source_id = 7
+interactive_type = ""

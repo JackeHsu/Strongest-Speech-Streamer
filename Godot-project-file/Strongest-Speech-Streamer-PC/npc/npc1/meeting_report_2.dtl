@@ -1,0 +1,7 @@
+join npc_1 center
+npc_1: 早上好！待会儿记着要[shake amp=50 freq=5][color=#FF0000]开会[/color]哦！[/shake]
+npc_1: 好像是有什么新直播任务要布置。
+npc_1: 好好准备一下哦！
+leave npc_1
+join npc_1 center
+npc_1: [shake amp=50 freq=5]哦！哦！[/shake]嘿，抱歉！忘记告诉你了，是十点哦！
