@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://i3lxf6he5y4h"]
+
+[ext_resource type="Script" path="res://history_record.gd" id="1_ddxe5"]
+[ext_resource type="Texture2D" uid="uid://cjirl6cyowewx" path="res://assets/button_background_new.png" id="1_dmbm2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aluj5"]
+texture = ExtResource("1_dmbm2")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="history_record" type="Button"]
+custom_minimum_size = Vector2(40, 40)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+text = "记录"
+script = ExtResource("1_ddxe5")
+
+[node name="Advice" type="RichTextLabel" parent="."]
+visible = false
+z_index = 10
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 0
+mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_aluj5")
+scroll_following = true
+autowrap_mode = 1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,346 @@
+[gd_scene load_steps=13 format=3 uid="uid://dctyomq38fn5l"]
+
+[ext_resource type="Script" path="res://game_start.gd" id="1_fumk0"]
+[ext_resource type="Script" path="res://SpeechTool.gd" id="1_vabip"]
+[ext_resource type="Script" path="res://speech_tip_container.gd" id="2_0labr"]
+[ext_resource type="Texture2D" uid="uid://c56w0gb012r0j" path="res://assets/close_button.png" id="4_wsdkd"]
+[ext_resource type="Texture2D" uid="uid://bouxwqyn4m3lm" path="res://assets/button_background_new2.png" id="5_cwpqr"]
+[ext_resource type="Texture2D" uid="uid://cjirl6cyowewx" path="res://assets/button_background_new.png" id="6_acxxa"]
+[ext_resource type="Script" path="res://panel_container_5.gd" id="6_rlx5p"]
+[ext_resource type="Script" path="res://countdown.gd" id="7_wgsad"]
+[ext_resource type="Script" path="res://update_date.gd" id="8_g73nk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3hrac"]
+texture = ExtResource("6_acxxa")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_godec"]
+texture = ExtResource("5_cwpqr")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lxpxl"]
+texture = ExtResource("6_acxxa")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="Node2D" type="CanvasLayer"]
+
+[node name="ui2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fumk0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -81.5
+offset_right = 40.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="ui2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "演讲学习辅助工具"
+
+[node name="start" type="LineEdit" parent="ui2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+placeholder_text = "请输入名字"
+alignment = 1
+
+[node name="main_menu" type="VBoxContainer" parent="ui2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="start2" type="Button" parent="ui2/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "确认"
+
+[node name="quit" type="Button" parent="ui2/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "退出"
+
+[node name="Label" type="Label" parent="ui2/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "请输入名字再点击确认！"
+horizontal_alignment = 1
+
+[node name="ui" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vabip")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -81.5
+offset_right = 40.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="ui/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
+text = "演讲学习辅助工具"
+
+[node name="main_menu" type="VBoxContainer" parent="ui/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="start" type="Button" parent="ui/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "开始学习"
+
+[node name="start2" type="Button" parent="ui/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "演讲练习"
+
+[node name="quit" type="Button" parent="ui/VBoxContainer/main_menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "退出"
+
+[node name="Button" type="Button" parent="ui"]
+offset_right = 168.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 40
+text = "上传数据"
+
+[node name="PanelContainer4" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -342.5
+offset_top = 178.0
+offset_right = 342.5
+offset_bottom = 538.0
+grow_horizontal = 2
+
+[node name="SpeechTipContainer" type="MarginContainer" parent="PanelContainer4"]
+layout_mode = 2
+theme_override_constants/margin_right = 45
+script = ExtResource("2_0labr")
+
+[node name="record_gird" type="GridContainer" parent="PanelContainer4/SpeechTipContainer"]
+layout_mode = 2
+columns = 10
+
+[node name="Advice" type="RichTextLabel" parent="PanelContainer4/SpeechTipContainer"]
+visible = false
+z_index = 10
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_3hrac")
+scroll_following = true
+autowrap_mode = 1
+
+[node name="advice_close" type="TextureButton" parent="PanelContainer4/SpeechTipContainer/Advice"]
+z_index = 11
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_top = 1.0
+offset_right = -5.0
+offset_bottom = 41.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("4_wsdkd")
+stretch_mode = 0
+
+[node name="Class" type="Button" parent="PanelContainer4/SpeechTipContainer/Advice"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 5.0
+offset_right = 632.0
+offset_bottom = 92.0
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_godec")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lxpxl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lxpxl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lxpxl")
+text = "课程"
+
+[node name="speech_tip_close" type="TextureButton" parent="PanelContainer4"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("4_wsdkd")
+stretch_mode = 5
+
+[node name="PanelContainer5" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -342.5
+offset_top = 178.0
+offset_right = 342.5
+offset_bottom = 538.0
+grow_horizontal = 2
+
+[node name="SpeechTipContainer" type="MarginContainer" parent="PanelContainer5"]
+layout_mode = 2
+theme_override_constants/margin_right = 45
+script = ExtResource("6_rlx5p")
+
+[node name="record_gird" type="GridContainer" parent="PanelContainer5/SpeechTipContainer"]
+layout_mode = 2
+columns = 10
+
+[node name="Advice" type="RichTextLabel" parent="PanelContainer5/SpeechTipContainer"]
+visible = false
+z_index = 10
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_3hrac")
+bbcode_enabled = true
+scroll_following = true
+autowrap_mode = 1
+
+[node name="advice_close" type="TextureButton" parent="PanelContainer5/SpeechTipContainer/Advice"]
+z_index = 11
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_top = 1.0
+offset_right = -5.0
+offset_bottom = 41.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("4_wsdkd")
+stretch_mode = 0
+
+[node name="speech_tip_close_2" type="TextureButton" parent="PanelContainer5"]
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("4_wsdkd")
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 947.0
+offset_top = 80.0
+offset_right = 1095.0
+offset_bottom = 334.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "你需要根据[color=#FF0000]演讲的题目[/color]准备好[color=#FF0000]一份演讲稿[/color]，并且运用[color=#FF0000]所学技巧[/color]进行演讲，演讲时间不超过[color=#FF0000]60秒[/color]。
+如果准备好，请点击[color=#FF0000]下面的按钮[/color]开始计时"
+
+[node name="start_speech" type="Button" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 402.0
+offset_top = -313.0
+offset_right = 514.0
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 40
+text = "开始演讲"
+
+[node name="RichTextLabel2" type="Label" parent="start_speech"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -658.857
+offset_top = -357.143
+offset_right = -618.857
+offset_bottom = -317.143
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+script = ExtResource("7_wgsad")
+
+[node name="Timer" type="Timer" parent="start_speech/RichTextLabel2"]
+
+[node name="Node" type="Node2D" parent="."]
+script = ExtResource("8_g73nk")
+
+[node name="get_url" type="HTTPRequest" parent="Node"]
+
+[node name="upload_txt" type="HTTPRequest" parent="Node"]
+
+[connection signal="pressed" from="ui2/VBoxContainer/main_menu/start2" to="ui2" method="_on_start_2_pressed"]
+[connection signal="pressed" from="ui2/VBoxContainer/main_menu/quit" to="ui2" method="_on_quit_pressed"]
+[connection signal="pressed" from="ui/VBoxContainer/main_menu/start" to="ui" method="_on_start_pressed"]
+[connection signal="pressed" from="ui/VBoxContainer/main_menu/start2" to="ui" method="_on_start_2_pressed"]
+[connection signal="pressed" from="ui/VBoxContainer/main_menu/quit" to="ui" method="_on_quit_pressed"]
+[connection signal="pressed" from="ui/Button" to="Node" method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer4/SpeechTipContainer/Advice/advice_close" to="PanelContainer4/SpeechTipContainer" method="_on_advice_close_pressed"]
+[connection signal="pressed" from="PanelContainer4/SpeechTipContainer/Advice/Class" to="PanelContainer4/SpeechTipContainer" method="_on_class_pressed"]
+[connection signal="pressed" from="PanelContainer4/speech_tip_close" to="ui" method="_on_speech_tip_close_pressed"]
+[connection signal="pressed" from="PanelContainer5/SpeechTipContainer/Advice/advice_close" to="PanelContainer5/SpeechTipContainer" method="_on_advice_close_pressed"]
+[connection signal="pressed" from="PanelContainer5/speech_tip_close_2" to="ui" method="_on_speech_tip_close_2_pressed"]
+[connection signal="pressed" from="PanelContainer5/speech_tip_close_2" to="start_speech/RichTextLabel2" method="_on_speech_tip_close_2_pressed"]
+[connection signal="pressed" from="start_speech" to="start_speech/RichTextLabel2" method="_on_start_speech_pressed"]
+[connection signal="timeout" from="start_speech/RichTextLabel2/Timer" to="start_speech/RichTextLabel2" method="_on_timer_timeout"]
+[connection signal="request_completed" from="Node/get_url" to="Node" method="_on_get_url_request_completed"]
+[connection signal="request_completed" from="Node/upload_txt" to="Node" method="_on_update_txt_request_completed"]
