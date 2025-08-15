@@ -117,9 +117,9 @@ Strongest Speech Streamer is an AI-driven gamified speech training platform desi
 2. **Replicability / 可复现性**
    - Researchers can run the game and inspect all functional modules, algorithms, and AI feedback processes directly from the Chinese source code. All core gameplay logic, AI integration, and audio processing are fully accessible.
    - 研究人员可直接运行中文源码，查看所有功能模块、算法以及 AI 反馈流程。核心游戏逻辑、AI 集成及音频处理完全开放。
-3. **English Demo / 英文演示**
-   - An English demo version is provided in the video to illustrate the core gameplay. For an English UI, users can modify the .tscn scene files or scripts to localize the interface. Click the image below to watch the demo video.
-   - 视频中提供了英文演示版本，仅用于展示游戏核心玩法。如需英文界面，可自行修改 .tscn 场景文件或脚本实现界面本地化。点击下方图片观看演示视频。
+3. **Demo / 演示**
+   - A Strongest Speech Streamer demo version is provided in the video to illustrate the core gameplay. For an English UI, users can modify the .tscn scene files or scripts to localize the interface. Click the image below to watch the demo video.
+   - 视频中提供了最强演讲主播游戏演示版本，仅用于展示游戏核心玩法。如需英文界面，可自行修改 .tscn 场景文件或脚本实现界面本地化。点击下方图片观看演示视频。
      <p align="center">
        <a href="https://youtu.be/0PGKH4IYjng?si=F-xLGsXWaW0Ac8zA">
          <img src="assets/title.png" alt="Demo Video" width="600">
