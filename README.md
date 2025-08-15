@@ -10,7 +10,8 @@
 - [Project Overview / 项目概览](#project-overview--项目概览)  
 - [Functional Modules / 功能模块](#functional-modules--功能模块)  
 - [Requirements / 运行环境要求](#requirements--运行环境要求)  
-- [Setup & Deployment / 安装与部署](#setup--deployment--安装与部署)  
+- [Setup & Deployment / 安装与部署](#setup--deployment--安装与部署)
+- [Notes on Source Code / 源码说明](#sourcecode--note--源码说明)  
 - [Usage / 使用说明](#usage--使用说明)  
 - [License / 许可证](#license--许可证)  
 
@@ -108,6 +109,18 @@ Strongest Speech Streamer is an AI-driven gamified speech training platform desi
      <div align="center">
      <img src="assets/usage.png" alt="说明示例截图">
      </div>
+---
+## Notes on Source Code / 源码说明
+1. **Language / 语言说明**
+   - The provided source code is primarily in Chinese (UI and in-game text). Only certain scenes in the demo version were localized into English to illustrate the overall core workflow of the game and the AI feedback.
+   - 提供的源码主要为中文界面和文本。演示版本中仅部分场景英文化，用于展示游戏的大致核心流程与 AI 反馈效果。
+2. **Replicability / 可复现性**
+   - Researchers can run the game and inspect all functional modules, algorithms, and AI feedback processes directly from the Chinese source code. All core gameplay logic, AI integration, and audio processing are fully accessible.
+   - 研究人员可直接运行中文源码，查看所有功能模块、算法以及 AI 反馈流程。核心游戏逻辑、AI 集成及音频处理完全开放。
+3. **English Demo / 英文演示**
+   - An English demo version is provided in the video to illustrate the core gameplay. For an English UI, users can modify the .tscn scene files or scripts to localize the interface.
+   - 视频中提供了英文演示版本，仅用于展示游戏核心玩法。如需英文界面，可自行修改 .tscn 场景文件或脚本实现界面本地化。
+     [![Demo Video](assets/title.png)](https://youtu.be/0PGKH4IYjng?si=F-xLGsXWaW0Ac8zA)
 ---
 ## License / 许可证
 
