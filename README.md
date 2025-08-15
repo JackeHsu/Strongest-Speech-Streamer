@@ -132,6 +132,16 @@ Strongest Speech Streamer is an AI-driven gamified speech training platform desi
 
 	A demo version of the Speech Learning Tool is provided to illustrate the traditional learning method used as the control group. .
 	演示了演讲学习工具的使用，展示了传统学习方法（作为对照组）的核心流程。
+	<p align="center">
+		<img src="assets/demo.gif" alt="Speech Learning Tool Demo" width="600">
+	</p>
+
+- ### Note / 备注
+  
+  The demo version does not include the actual learning videos, as the educational videos used in the experiment are copyrighted by their original creators and are limited to internal experimental use. The public demo links externally to the original videos to illustrate the software functionality, without embedding any actual video content.
+
+  演示版本未展示实际学习视频，因为实验中使用的教育视频版权归原作者所有，仅限内部实验使用。公开演示中通过外部链接跳转到原视频，以展示软件功能，而未包含任何实际视频内容。
+  
 
 4. **AI Feedback System / AI 反馈系统说明**
    
