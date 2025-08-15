@@ -133,6 +133,10 @@ Strongest Speech Streamer is an AI-driven gamified speech training platform desi
     游戏中集成了 AI 反馈系统，用于分析玩家的演讲表现，包括语速、流利度和内容组织，并提供改进建议。本项目中的 AI 部分通过 **百度智能云千帆 AppBuilder** 平台 实现，调用预训练模型，如 **ERNIE-3.5-8K** 和 **Qianfan-Agent-Speed-8K**。
      项目中未对模型进行再训练，而是通过在 AppBuilder 平台中编写 自定义 Prompt，指导 AI 提供符合教学目标的反馈。这使研究人员能够理解 AI 的工作流程并复现反馈过程，而无需访问用户私密数据或重新训练模型。
 
+   <div align="center">
+	   <img src="assets/BaiduAI.png" alt="AI平台截图">
+   </div>
+
     In the project files, researchers can replace the AI model by modifying the API configuration in `project/scripts/main.gd`. This allows testing with different models while keeping the feedback workflow intact.
    
      在工程项目文件中，研究人员可以通过修改 `project/scripts/main.gd` 中的 API 配置来更换 AI 模型，从而测试不同模型的反馈效果，同时保持原有反馈流程不变。
