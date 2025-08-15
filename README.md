@@ -94,14 +94,17 @@ Strongest Speech Streamer is an AI-driven gamified speech training platform desi
 ---
 ## Usage / 使用说明
 1. **PC Version / PC端使用**
-   - Before using on PC, please make sure the project contains the file `/bin/ffmpeg.exe`. If it does not exist, please re-download it and place the `bin` folder under the project directory.  
-   - 使用 PC 端之前，请确认工程文件中是否存在 `/bin/ffmpeg.exe`。若不存在，请重新下载，并将 `bin` 文件夹放入工程文件下。
+   - Before using on PC, please make sure the project contains the file `/bin/ffmpeg.exe`. If it does not exist, please download it and place the `bin` folder under the project directory.  
+   - 使用 PC 端之前，请确认工程文件中是否存在 `/bin/ffmpeg.exe`。若不存在，请下载，并将 `bin` 文件夹放入工程文件下。
 2. **Android Version / 安卓端使用**
    - Before using on Android, please make sure the project contains the folder `/addons/ffmpeg`. If it does not exist, please re-download it and place the `ffmpeg` folder under the project directory.  
    - 使用安卓端之前，请确认工程文件中是否存在 `/addons/ffmpeg` 文件夹。若不存在，请重新下载，并将 `ffmpeg` 文件夹放入工程文件下。  
 3. **Exported Executable / 导出游戏可执行文件**
    - When exporting the game executable (.exe), `ffmpeg.exe` may not be included in the package.Please place the `bin` folder in the same directory as the exported executable.  
    - 导出游戏可执行文件 (.exe) 时，`ffmpeg.exe` 可能不会被打包。请将 `bin` 文件夹放入游戏可执行文件 (.exe) 的同目录下。
+     <div align="center">
+     <img src="assets/usage.png" alt="说明示例截图">
+     </div>
 ---
 ## License / 许可证
 
