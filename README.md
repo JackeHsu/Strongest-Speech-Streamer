@@ -118,13 +118,21 @@ Strongest Speech Streamer is an AI-driven gamified speech training platform desi
    - Researchers can run the game and inspect all functional modules, algorithms, and AI feedback processes directly from the Chinese source code. All core gameplay logic, AI integration, and audio processing are fully accessible.
    - 研究人员可直接运行中文源码，查看所有功能模块、算法以及 AI 反馈流程。核心游戏逻辑、AI 集成及音频处理完全开放。
 3. **Demo / 演示**
-   - A Strongest Speech Streamer demo version is provided in the video to illustrate the core gameplay. For an English UI, users can modify the .tscn scene files or scripts to localize the interface. Click the image below to watch the demo video.
-   - 视频中提供了最强演讲主播游戏演示版本，仅用于展示游戏核心玩法。如需英文界面，可自行修改 .tscn 场景文件或脚本实现界面本地化。点击下方图片观看演示视频。
+- #### Strongest Speech Streamer / 最强演讲主播
+   
+   A Strongest Speech Streamer demo version is provided in the video to illustrate the core gameplay. For an English UI, users can modify the .tscn scene files or scripts to localize the interface. Click the image below to watch the demo video.
+   视频中提供了最强演讲主播游戏演示版本，仅用于展示游戏核心玩法。如需英文界面，可自行修改 .tscn 场景文件或脚本实现界面本地化。点击下方图片观看演示视频。
      <p align="center">
        <a href="https://youtu.be/0PGKH4IYjng?si=F-xLGsXWaW0Ac8zA">
          <img src="assets/title.png" alt="Demo Video" width="600">
        </a>
      </p>
+	 
+- #### Speech Learning Tool / 演讲学习工具
+
+	A demo version of the Speech Learning Tool is provided to illustrate the traditional learning method used as the control group. .
+	演示了演讲学习工具的使用，展示了传统学习方法（作为对照组）的核心流程。
+
 4. **AI Feedback System / AI 反馈系统说明**
    
     The game integrates an AI feedback system to analyze players' speech performance, including pacing, fluency, and content organization, and to provide improvement suggestions. The AI component in this project is implemented using **Baidu AI Cloud Qianfan AppBuilder** platform with pre-trained models such as **ERNIE-3.5-8K** and **Qianfan-Agent-Speed-8K**.
